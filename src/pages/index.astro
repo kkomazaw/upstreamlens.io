@@ -4,135 +4,544 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout title="Upstream Lens - Seeing decisions before code is written">
   <div class="hero">
-    <h1>Upstream Lens</h1>
-    <p class="hero-tagline">Seeing decisions before code is written</p>
-    <p class="hero-description">
-      CNCF upstream を起点に、<br />
-      Platform Engineering のトレンドと構造を読み解く。
-    </p>
-  </div>
-
-  <section class="intro">
-    <h2>なぜ upstream を見るのか</h2>
-    <p>
-      技術選択の背景には、常に意思決定がある。<br />
-      その意思決定は、コードが書かれる前に upstream で行われている。
-    </p>
-    <p>
-      Upstream Lens は、<strong>「なぜその判断がなされたのか」</strong>という構造と文脈を読み解き、<br />
-      Platform Engineer や Architect が判断に使える形で整理・共有する分析サイトです。
-    </p>
-  </section>
-
-  <section class="framework-overview">
-    <h2>3軸の思考フレームワーク</h2>
-    <p>
-      本サイトのすべての分析は、以下の3軸を前提とします：
-    </p>
-    <div class="framework">
-      <div class="axis">
-        <h3>Product</h3>
-        <p>価値仮説、ユーザー、提供したい体験</p>
-      </div>
-      <div class="axis">
-        <h3>Engineering</h3>
-        <p>技術選択、設計判断、実装可能性</p>
-      </div>
-      <div class="axis">
-        <h3>Organization / Architecture</h3>
-        <p>組織構造、運用、ガバナンス、持続性</p>
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="title-main">Upstream Lens</span>
+        <span class="title-accent">.</span>
+      </h1>
+      <p class="hero-tagline">Seeing decisions before code is written</p>
+      <p class="hero-description">
+        技術選択の背景にある意思決定を、<br />
+        コードが書かれる前の upstream から読み解く
+      </p>
+      <div class="hero-cta">
+        <a href="/philosophy" class="cta-primary">Philosophy</a>
+        <a href="/posts" class="cta-secondary">Posts</a>
       </div>
     </div>
-    <p class="framework-note">
-      → 詳しくは <a href="/philosophy">Philosophy</a> をご覧ください
-    </p>
+  </div>
+
+  <section class="value-props">
+    <div class="value-prop-card">
+      <div class="card-icon">🔍</div>
+      <h3>構造を見る</h3>
+      <p>
+        技術トレンドを「結果」ではなく、<br />
+        意思決定プロセスとして理解する
+      </p>
+    </div>
+    <div class="value-prop-card">
+      <div class="card-icon">🧭</div>
+      <h3>文脈を知る</h3>
+      <p>
+        なぜその判断がなされたのか、<br />
+        upstream の議論から構造を読み解く
+      </p>
+    </div>
+    <div class="value-prop-card">
+      <div class="card-icon">⚖️</div>
+      <h3>視点を持つ</h3>
+      <p>
+        中立を装わず、事実と解釈を分離し、<br />
+        思考の前提を明示する
+      </p>
+    </div>
+  </section>
+
+  <section class="framework-section">
+    <div class="section-header">
+      <h2>3軸の思考フレームワーク</h2>
+      <p class="section-subtitle">
+        すべての分析は、この3つの軸で構造化されます
+      </p>
+    </div>
+
+    <div class="framework-grid">
+      <div class="framework-card product">
+        <div class="card-header">
+          <div class="card-number">01</div>
+          <h3>Product</h3>
+        </div>
+        <div class="card-body">
+          <p>価値仮説、ユーザー、提供したい体験</p>
+          <div class="card-tag">Why</div>
+        </div>
+      </div>
+
+      <div class="framework-card engineering">
+        <div class="card-header">
+          <div class="card-number">02</div>
+          <h3>Engineering</h3>
+        </div>
+        <div class="card-body">
+          <p>技術選択、設計判断、実装可能性</p>
+          <div class="card-tag">How</div>
+        </div>
+      </div>
+
+      <div class="framework-card organization">
+        <div class="card-header">
+          <div class="card-number">03</div>
+          <h3>Organization</h3>
+        </div>
+        <div class="card-body">
+          <p>組織構造、運用、ガバナンス、持続性</p>
+          <div class="card-tag">Who</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="framework-footer">
+      <a href="/philosophy" class="link-arrow">
+        詳しくはPhilosophyへ
+        <span class="arrow">→</span>
+      </a>
+    </div>
   </section>
 
   <section class="getting-started">
     <h2>はじめに</h2>
-    <ol>
-      <li><a href="/philosophy">Philosophy</a> でサイトの視点を理解する</li>
-      <li><a href="/how-to-read">How to Read</a> で読み方を確認する</li>
-      <li>興味のある記事から読み始める（準備中）</li>
-    </ol>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3><a href="/philosophy">Philosophy</a></h3>
+          <p>サイトの視点と思考軸を理解する</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3><a href="/how-to-read">How to Read</a></h3>
+          <p>記事の読み方と前提を確認する</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3><a href="/posts">Posts</a></h3>
+          <p>興味のある記事から読み始める</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="status">
-    <h2>サイトステータス</h2>
-    <p>
-      <strong>現在、サイト構築中です。</strong><br />
-      コンテンツは順次公開予定です。
-    </p>
+  <section class="status-banner">
+    <div class="status-content">
+      <div class="status-icon">🚧</div>
+      <div class="status-text">
+        <strong>現在、サイト構築中です</strong>
+        <p>コンテンツは順次公開予定です</p>
+      </div>
+    </div>
   </section>
 </BaseLayout>
 
 <style>
+  /* Hero Section */
   .hero {
+    position: relative;
     text-align: center;
-    padding: 3rem 0;
-    margin-bottom: 3rem;
+    padding: 5rem 0 4rem;
+    margin: -3rem -1.5rem 4rem;
+    overflow: hidden;
   }
 
-  .hero h1 {
-    font-size: 3rem;
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    opacity: 0.05;
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 800;
     margin: 0 0 1rem 0;
-    color: var(--heading-color);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .title-accent {
+    color: #f093fb;
+    -webkit-text-fill-color: #f093fb;
   }
 
   .hero-tagline {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     font-style: italic;
     color: var(--text-secondary);
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 2rem 0;
+    font-weight: 500;
   }
 
   .hero-description {
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
     color: var(--text-color);
-    line-height: 1.8;
+    line-height: 1.7;
+    margin: 0 0 2.5rem 0;
   }
 
-  .intro,
-  .framework-overview,
-  .getting-started,
-  .status {
-    margin: 3rem 0;
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
-  .framework-note {
-    text-align: center;
-    margin-top: 1.5rem;
+  .cta-primary,
+  .cta-secondary {
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
     font-size: 1rem;
   }
 
-  .status {
-    background-color: var(--code-bg);
-    padding: 1.5rem;
-    border-left: 4px solid var(--accent-color);
-    border-radius: 4px;
+  .cta-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
   }
 
-  .status h2 {
-    margin-top: 0;
+  .cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  }
+
+  .cta-secondary {
+    background: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+  }
+
+  .cta-secondary:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  /* Value Props */
+  .value-props {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+  }
+
+  .value-prop-card {
+    padding: 2rem;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .value-prop-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-color);
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .value-prop-card h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.25rem;
+    color: var(--heading-color);
+  }
+
+  .value-prop-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  /* Framework Section */
+  .framework-section {
+    margin: 5rem 0;
+    padding: 3rem 0;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
     border-bottom: none;
-    padding-bottom: 0;
   }
 
-  .status p {
-    margin-bottom: 0;
+  .section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin: 0;
   }
 
+  .framework-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .framework-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 2px solid var(--border-color);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .framework-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--card-gradient));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .framework-card.product::before {
+    --card-gradient: #667eea, #764ba2;
+  }
+
+  .framework-card.engineering::before {
+    --card-gradient: #f093fb, #f5576c;
+  }
+
+  .framework-card.organization::before {
+    --card-gradient: #4facfe, #00f2fe;
+  }
+
+  .framework-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    border-color: transparent;
+  }
+
+  .framework-card:hover::before {
+    opacity: 1;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-number {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    opacity: 0.5;
+  }
+
+  .card-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .card-body p {
+    margin: 0 0 1rem 0;
+    line-height: 1.7;
+    color: var(--text-color);
+  }
+
+  .card-tag {
+    display: inline-block;
+    padding: 0.375rem 0.875rem;
+    background: var(--code-bg);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent-color);
+  }
+
+  .framework-footer {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: gap 0.3s ease;
+  }
+
+  .link-arrow:hover {
+    gap: 1rem;
+  }
+
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .link-arrow:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  /* Getting Started */
+  .getting-started {
+    margin: 5rem 0;
+  }
+
+  .getting-started h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .steps {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .step:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 16px rgba(0, 102, 204, 0.1);
+  }
+
+  .step-number {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+
+  .step-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+  }
+
+  .step-content h3 a {
+    color: var(--heading-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .step-content h3 a:hover {
+    color: var(--accent-color);
+  }
+
+  .step-content p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+
+  /* Status Banner */
+  .status-banner {
+    margin: 4rem 0 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(253, 203, 110, 0.3);
+  }
+
+  .status-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .status-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+  }
+
+  .status-text strong {
+    display: block;
+    font-size: 1.125rem;
+    color: #2d3436;
+    margin-bottom: 0.25rem;
+  }
+
+  .status-text p {
+    margin: 0;
+    color: #636e72;
+    font-size: 0.95rem;
+  }
+
+  /* Responsive */
   @media (max-width: 768px) {
-    .hero h1 {
+    .hero {
+      padding: 3rem 0 2rem;
+      margin: -3rem -1rem 3rem;
+    }
+
+    .value-props {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .framework-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .status-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .section-header h2 {
       font-size: 2rem;
-    }
-
-    .hero-tagline {
-      font-size: 1rem;
-    }
-
-    .hero-description {
-      font-size: 1rem;
     }
   }
 </style>

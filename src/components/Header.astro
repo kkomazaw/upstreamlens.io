@@ -1,0 +1,47 @@
+---
+import Navigation from "./Navigation.astro";
+---
+
+<header>
+  <div class="header-content">
+    <div class="site-title">
+      <a href="/">Upstream Lens</a>
+    </div>
+    <p class="tagline">Seeing decisions before code is written</p>
+  </div>
+  <Navigation />
+</header>
+
+<style>
+  header {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 3rem;
+  }
+
+  .header-content {
+    margin-bottom: 1.5rem;
+  }
+
+  .site-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .site-title a {
+    text-decoration: none;
+    color: var(--heading-color);
+  }
+
+  .site-title a:hover {
+    color: var(--accent-color);
+  }
+
+  .tagline {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin: 0;
+    font-style: italic;
+  }
+</style>

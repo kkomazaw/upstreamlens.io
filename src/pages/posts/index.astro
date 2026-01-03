@@ -1,0 +1,197 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const allPosts = await getCollection('posts', ({ data }) => {
+  return data.draft !== true;
+});
+
+const sortedPosts = allPosts.sort((a, b) =>
+  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const postsByCategory = sortedPosts.reduce((acc, post) => {
+  const category = post.data.category;
+  if (!acc[category]) {
+    acc[category] = [];
+  }
+  acc[category].push(post);
+  return acc;
+}, {} as Record<string, typeof sortedPosts>);
+
+const categories = ['Philosophy', 'Notes', 'Analysis', 'Curation', 'Meta'] as const;
+---
+
+<BaseLayout title="Posts | Upstream Lens">
+  <h1>Posts</h1>
+
+  {sortedPosts.length === 0 ? (
+    <section class="empty-state">
+      <p>記事はまだ公開されていません。</p>
+      <p>準備が整い次第、順次公開予定です。</p>
+    </section>
+  ) : (
+    <>
+      <section class="all-posts">
+        <h2>最新記事</h2>
+        <ul class="post-list">
+          {sortedPosts.map(post => (
+            <li>
+              <article class="post-preview">
+                <h3>
+                  <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+                </h3>
+                <div class="post-meta">
+                  <time datetime={post.data.pubDate.toISOString()}>
+                    {post.data.pubDate.toLocaleDateString('ja-JP', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </time>
+                  <span class="category">{post.data.category}</span>
+                </div>
+                <p class="description">{post.data.description}</p>
+              </article>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="by-category">
+        <h2>カテゴリ別</h2>
+        {categories.map(category => {
+          const posts = postsByCategory[category];
+          if (!posts || posts.length === 0) return null;
+
+          return (
+            <div class="category-section">
+              <h3>{category}</h3>
+              <ul class="post-list">
+                {posts.map(post => (
+                  <li>
+                    <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+                    <time datetime={post.data.pubDate.toISOString()}>
+                      {post.data.pubDate.toLocaleDateString('ja-JP', {
+                        year: 'numeric',
+                        month: 'numeric',
+                        day: 'numeric'
+                      })}
+                    </time>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </section>
+    </>
+  )}
+</BaseLayout>
+
+<style>
+  .empty-state {
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--text-secondary);
+  }
+
+  .all-posts,
+  .by-category {
+    margin: 3rem 0;
+  }
+
+  .post-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .post-preview {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .post-preview:last-child {
+    border-bottom: none;
+  }
+
+  .post-preview h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+  }
+
+  .post-preview h3 a {
+    color: var(--heading-color);
+    text-decoration: none;
+  }
+
+  .post-preview h3 a:hover {
+    color: var(--accent-color);
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+  }
+
+  .category {
+    background-color: var(--code-bg);
+    padding: 0.25rem 0.75rem;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+
+  .description {
+    color: var(--text-color);
+    margin: 0;
+  }
+
+  .category-section {
+    margin: 2rem 0;
+  }
+
+  .category-section h3 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+  }
+
+  .category-section .post-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .category-section .post-list li:last-child {
+    border-bottom: none;
+  }
+
+  .category-section .post-list a {
+    flex: 1;
+  }
+
+  .category-section .post-list time {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    margin-left: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .category-section .post-list li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+    }
+
+    .category-section .post-list time {
+      margin-left: 0;
+    }
+  }
+</style>

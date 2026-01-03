@@ -2,11 +2,138 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Upstream Lens">
-  <h1>Upstream Lens</h1>
-  <p>
-    CNCFアップストリームを起点に、<br />
-    プラットフォームエンジニアリングのトレンドと構造を読み解く。
-  </p>
+<BaseLayout title="Upstream Lens - Seeing decisions before code is written">
+  <div class="hero">
+    <h1>Upstream Lens</h1>
+    <p class="hero-tagline">Seeing decisions before code is written</p>
+    <p class="hero-description">
+      CNCF upstream を起点に、<br />
+      Platform Engineering のトレンドと構造を読み解く。
+    </p>
+  </div>
+
+  <section class="intro">
+    <h2>なぜ upstream を見るのか</h2>
+    <p>
+      技術選択の背景には、常に意思決定がある。<br />
+      その意思決定は、コードが書かれる前に upstream で行われている。
+    </p>
+    <p>
+      Upstream Lens は、<strong>「なぜその判断がなされたのか」</strong>という構造と文脈を読み解き、<br />
+      Platform Engineer や Architect が判断に使える形で整理・共有する分析サイトです。
+    </p>
+  </section>
+
+  <section class="framework-overview">
+    <h2>3軸の思考フレームワーク</h2>
+    <p>
+      本サイトのすべての分析は、以下の3軸を前提とします：
+    </p>
+    <div class="framework">
+      <div class="axis">
+        <h3>Product</h3>
+        <p>価値仮説、ユーザー、提供したい体験</p>
+      </div>
+      <div class="axis">
+        <h3>Engineering</h3>
+        <p>技術選択、設計判断、実装可能性</p>
+      </div>
+      <div class="axis">
+        <h3>Organization / Architecture</h3>
+        <p>組織構造、運用、ガバナンス、持続性</p>
+      </div>
+    </div>
+    <p class="framework-note">
+      → 詳しくは <a href="/philosophy">Philosophy</a> をご覧ください
+    </p>
+  </section>
+
+  <section class="getting-started">
+    <h2>はじめに</h2>
+    <ol>
+      <li><a href="/philosophy">Philosophy</a> でサイトの視点を理解する</li>
+      <li><a href="/how-to-read">How to Read</a> で読み方を確認する</li>
+      <li>興味のある記事から読み始める（準備中）</li>
+    </ol>
+  </section>
+
+  <section class="status">
+    <h2>サイトステータス</h2>
+    <p>
+      <strong>現在、サイト構築中です。</strong><br />
+      コンテンツは順次公開予定です。
+    </p>
+  </section>
 </BaseLayout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    color: var(--heading-color);
+  }
+
+  .hero-tagline {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    margin: 0 0 1.5rem 0;
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    color: var(--text-color);
+    line-height: 1.8;
+  }
+
+  .intro,
+  .framework-overview,
+  .getting-started,
+  .status {
+    margin: 3rem 0;
+  }
+
+  .framework-note {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .status {
+    background-color: var(--code-bg);
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+  }
+
+  .status h2 {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .status p {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero-tagline {
+      font-size: 1rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+  }
+</style>
 

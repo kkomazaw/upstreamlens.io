@@ -1,17 +1,208 @@
 ---
-const { title } = Astro.props;
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "CNCF upstream を起点に、Platform Engineering のトレンドと構造を読み解く分析サイト" } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
   <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <main>
-    <slot />
-  </main>
+  <div class="container">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </div>
 </body>
 </html>
+
+<style is:global>
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --text-secondary: #666666;
+    --heading-color: #000000;
+    --accent-color: #0066cc;
+    --border-color: #e0e0e0;
+    --code-bg: #f5f5f5;
+    --link-color: #0066cc;
+    --link-hover: #0052a3;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  main {
+    min-height: 60vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 2rem 0 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+  }
+
+  ul, ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+
+  li {
+    margin: 0.5rem 0;
+  }
+
+  code {
+    background-color: var(--code-bg);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  }
+
+  pre {
+    background-color: var(--code-bg);
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+
+  pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  section {
+    margin: 2.5rem 0;
+  }
+
+  dl {
+    margin: 1rem 0;
+  }
+
+  dt {
+    font-weight: 600;
+    margin-top: 1rem;
+    color: var(--heading-color);
+  }
+
+  dd {
+    margin: 0.5rem 0 0 1.5rem;
+    color: var(--text-secondary);
+  }
+
+  strong {
+    font-weight: 600;
+    color: var(--heading-color);
+  }
+
+  .framework {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .axis {
+    padding: 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+  }
+
+  .axis h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+  }
+
+  .axis p {
+    margin-bottom: 0;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    .container {
+      padding: 0 1rem;
+    }
+  }
+</style>
 

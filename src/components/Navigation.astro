@@ -1,0 +1,83 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/posts", label: "Posts" },
+  { href: "/about", label: "About" },
+  { href: "/philosophy", label: "Philosophy" },
+  { href: "/how-to-read", label: "How to Read" },
+  { href: "/disclaimer", label: "Disclaimer" },
+  { href: "/author", label: "Author" },
+];
+
+function isActive(href: string, currentPath: string): boolean {
+  if (href === "/") {
+    return currentPath === "/" || currentPath === "";
+  }
+  return currentPath.startsWith(href);
+}
+---
+
+<nav>
+  <ul>
+    {navItems.map(item => (
+      <li>
+        <a
+          href={item.href}
+          class:list={["nav-link", { active: isActive(item.href, currentPath) }]}
+          aria-current={isActive(item.href, currentPath) ? "page" : undefined}
+        >
+          {item.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  nav {
+    margin: 2rem 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+
+  .nav-link:hover {
+    border-bottom-color: var(--accent-color);
+  }
+
+  .nav-link.active {
+    border-bottom-color: var(--accent-color);
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .nav-link {
+      padding: 0.5rem 0;
+    }
+  }
+</style>

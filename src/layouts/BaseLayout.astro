@@ -183,25 +183,79 @@ const { title, description = "CNCF upstream を起点に、Platform Engineering 
     color: var(--text-secondary);
   }
 
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .container {
+      max-width: 720px;
+      padding: 0 2rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+
+  /* Mobile */
   @media (max-width: 768px) {
     html {
-      font-size: 14px;
+      font-size: 15px;
+    }
+
+    .container {
+      padding: 0 1.25rem;
     }
 
     h1 {
       font-size: 2rem;
+      line-height: 1.2;
     }
 
     h2 {
       font-size: 1.5rem;
+      line-height: 1.3;
     }
 
     h3 {
       font-size: 1.25rem;
     }
 
+    /* Increase touch target size */
+    a {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    /* Better spacing on mobile */
+    section {
+      margin: 2rem 0;
+    }
+
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+  }
+
+  /* Small mobile */
+  @media (max-width: 480px) {
+    html {
+      font-size: 14px;
+    }
+
     .container {
       padding: 0 1rem;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
     }
   }
 </style>

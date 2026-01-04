@@ -45,6 +45,7 @@ const currentYear = new Date().getFullYear();
   .footer-nav a {
     color: var(--text-secondary);
     text-decoration: none;
+    padding: 0.25rem 0.5rem;
   }
 
   .footer-nav a:hover {
@@ -55,5 +56,39 @@ const currentYear = new Date().getFullYear();
   .separator {
     margin: 0 0.75rem;
     color: var(--border-color);
+  }
+
+  @media (max-width: 768px) {
+    footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+    }
+
+    .footer-content {
+      font-size: 0.8125rem;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .separator {
+      display: none;
+    }
+
+    .footer-nav a {
+      padding: 0.5rem;
+      display: block;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .copyright,
+    .disclaimer-note {
+      font-size: 0.75rem;
+    }
   }
 </style>

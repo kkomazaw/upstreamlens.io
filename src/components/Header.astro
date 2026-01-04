@@ -44,4 +44,37 @@ import Navigation from "./Navigation.astro";
     margin: 0;
     font-style: italic;
   }
+
+  @media (max-width: 768px) {
+    header {
+      padding: 1.5rem 0;
+      margin-bottom: 2rem;
+    }
+
+    .header-content {
+      margin-bottom: 1rem;
+    }
+
+    .site-title {
+      font-size: 1.5rem;
+    }
+
+    .tagline {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header {
+      padding: 1.25rem 0;
+    }
+
+    .site-title {
+      font-size: 1.35rem;
+    }
+
+    .tagline {
+      font-size: 0.8125rem;
+    }
+  }
 </style>

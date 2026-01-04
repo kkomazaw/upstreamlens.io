@@ -20,7 +20,11 @@ function isActive(href: string, currentPath: string): boolean {
 ---
 
 <nav>
-  <ul>
+  <button class="mobile-menu-toggle" aria-label="メニュー" id="mobile-menu-toggle">
+    <span class="hamburger"></span>
+  </button>
+
+  <ul id="nav-menu">
     {navItems.map(item => (
       <li>
         <a
@@ -35,9 +39,92 @@ function isActive(href: string, currentPath: string): boolean {
   </ul>
 </nav>
 
+<script>
+  // Mobile menu toggle
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('nav-menu');
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      toggle.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen.toString());
+    });
+
+    // Close menu when clicking a link
+    const links = menu.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!toggle.contains(e.target as Node) && !menu.contains(e.target as Node)) {
+        menu.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+</script>
+
 <style>
   nav {
+    position: relative;
     margin: 2rem 0;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-color);
+    position: relative;
+    transition: background 0.3s ease;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: var(--text-color);
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger::before {
+    top: -8px;
+  }
+
+  .hamburger::after {
+    top: 8px;
+  }
+
+  .mobile-menu-toggle.open .hamburger {
+    background: transparent;
+  }
+
+  .mobile-menu-toggle.open .hamburger::before {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  .mobile-menu-toggle.open .hamburger::after {
+    transform: rotate(-45deg) translate(5px, -6px);
   }
 
   ul {
@@ -58,26 +145,74 @@ function isActive(href: string, currentPath: string): boolean {
     color: var(--text-color);
     padding: 0.5rem 1rem;
     border-bottom: 2px solid transparent;
-    transition: border-color 0.2s ease;
+    transition: all 0.2s ease;
+    display: block;
   }
 
   .nav-link:hover {
     border-bottom-color: var(--accent-color);
+    color: var(--accent-color);
   }
 
   .nav-link.active {
     border-bottom-color: var(--accent-color);
     font-weight: 600;
+    color: var(--accent-color);
   }
 
-  @media (max-width: 768px) {
+  /* Tablet and mobile */
+  @media (max-width: 1024px) {
     ul {
-      flex-direction: column;
-      gap: 0.5rem;
+      gap: 1rem;
     }
 
     .nav-link {
-      padding: 0.5rem 0;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  /* Mobile menu */
+  @media (max-width: 768px) {
+    .mobile-menu-toggle {
+      display: block;
+    }
+
+    ul {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(280px, 80vw);
+      background: var(--bg-color);
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      gap: 0;
+      padding: 5rem 0 2rem;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+      overflow-y: auto;
+    }
+
+    ul.open {
+      transform: translateX(0);
+    }
+
+    li {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-link {
+      padding: 1rem 1.5rem;
+      border-bottom: none;
+      font-size: 1rem;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      background: var(--code-bg);
+      border-bottom: none;
     }
   }
 </style>

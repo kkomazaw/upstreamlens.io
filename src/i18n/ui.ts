@@ -18,21 +18,21 @@ export const ui = {
 
     // Hero
     'hero.tagline': 'Seeing decisions before code is written',
-    'hero.description': '技術選択の背景にある意思決定を、コードが書かれる前の upstream から読み解く',
+    'hero.description': '技術トレンドの裏側にある意思決定を、コードが書かれる前から追いかける',
     'hero.cta.philosophy': 'Philosophy',
     'hero.cta.posts': 'Posts',
 
     // Value Props
-    'value.structure.title': '構造を見る',
-    'value.structure.desc': '技術トレンドを「結果」ではなく、意思決定プロセスとして理解する',
-    'value.context.title': '文脈を知る',
-    'value.context.desc': 'なぜその判断がなされたのか、upstream の議論から構造を読み解く',
-    'value.perspective.title': '視点を持つ',
-    'value.perspective.desc': '中立を装わず、事実と解釈を分離し、思考の前提を明示する',
+    'value.structure.title': '流れを追いかける',
+    'value.structure.desc': '技術トレンドを「結果」として見るのではなく、どう決まっていったかのプロセスを追う',
+    'value.context.title': '背景を探る',
+    'value.context.desc': 'なぜその選択がされたのか、コミュニティの議論から背景を探っていく',
+    'value.perspective.title': '視点を明らかにする',
+    'value.perspective.desc': '中立を装わず、事実と解釈を分けて、考え方の前提を先に示す',
 
     // Framework
-    'framework.title': '3軸の思考フレームワーク',
-    'framework.subtitle': 'すべての分析は、この3つの軸で構造化されます',
+    'framework.title': '3つの軸で考える',
+    'framework.subtitle': 'どんな技術も、この3つの視点で整理しています',
     'framework.product.title': 'Product',
     'framework.product.desc': '価値仮説、ユーザー、提供したい体験',
     'framework.product.tag': 'Why',
@@ -45,13 +45,13 @@ export const ui = {
     'framework.learnMore': '詳しくはPhilosophyへ',
 
     // Getting Started
-    'gettingStarted.title': 'はじめに',
+    'gettingStarted.title': 'まずはここから',
     'gettingStarted.step1.title': 'Philosophy',
-    'gettingStarted.step1.desc': 'サイトの視点と思考軸を理解する',
+    'gettingStarted.step1.desc': 'このサイトの考え方を知る',
     'gettingStarted.step2.title': 'How to Read',
-    'gettingStarted.step2.desc': '記事の読み方と前提を確認する',
+    'gettingStarted.step2.desc': '記事の読み方をチェック',
     'gettingStarted.step3.title': 'Posts',
-    'gettingStarted.step3.desc': '興味のある記事から読み始める',
+    'gettingStarted.step3.desc': '気になる記事を読んでみる',
 
     // Status
     'status.title': '現在、サイト構築中です',
@@ -77,21 +77,21 @@ export const ui = {
 
     // Hero
     'hero.tagline': 'Seeing decisions before code is written',
-    'hero.description': 'Decoding the decision-making behind technology choices from upstream before code is written',
+    'hero.description': 'Follow the decisions behind tech trends from the very beginning',
     'hero.cta.philosophy': 'Philosophy',
     'hero.cta.posts': 'Posts',
 
     // Value Props
-    'value.structure.title': 'See Structure',
-    'value.structure.desc': 'Understand tech trends as decision-making processes, not just outcomes',
-    'value.context.title': 'Know Context',
-    'value.context.desc': 'Decode why decisions were made through upstream discussions and structure',
-    'value.perspective.title': 'Have Perspective',
-    'value.perspective.desc': 'Separate facts from interpretation without claiming neutrality',
+    'value.structure.title': 'Follow the Flow',
+    'value.structure.desc': 'Track how decisions unfold, not just the final outcomes',
+    'value.context.title': 'Explore the Background',
+    'value.context.desc': 'Discover why choices were made through community discussions',
+    'value.perspective.title': 'Be Clear About Perspective',
+    'value.perspective.desc': 'Separate facts from interpretation, and state our assumptions upfront',
 
     // Framework
-    'framework.title': '3-Axis Thinking Framework',
-    'framework.subtitle': 'All analyses are structured along these three axes',
+    'framework.title': 'Think in 3 Dimensions',
+    'framework.subtitle': 'We organize every technology through these three perspectives',
     'framework.product.title': 'Product',
     'framework.product.desc': 'Value hypothesis, users, desired experience',
     'framework.product.tag': 'Why',
@@ -104,13 +104,13 @@ export const ui = {
     'framework.learnMore': 'Learn more in Philosophy',
 
     // Getting Started
-    'gettingStarted.title': 'Getting Started',
+    'gettingStarted.title': 'Start Here',
     'gettingStarted.step1.title': 'Philosophy',
-    'gettingStarted.step1.desc': 'Understand our perspective and thinking framework',
+    'gettingStarted.step1.desc': 'Get to know our perspective',
     'gettingStarted.step2.title': 'How to Read',
-    'gettingStarted.step2.desc': 'Check how to read articles and prerequisites',
+    'gettingStarted.step2.desc': 'Check out the reading guide',
     'gettingStarted.step3.title': 'Posts',
-    'gettingStarted.step3.desc': 'Start reading from topics that interest you',
+    'gettingStarted.step3.desc': 'Dive into articles that interest you',
 
     // Status
     'status.title': 'Site Under Construction',

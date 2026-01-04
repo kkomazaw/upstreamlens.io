@@ -1,21 +1,26 @@
 ---
+import { useTranslations } from '../i18n/utils';
+
+const lang = Astro.currentLocale || 'ja';
+const t = useTranslations(lang as 'ja' | 'en');
 const currentYear = new Date().getFullYear();
+const langPrefix = lang === 'ja' ? '' : '/en';
 ---
 
 <footer>
   <div class="footer-content">
     <p class="copyright">
-      © {currentYear} Upstream Lens. All rights reserved.
+      {t('footer.copyright').replace('{year}', currentYear.toString())}
     </p>
     <p class="disclaimer-note">
-      This site is not affiliated with CNCF or any related projects.
+      {t('footer.disclaimer')}
     </p>
     <nav class="footer-nav">
-      <a href="/disclaimer">Disclaimer</a>
+      <a href={`${langPrefix}/disclaimer`}>{t('nav.disclaimer')}</a>
       <span class="separator">•</span>
-      <a href="/author">Author</a>
+      <a href={`${langPrefix}/author`}>{t('nav.author')}</a>
       <span class="separator">•</span>
-      <a href="https://github.com/upstreamlens/upstreamlens.io" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://github.com/kkomazaw/upstreamlens.io" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
   </div>
 </footer>

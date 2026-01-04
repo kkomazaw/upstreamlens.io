@@ -1,0 +1,536 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { useTranslations } from '../../i18n/utils';
+
+const lang = 'en';
+const t = useTranslations(lang);
+---
+
+<BaseLayout title="Upstream Lens - Seeing decisions before code is written">
+  <div class="hero">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="title-main">Upstream Lens</span>
+        <span class="title-accent">.</span>
+      </h1>
+      <p class="hero-tagline">{t('hero.tagline')}</p>
+      <p class="hero-description">
+        {t('hero.description')}
+      </p>
+      <div class="hero-cta">
+        <a href="/en/philosophy" class="cta-primary">{t('hero.cta.philosophy')}</a>
+        <a href="/en/posts" class="cta-secondary">{t('hero.cta.posts')}</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="value-props">
+    <div class="value-prop-card">
+      <div class="card-icon">🔍</div>
+      <h3>{t('value.structure.title')}</h3>
+      <p>{t('value.structure.desc')}</p>
+    </div>
+    <div class="value-prop-card">
+      <div class="card-icon">🧭</div>
+      <h3>{t('value.context.title')}</h3>
+      <p>{t('value.context.desc')}</p>
+    </div>
+    <div class="value-prop-card">
+      <div class="card-icon">⚖️</div>
+      <h3>{t('value.perspective.title')}</h3>
+      <p>{t('value.perspective.desc')}</p>
+    </div>
+  </section>
+
+  <section class="framework-section">
+    <div class="section-header">
+      <h2>{t('framework.title')}</h2>
+      <p class="section-subtitle">
+        {t('framework.subtitle')}
+      </p>
+    </div>
+
+    <div class="framework-grid">
+      <div class="framework-card product">
+        <div class="card-header">
+          <div class="card-number">01</div>
+          <h3>{t('framework.product.title')}</h3>
+        </div>
+        <div class="card-body">
+          <p>{t('framework.product.desc')}</p>
+          <div class="card-tag">{t('framework.product.tag')}</div>
+        </div>
+      </div>
+
+      <div class="framework-card engineering">
+        <div class="card-header">
+          <div class="card-number">02</div>
+          <h3>{t('framework.engineering.title')}</h3>
+        </div>
+        <div class="card-body">
+          <p>{t('framework.engineering.desc')}</p>
+          <div class="card-tag">{t('framework.engineering.tag')}</div>
+        </div>
+      </div>
+
+      <div class="framework-card organization">
+        <div class="card-header">
+          <div class="card-number">03</div>
+          <h3>{t('framework.organization.title')}</h3>
+        </div>
+        <div class="card-body">
+          <p>{t('framework.organization.desc')}</p>
+          <div class="card-tag">{t('framework.organization.tag')}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="framework-footer">
+      <a href="/en/philosophy" class="link-arrow">
+        {t('framework.learnMore')}
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="getting-started">
+    <h2>{t('gettingStarted.title')}</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3><a href="/en/philosophy">{t('gettingStarted.step1.title')}</a></h3>
+          <p>{t('gettingStarted.step1.desc')}</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3><a href="/en/how-to-read">{t('gettingStarted.step2.title')}</a></h3>
+          <p>{t('gettingStarted.step2.desc')}</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3><a href="/en/posts">{t('gettingStarted.step3.title')}</a></h3>
+          <p>{t('gettingStarted.step3.desc')}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="status-banner">
+    <div class="status-content">
+      <div class="status-icon">🚧</div>
+      <div class="status-text">
+        <strong>{t('status.title')}</strong>
+        <p>{t('status.desc')}</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Same styles as Japanese version */
+  .hero {
+    position: relative;
+    text-align: center;
+    padding: 5rem 0 4rem;
+    margin: -3rem -1.5rem 4rem;
+    overflow: hidden;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    opacity: 0.05;
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .title-accent {
+    color: #f093fb;
+    -webkit-text-fill-color: #f093fb;
+  }
+
+  .hero-tagline {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-style: italic;
+    color: var(--text-secondary);
+    margin: 0 0 2rem 0;
+    font-weight: 500;
+  }
+
+  .hero-description {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-color);
+    line-height: 1.7;
+    margin: 0 0 2.5rem 0;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+
+  .cta-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  }
+
+  .cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  }
+
+  .cta-secondary {
+    background: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+  }
+
+  .cta-secondary:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .value-props {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+  }
+
+  .value-prop-card {
+    padding: 2rem;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .value-prop-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent-color);
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .value-prop-card h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.25rem;
+    color: var(--heading-color);
+  }
+
+  .value-prop-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  .framework-section {
+    margin: 5rem 0;
+    padding: 3rem 0;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+    border-bottom: none;
+  }
+
+  .section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin: 0;
+  }
+
+  .framework-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .framework-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 2px solid var(--border-color);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .framework-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--card-gradient));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .framework-card.product::before {
+    --card-gradient: #667eea, #764ba2;
+  }
+
+  .framework-card.engineering::before {
+    --card-gradient: #f093fb, #f5576c;
+  }
+
+  .framework-card.organization::before {
+    --card-gradient: #4facfe, #00f2fe;
+  }
+
+  .framework-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    border-color: transparent;
+  }
+
+  .framework-card:hover::before {
+    opacity: 1;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-number {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    opacity: 0.5;
+  }
+
+  .card-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .card-body p {
+    margin: 0 0 1rem 0;
+    line-height: 1.7;
+    color: var(--text-color);
+  }
+
+  .card-tag {
+    display: inline-block;
+    padding: 0.375rem 0.875rem;
+    background: var(--code-bg);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent-color);
+  }
+
+  .framework-footer {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: gap 0.3s ease;
+  }
+
+  .link-arrow:hover {
+    gap: 1rem;
+  }
+
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .link-arrow:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  .getting-started {
+    margin: 5rem 0;
+  }
+
+  .getting-started h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .steps {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .step:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 16px rgba(0, 102, 204, 0.1);
+  }
+
+  .step-number {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+
+  .step-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+  }
+
+  .step-content h3 a {
+    color: var(--heading-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .step-content h3 a:hover {
+    color: var(--accent-color);
+  }
+
+  .step-content p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+  }
+
+  .status-banner {
+    margin: 4rem 0 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(253, 203, 110, 0.3);
+  }
+
+  .status-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .status-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+  }
+
+  .status-text strong {
+    display: block;
+    font-size: 1.125rem;
+    color: #2d3436;
+    margin-bottom: 0.25rem;
+  }
+
+  .status-text p {
+    margin: 0;
+    color: #636e72;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3rem 0 2rem;
+      margin: -3rem -1rem 3rem;
+    }
+
+    .value-props {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .framework-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .status-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+    }
+  }
+</style>

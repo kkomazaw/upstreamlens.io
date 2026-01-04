@@ -1,0 +1,62 @@
+---
+import { languages } from '../i18n/ui';
+
+const lang = Astro.currentLocale || 'ja';
+const currentPath = Astro.url.pathname;
+
+// Remove language prefix from path
+const pathWithoutLang = currentPath.replace(/^\/(en|ja)/, '') || '/';
+---
+
+<div class="language-switcher">
+  {Object.entries(languages).map(([locale, label]) => {
+    const href = locale === 'ja' ? pathWithoutLang : `/en${pathWithoutLang}`;
+    const isActive = lang === locale;
+
+    return (
+      <a
+        href={href}
+        class:list={['lang-link', { active: isActive }]}
+        aria-current={isActive ? 'page' : undefined}
+      >
+        {label}
+      </a>
+    );
+  })}
+</div>
+
+<style>
+  .language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .lang-link {
+    padding: 0.375rem 0.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+
+  .lang-link:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+
+  .lang-link.active {
+    color: var(--accent-color);
+    background: var(--code-bg);
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .language-switcher {
+      margin-top: 1rem;
+      justify-content: center;
+    }
+  }
+</style>

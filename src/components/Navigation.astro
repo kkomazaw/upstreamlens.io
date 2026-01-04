@@ -1,19 +1,24 @@
 ---
+import { useTranslations } from '../i18n/utils';
+
+const lang = Astro.currentLocale || 'ja';
+const t = useTranslations(lang as 'ja' | 'en');
 const currentPath = Astro.url.pathname;
+const langPrefix = lang === 'ja' ? '' : '/en';
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/posts", label: "Posts" },
-  { href: "/about", label: "About" },
-  { href: "/philosophy", label: "Philosophy" },
-  { href: "/how-to-read", label: "How to Read" },
-  { href: "/disclaimer", label: "Disclaimer" },
-  { href: "/author", label: "Author" },
+  { href: `${langPrefix}/`, label: t('nav.home') },
+  { href: `${langPrefix}/posts`, label: t('nav.posts') },
+  { href: `${langPrefix}/about`, label: t('nav.about') },
+  { href: `${langPrefix}/philosophy`, label: t('nav.philosophy') },
+  { href: `${langPrefix}/how-to-read`, label: t('nav.howToRead') },
+  { href: `${langPrefix}/disclaimer`, label: t('nav.disclaimer') },
+  { href: `${langPrefix}/author`, label: t('nav.author') },
 ];
 
 function isActive(href: string, currentPath: string): boolean {
-  if (href === "/") {
-    return currentPath === "/" || currentPath === "";
+  if (href === "/" || href === "/en/") {
+    return currentPath === href || currentPath === href.slice(0, -1);
   }
   return currentPath.startsWith(href);
 }

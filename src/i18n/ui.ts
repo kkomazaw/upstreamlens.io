@@ -59,7 +59,7 @@ export const ui = {
 
     // Footer
     'footer.copyright': '© {year} Upstream Lens. All rights reserved.',
-    'footer.disclaimer': 'This site is not affiliated with CNCF or any related projects.',
+    'footer.disclaimer': 'This site is not affiliated with any specific foundation, organization, or project.',
 
     // Common
     'common.readMore': '続きを読む',
@@ -118,7 +118,7 @@ export const ui = {
 
     // Footer
     'footer.copyright': '© {year} Upstream Lens. All rights reserved.',
-    'footer.disclaimer': 'This site is not affiliated with CNCF or any related projects.',
+    'footer.disclaimer': 'This site is not affiliated with any specific foundation, organization, or project.',
 
     // Common
     'common.readMore': 'Read more',

@@ -1,0 +1,84 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Philosophy | Upstream Lens">
+  <h1>Philosophy</h1>
+
+  <section>
+    <h2>Editorial Principles</h2>
+    <ul>
+      <li><strong>Not pretending neutrality</strong> — We establish our perspective upfront</li>
+      <li><strong>Separating facts from interpretation</strong> — Clear distinction between Facts and Interpretation</li>
+      <li><strong>Emphasizing upstream → downstream flow</strong> — Tracking the origin of decision-making</li>
+      <li><strong>Making perspective explicit</strong> — Always showing from which standpoint we observe</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3-Axis Thinking Framework</h2>
+    <p>
+      All analyses on this site assume the following three axes:
+    </p>
+
+    <div class="framework">
+      <div class="axis">
+        <h3>Product</h3>
+        <p>Value hypothesis, users, desired experience</p>
+      </div>
+
+      <div class="axis">
+        <h3>Engineering</h3>
+        <p>Technology choices, design decisions, implementation feasibility</p>
+      </div>
+
+      <div class="axis">
+        <h3>Organization / Architecture</h3>
+        <p>Organizational structure, operations, governance, sustainability</p>
+      </div>
+    </div>
+
+    <p>
+      All articles and analyses implicitly or explicitly address:<br />
+      <strong>Where and what kind of trade-offs occur along these three axes</strong>
+    </p>
+  </section>
+
+  <section>
+    <h2>Relationship with CNCF</h2>
+    <ul>
+      <li>SIG / WG / Projects are viewed as <strong>decision-making maturity levels</strong>, not technical classifications</li>
+      <li>Projects are analyzed as <strong>results of multiple constraints and compromises</strong>, not as finished products</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What This Site Aims For</h2>
+    <p>
+      Upstream Lens is not a site that presents the correct answers.<br />
+      It is <strong>a lens for establishing thinking frameworks</strong>.
+    </p>
+    <p>
+      What readers should take away from this site:
+    </p>
+    <ul>
+      <li>An upstream perspective</li>
+      <li>A viewpoint to read other technical articles and discussions from different angles</li>
+      <li>A framework to articulate decision-making structures</li>
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .framework {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .framework {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

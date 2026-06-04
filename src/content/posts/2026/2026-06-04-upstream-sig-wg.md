@@ -4,7 +4,7 @@ description: "CNCF upstream activity from sig-wg"
 pubDate: 2026-06-04
 category: "Notes"
 tags: ["upstream", "CNCF", "SIG", "meeting-notes", "community", "sig-network", "KEP", "proposal", "kubernetes"]
-draft: "false"
+draft: false
 ---
 
 ## Overview

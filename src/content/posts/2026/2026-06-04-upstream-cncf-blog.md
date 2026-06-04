@@ -4,7 +4,7 @@ description: "CNCF upstream activity from cncf-blog"
 pubDate: 2026-06-04
 category: "Notes"
 tags: ["upstream", "CNCF", "blog", "kubernetes", "security", "kubecon", "cloudnativecon", "prometheus", "cilium"]
-draft: "false"
+draft: false
 ---
 
 ## Overview

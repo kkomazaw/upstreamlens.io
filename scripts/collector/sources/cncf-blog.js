@@ -1,11 +1,11 @@
-import fetch from 'node-fetch';
-import * as cheerio from 'cheerio';
+import Parser from 'rss-parser';
 import { subDays, parseISO, isAfter } from 'date-fns';
 
 export class CNCFBlogCollector {
   constructor(config) {
     this.config = config;
     this.name = 'CNCF Blog';
+    this.parser = new Parser();
   }
 
   async collect() {
@@ -13,20 +13,44 @@ export class CNCFBlogCollector {
     const since = subDays(new Date(), this.config.lookbackDays);
 
     try {
-      console.log(`  • Fetching CNCF blog posts...`);
+      console.log(`  • Fetching CNCF blog RSS feed...`);
 
-      // Fetch the blog page
-      const response = await fetch(this.config.url);
-      const html = await response.text();
+      // Use RSS feed instead of web scraping
+      const feed = await this.parser.parseURL('https://www.cncf.io/feed/');
 
-      // Parse HTML
-      const $ = cheerio.load(html);
+      for (const entry of feed.items) {
+        try {
+          // Parse publication date (use isoDate for proper parsing)
+          const pubDate = entry.isoDate ? new Date(entry.isoDate) : null;
 
-      // Find blog post entries
-      const posts = this.extractPosts($, since);
-      items.push(...posts);
+          // Filter by date if available
+          if (!pubDate || isAfter(pubDate, since)) {
+            // Extract description (remove HTML tags for cleaner text)
+            const description = this.stripHtml(entry.contentSnippet || entry.content || '');
 
-      console.log(`  ✓ Found ${posts.length} recent blog posts`);
+            items.push({
+              source: 'cncf-blog',
+              type: 'blog-post',
+              title: `CNCF Blog: ${entry.title}`,
+              description: this.truncate(description, 400),
+              url: entry.link,
+              tags: ['CNCF', 'blog', ...this.extractTags(entry.title, description), ...this.extractCategories(entry)],
+              metadata: {
+                Published: pubDate ? pubDate.toISOString().split('T')[0] : 'Recent',
+                Source: 'CNCF Official Blog',
+                Author: entry.creator || 'CNCF'
+              },
+              stars: 1000, // High priority for official CNCF content
+              priority: this.determinePriority(entry.title, description)
+            });
+          }
+        } catch (error) {
+          // Skip this entry if parsing fails
+          console.error(`  ✗ Error parsing entry: ${error.message}`);
+        }
+      }
+
+      console.log(`  ✓ Found ${items.length} recent blog posts`);
     } catch (error) {
       console.error(`  ✗ Error fetching CNCF blog:`, error.message);
     }
@@ -34,63 +58,31 @@ export class CNCFBlogCollector {
     return items;
   }
 
-  extractPosts($, since) {
-    const posts = [];
+  extractCategories(entry) {
+    const categories = [];
 
-    // CNCF blog structure (adjust selectors as needed)
-    // This is a generic implementation that may need adjustment
-    $('article, .post, .blog-post').each((i, elem) => {
-      try {
-        const $elem = $(elem);
+    // RSS entries often have categories
+    if (entry.categories && Array.isArray(entry.categories)) {
+      categories.push(...entry.categories.map(c => c.toLowerCase()));
+    }
 
-        // Extract title
-        const titleElem = $elem.find('h2, h3, .entry-title, .post-title').first();
-        const title = titleElem.text().trim();
+    return categories;
+  }
 
-        // Extract link
-        const linkElem = titleElem.find('a').first();
-        const url = linkElem.attr('href') || $elem.find('a').first().attr('href');
+  determinePriority(title, description) {
+    const text = (title + ' ' + description).toLowerCase();
 
-        // Extract date
-        const dateElem = $elem.find('time, .date, .post-date').first();
-        let dateStr = dateElem.attr('datetime') || dateElem.text().trim();
+    const highPriorityKeywords = [
+      'graduation',
+      'incubation',
+      'security',
+      'breaking',
+      'kubecon',
+      'announcement',
+      'release'
+    ];
 
-        // Extract excerpt/description
-        const descElem = $elem.find('.excerpt, .entry-summary, p').first();
-        const description = descElem.text().trim();
-
-        if (title && url) {
-          // Try to parse date
-          let publishDate = null;
-          try {
-            publishDate = dateStr ? parseISO(dateStr.split('T')[0]) : null;
-          } catch (e) {
-            // If date parsing fails, include the post anyway
-          }
-
-          // Filter by date if available
-          if (!publishDate || isAfter(publishDate, since)) {
-            posts.push({
-              source: 'cncf-blog',
-              type: 'blog-post',
-              title: `CNCF Blog: ${title}`,
-              description: this.truncate(description, 400),
-              url: url.startsWith('http') ? url : `https://www.cncf.io${url}`,
-              tags: ['CNCF', 'blog', ...this.extractTags(title, description)],
-              metadata: {
-                Published: dateStr || 'Recent',
-                Source: 'CNCF Official Blog'
-              },
-              stars: 1000 // High priority for official CNCF content
-            });
-          }
-        }
-      } catch (error) {
-        // Skip this post if parsing fails
-      }
-    });
-
-    return posts;
+    return highPriorityKeywords.some(keyword => text.includes(keyword)) ? 'high' : 'normal';
   }
 
   extractTags(title, description) {
@@ -101,7 +93,8 @@ export class CNCFBlogCollector {
     const projects = [
       'kubernetes', 'prometheus', 'envoy', 'containerd', 'fluentd',
       'jaeger', 'vitess', 'tikv', 'etcd', 'coredns', 'rook', 'harbor',
-      'helm', 'argo', 'linkerd', 'istio', 'cilium', 'falco'
+      'helm', 'argo', 'linkerd', 'istio', 'cilium', 'falco', 'flux',
+      'backstage', 'crossplane', 'dapr', 'knative', 'kyverno'
     ];
 
     projects.forEach(project => {
@@ -113,7 +106,7 @@ export class CNCFBlogCollector {
     // Important keywords
     const keywords = [
       'graduation', 'incubation', 'sandbox', 'security', 'release',
-      'kubecon', 'cloudnativecon', 'survey', 'announcement'
+      'kubecon', 'cloudnativecon', 'survey', 'announcement', 'webinar'
     ];
 
     keywords.forEach(keyword => {
@@ -123,6 +116,20 @@ export class CNCFBlogCollector {
     });
 
     return tags;
+  }
+
+  stripHtml(html) {
+    if (!html) return '';
+    // Basic HTML tag removal
+    return html
+      .replace(/<[^>]*>/g, '')
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .trim();
   }
 
   truncate(text, maxLength) {

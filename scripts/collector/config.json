@@ -15,7 +15,7 @@
     "cncfBlog": {
       "enabled": true,
       "url": "https://www.cncf.io/blog/",
-      "lookbackDays": 1
+      "lookbackDays": 7
     },
     "sigWgMeetingNotes": {
       "enabled": true,

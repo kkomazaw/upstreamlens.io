@@ -152,7 +152,7 @@ class UpstreamCollector {
       .map(([key, value]) => {
         if (key === 'tags') {
           return `${key}: [${value.map(t => `"${t}"`).join(', ')}]`;
-        } else if (key === 'pubDate') {
+        } else if (key === 'pubDate' || key === 'draft') {
           return `${key}: ${value}`;
         }
         return `${key}: "${value}"`;

@@ -1,0 +1,17 @@
+{
+  "name": "cncf-upstream-collector",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Daily CNCF upstream information collector daemon",
+  "scripts": {
+    "collect": "node index.js",
+    "test": "node index.js --dry-run"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.0.0",
+    "date-fns": "^4.1.0",
+    "node-fetch": "^3.3.2",
+    "cheerio": "^1.0.0",
+    "js-yaml": "^4.1.0"
+  }
+}

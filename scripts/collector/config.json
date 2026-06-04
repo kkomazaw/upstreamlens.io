@@ -1,0 +1,48 @@
+{
+  "sources": {
+    "github": {
+      "enabled": true,
+      "organizations": [
+        "kubernetes",
+        "prometheus",
+        "envoyproxy",
+        "containerd",
+        "cncf"
+      ],
+      "eventTypes": ["release", "issue", "pull_request"],
+      "lookbackDays": 1
+    },
+    "cncfBlog": {
+      "enabled": true,
+      "url": "https://www.cncf.io/blog/",
+      "lookbackDays": 1
+    },
+    "sigWgMeetingNotes": {
+      "enabled": true,
+      "repositories": [
+        "kubernetes/community",
+        "kubernetes/enhancements"
+      ],
+      "lookbackDays": 7
+    }
+  },
+  "output": {
+    "directory": "../../src/content/posts",
+    "category": "Notes",
+    "autoTag": true
+  },
+  "filters": {
+    "minStars": 100,
+    "excludeLabels": ["duplicate", "invalid"],
+    "importantKeywords": [
+      "graduation",
+      "incubation",
+      "proposal",
+      "KEP",
+      "RFC",
+      "breaking change",
+      "deprecation",
+      "security"
+    ]
+  }
+}

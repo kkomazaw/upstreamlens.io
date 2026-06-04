@@ -81,6 +81,29 @@ draft: false
 - `Curation` - 外部情報の整理と解釈
 - `Meta` - コミュニティ構造や進化の考察
 
+## Automated Collection
+
+このサイトには、CNCFのアップストリーム情報を自動収集するデーモンシステムが組み込まれています。
+
+### 収集対象
+
+- **GitHub Activity**: CNCF組織の重要なIssue、PR、Releaseを毎日収集
+- **CNCF Blog**: 公式ブログの最新投稿を収集
+- **SIG/WG Meeting Notes**: KubernetesやCNCFのSIG/WGミーティング議事録を収集
+
+### 実行スケジュール
+
+GitHub Actionsにより、毎日午前9時(JST)に自動実行されます。
+
+手動で実行する場合：
+1. GitHubリポジトリの「Actions」タブに移動
+2. 「Collect CNCF Upstream Data」を選択
+3. 「Run workflow」をクリック
+
+### 詳細
+
+コレクターの詳細については、[scripts/collector/README.md](scripts/collector/README.md)を参照してください。
+
 ## Deployment
 
 このサイトは GitHub Actions により自動的に GitHub Pages にデプロイされます。

@@ -43,14 +43,18 @@ jobs:
       - name: Check for changes
         id: git-check
         run: |
-          git diff --exit-code || echo "changes=true" >> $GITHUB_OUTPUT
+          git add src/content/posts/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Commit and push changes
         if: steps.git-check.outputs.changes == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add src/content/posts/
           git commit -m "chore: Daily CNCF upstream collection $(date +'%Y-%m-%d')
 
           🤖 Generated with [Claude Code](https://claude.com/claude-code)

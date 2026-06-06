@@ -10,6 +10,7 @@ export const ui = {
     // Navigation
     'nav.home': 'Home',
     'nav.posts': 'Posts',
+    'nav.stories': 'Stories',
     'nav.about': 'About',
     'nav.philosophy': 'Philosophy',
     'nav.howToRead': 'How to Read',
@@ -64,11 +65,22 @@ export const ui = {
     // Common
     'common.readMore': '続きを読む',
     'common.backToList': '記事一覧に戻る',
+
+    // Stories
+    'stories.title': 'Stories',
+    'stories.subtitle': 'Upstream活動を通じて得た経験と洞察',
+    'stories.latest': '最新のStories',
+    'stories.viewAll': 'すべてのStoriesを見る',
+    'stories.category.experience': '実体験',
+    'stories.category.reflection': '内省',
+    'stories.category.behindTheScenes': '舞台裏',
+    'stories.category.fiction': '創作',
   },
   en: {
     // Navigation
     'nav.home': 'Home',
     'nav.posts': 'Posts',
+    'nav.stories': 'Stories',
     'nav.about': 'About',
     'nav.philosophy': 'Philosophy',
     'nav.howToRead': 'How to Read',
@@ -123,5 +135,15 @@ export const ui = {
     // Common
     'common.readMore': 'Read more',
     'common.backToList': 'Back to list',
+
+    // Stories
+    'stories.title': 'Stories',
+    'stories.subtitle': 'Experiences and insights from Upstream activities',
+    'stories.latest': 'Latest Stories',
+    'stories.viewAll': 'View all Stories',
+    'stories.category.experience': 'Experience',
+    'stories.category.reflection': 'Reflection',
+    'stories.category.behindTheScenes': 'Behind the Scenes',
+    'stories.category.fiction': 'Fiction',
   },
 } as const;

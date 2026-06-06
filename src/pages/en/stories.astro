@@ -1,0 +1,238 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const allStories = await getCollection('stories', ({ data }) => {
+  return data.draft !== true;
+});
+
+const sortedStories = allStories.sort((a, b) =>
+  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const storiesByCategory = sortedStories.reduce((acc, story) => {
+  const category = story.data.category;
+  if (!acc[category]) {
+    acc[category] = [];
+  }
+  acc[category].push(story);
+  return acc;
+}, {} as Record<string, typeof sortedStories>);
+
+const categories = ['Experience', 'Reflection', 'Behind the Scenes', 'Fiction'] as const;
+---
+
+<BaseLayout title="Stories | Upstream Lens">
+  <h1>Stories</h1>
+  <p class="page-subtitle">Experiences and insights from Upstream activities</p>
+
+  {sortedStories.length === 0 ? (
+    <section class="empty-state">
+      <p>No stories have been published yet.</p>
+      <p>Stories will be published progressively as they are ready.</p>
+    </section>
+  ) : (
+    <>
+      <section class="all-stories">
+        <h2>Latest Stories</h2>
+        <ul class="story-list">
+          {sortedStories.map(story => (
+            <li>
+              <article class="story-preview">
+                <h3>
+                  <a href={`/en/stories/${story.slug}`}>{story.data.title}</a>
+                </h3>
+                <div class="story-meta">
+                  <time datetime={story.data.pubDate.toISOString()}>
+                    {story.data.pubDate.toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </time>
+                  <span class="category">{story.data.category}</span>
+                </div>
+                <p class="description">{story.data.description}</p>
+              </article>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="by-category">
+        <h2>By Category</h2>
+        {categories.map(category => {
+          const stories = storiesByCategory[category];
+          if (!stories || stories.length === 0) return null;
+
+          return (
+            <div class="category-section">
+              <h3>{category}</h3>
+              <ul class="story-list">
+                {stories.map(story => (
+                  <li>
+                    <a href={`/en/stories/${story.slug}`}>{story.data.title}</a>
+                    <time datetime={story.data.pubDate.toISOString()}>
+                      {story.data.pubDate.toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'numeric',
+                        day: 'numeric'
+                      })}
+                    </time>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </section>
+    </>
+  )}
+</BaseLayout>
+
+<style>
+  .page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin: -1rem 0 2rem 0;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--text-secondary);
+  }
+
+  .all-stories,
+  .by-category {
+    margin: 3rem 0;
+  }
+
+  .story-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .story-preview {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .story-preview:last-child {
+    border-bottom: none;
+  }
+
+  .story-preview h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+  }
+
+  .story-preview h3 a {
+    color: var(--heading-color);
+    text-decoration: none;
+  }
+
+  .story-preview h3 a:hover {
+    color: var(--accent-color);
+  }
+
+  .story-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+  }
+
+  .category {
+    background-color: var(--code-bg);
+    padding: 0.25rem 0.75rem;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+
+  .description {
+    color: var(--text-color);
+    margin: 0;
+  }
+
+  .category-section {
+    margin: 2rem 0;
+  }
+
+  .category-section h3 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+  }
+
+  .category-section .story-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .category-section .story-list li:last-child {
+    border-bottom: none;
+  }
+
+  .category-section .story-list a {
+    flex: 1;
+  }
+
+  .category-section .story-list time {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    margin-left: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .all-stories,
+    .by-category {
+      margin: 2rem 0;
+    }
+
+    .story-preview {
+      padding: 1.25rem 0;
+    }
+
+    .story-preview h3 {
+      font-size: 1.25rem;
+    }
+
+    .story-meta {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .category-section .story-list li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+      padding: 1rem 0;
+    }
+
+    .category-section .story-list time {
+      margin-left: 0;
+      font-size: 0.8125rem;
+    }
+
+    .category-section .story-list a {
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .story-preview h3 {
+      font-size: 1.125rem;
+    }
+
+    .description {
+      font-size: 0.9rem;
+    }
+  }
+</style>

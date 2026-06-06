@@ -1,9 +1,22 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { useTranslations } from '../../i18n/utils';
 
 const lang = 'en';
 const t = useTranslations(lang);
+
+// Get latest posts and stories
+const allPosts = await getCollection('posts', ({ data }) => data.draft !== true);
+const allStories = await getCollection('stories', ({ data }) => data.draft !== true);
+
+const latestPosts = allPosts
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+
+const latestStories = allStories
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 2);
 ---
 
 <BaseLayout title="Upstream Lens - Seeing decisions before code is written">
@@ -15,33 +28,13 @@ const t = useTranslations(lang);
         <span class="title-accent">.</span>
       </h1>
       <p class="hero-tagline">{t('hero.tagline')}</p>
-      <p class="hero-description">
-        {t('hero.description')}
-      </p>
       <div class="hero-cta">
         <a href="/en/philosophy" class="cta-primary">{t('hero.cta.philosophy')}</a>
         <a href="/en/posts" class="cta-secondary">{t('hero.cta.posts')}</a>
+        <a href="/en/stories" class="cta-secondary">Stories</a>
       </div>
     </div>
   </div>
-
-  <section class="value-props">
-    <div class="value-prop-card">
-      <div class="card-icon">🔍</div>
-      <h3>{t('value.structure.title')}</h3>
-      <p>{t('value.structure.desc')}</p>
-    </div>
-    <div class="value-prop-card">
-      <div class="card-icon">🧭</div>
-      <h3>{t('value.context.title')}</h3>
-      <p>{t('value.context.desc')}</p>
-    </div>
-    <div class="value-prop-card">
-      <div class="card-icon">⚖️</div>
-      <h3>{t('value.perspective.title')}</h3>
-      <p>{t('value.perspective.desc')}</p>
-    </div>
-  </section>
 
   <section class="framework-section">
     <div class="section-header">
@@ -94,32 +87,61 @@ const t = useTranslations(lang);
     </div>
   </section>
 
-  <section class="getting-started">
-    <h2>{t('gettingStarted.title')}</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-number">1</div>
-        <div class="step-content">
-          <h3><a href="/en/philosophy">{t('gettingStarted.step1.title')}</a></h3>
-          <p>{t('gettingStarted.step1.desc')}</p>
+  {(latestPosts.length > 0 || latestStories.length > 0) && (
+    <section class="latest-content">
+      <h2>Latest Content</h2>
+
+      {latestPosts.length > 0 && (
+        <div class="content-section">
+          <h3>
+            <a href="/en/posts" class="section-title">Posts</a>
+          </h3>
+          <ul class="content-list">
+            {latestPosts.map(post => (
+              <li>
+                <a href={`/en/posts/${post.slug}`} class="content-item">
+                  <span class="item-title">{post.data.title}</span>
+                  <span class="item-date">
+                    {post.data.pubDate.toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'numeric',
+                      day: 'numeric'
+                    })}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a href="/en/posts" class="view-all">View all Posts →</a>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-number">2</div>
-        <div class="step-content">
-          <h3><a href="/en/how-to-read">{t('gettingStarted.step2.title')}</a></h3>
-          <p>{t('gettingStarted.step2.desc')}</p>
+      )}
+
+      {latestStories.length > 0 && (
+        <div class="content-section">
+          <h3>
+            <a href="/en/stories" class="section-title">Stories</a>
+          </h3>
+          <ul class="content-list">
+            {latestStories.map(story => (
+              <li>
+                <a href={`/en/stories/${story.slug}`} class="content-item">
+                  <span class="item-title">{story.data.title}</span>
+                  <span class="item-date">
+                    {story.data.pubDate.toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'numeric',
+                      day: 'numeric'
+                    })}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a href="/en/stories" class="view-all">View all Stories →</a>
         </div>
-      </div>
-      <div class="step">
-        <div class="step-number">3</div>
-        <div class="step-content">
-          <h3><a href="/en/posts">{t('gettingStarted.step3.title')}</a></h3>
-          <p>{t('gettingStarted.step3.desc')}</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      )}
+    </section>
+  )}
 
   <section class="status-banner">
     <div class="status-content">
@@ -133,7 +155,7 @@ const t = useTranslations(lang);
 </BaseLayout>
 
 <style>
-  /* Same styles as Japanese version */
+  /* Hero Section */
   .hero {
     position: relative;
     text-align: center;
@@ -186,13 +208,6 @@ const t = useTranslations(lang);
     font-weight: 500;
   }
 
-  .hero-description {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    color: var(--text-color);
-    line-height: 1.7;
-    margin: 0 0 2.5rem 0;
-  }
-
   .hero-cta {
     display: flex;
     gap: 1rem;
@@ -233,45 +248,7 @@ const t = useTranslations(lang);
     transform: translateY(-2px);
   }
 
-  .value-props {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin: 4rem 0;
-  }
-
-  .value-prop-card {
-    padding: 2rem;
-    background: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    transition: all 0.3s ease;
-  }
-
-  .value-prop-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    border-color: var(--accent-color);
-  }
-
-  .card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .value-prop-card h3 {
-    margin: 0 0 0.75rem 0;
-    font-size: 1.25rem;
-    color: var(--heading-color);
-  }
-
-  .value-prop-card p {
-    margin: 0;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    font-size: 0.95rem;
-  }
-
+  /* Framework Section */
   .framework-section {
     margin: 5rem 0;
     padding: 3rem 0;
@@ -408,74 +385,93 @@ const t = useTranslations(lang);
     transform: translateX(4px);
   }
 
-  .getting-started {
+  /* Latest Content */
+  .latest-content {
     margin: 5rem 0;
   }
 
-  .getting-started h2 {
+  .latest-content > h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 3rem;
+    border-bottom: none;
   }
 
-  .steps {
-    display: grid;
-    gap: 1.5rem;
-    max-width: 600px;
-    margin: 0 auto;
+  .content-section {
+    margin: 3rem 0;
   }
 
-  .step {
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
-    padding: 1.5rem;
-    background: white;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    transition: all 0.3s ease;
+  .content-section h3 {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
   }
 
-  .step:hover {
-    border-color: var(--accent-color);
-    box-shadow: 0 4px 16px rgba(0, 102, 204, 0.1);
-  }
-
-  .step-number {
-    flex-shrink: 0;
-    width: 2.5rem;
-    height: 2.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.125rem;
-  }
-
-  .step-content h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.25rem;
-  }
-
-  .step-content h3 a {
+  .section-title {
     color: var(--heading-color);
     text-decoration: none;
-    transition: color 0.2s ease;
   }
 
-  .step-content h3 a:hover {
+  .section-title:hover {
     color: var(--accent-color);
   }
 
-  .step-content p {
-    margin: 0;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
+  .content-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
   }
 
+  .content-list li {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .content-list li:last-child {
+    border-bottom: none;
+  }
+
+  .content-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.2s ease;
+  }
+
+  .content-item:hover {
+    color: var(--accent-color);
+    padding-left: 0.5rem;
+  }
+
+  .item-title {
+    flex: 1;
+    font-weight: 500;
+  }
+
+  .item-date {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    margin-left: 1rem;
+  }
+
+  .view-all {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: gap 0.3s ease;
+  }
+
+  .view-all:hover {
+    text-decoration: underline;
+  }
+
+  /* Status Banner */
   .status-banner {
     margin: 4rem 0 2rem;
     padding: 2rem;
@@ -508,20 +504,45 @@ const t = useTranslations(lang);
     font-size: 0.95rem;
   }
 
+  /* Responsive */
   @media (max-width: 768px) {
     .hero {
       padding: 3rem 0 2rem;
       margin: -3rem -1rem 3rem;
     }
 
-    .value-props {
+    .framework-grid {
       grid-template-columns: 1fr;
       gap: 1.5rem;
     }
 
-    .framework-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+    .latest-content {
+      margin: 3rem 0;
+    }
+
+    .latest-content > h2 {
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .content-section {
+      margin: 2rem 0;
+    }
+
+    .content-section h3 {
+      font-size: 1.25rem;
+    }
+
+    .content-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+      padding: 0.875rem 0;
+    }
+
+    .item-date {
+      margin-left: 0;
+      font-size: 0.8125rem;
     }
 
     .status-content {

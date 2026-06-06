@@ -8,12 +8,10 @@ const langPrefix = lang === 'ja' ? '' : '/en';
 
 const navItems = [
   { href: `${langPrefix}/`, label: t('nav.home') },
-  { href: `${langPrefix}/posts`, label: t('nav.posts') },
-  { href: `${langPrefix}/about`, label: t('nav.about') },
   { href: `${langPrefix}/philosophy`, label: t('nav.philosophy') },
-  { href: `${langPrefix}/how-to-read`, label: t('nav.howToRead') },
-  { href: `${langPrefix}/disclaimer`, label: t('nav.disclaimer') },
-  { href: `${langPrefix}/author`, label: t('nav.author') },
+  { href: `${langPrefix}/posts`, label: t('nav.posts') },
+  { href: `${langPrefix}/stories`, label: t('nav.stories') },
+  { href: `${langPrefix}/about`, label: t('nav.about') },
 ];
 
 function isActive(href: string, currentPath: string): boolean {

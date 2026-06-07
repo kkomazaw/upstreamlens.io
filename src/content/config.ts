@@ -9,6 +9,15 @@ const postsCollection = defineCollection({
     category: z.enum(['Philosophy', 'Notes', 'Analysis', 'Curation', 'Meta']),
     tags: z.array(z.string()).optional(),
     draft: z.boolean().default(false),
+
+    // 4層分類（複数選択可）
+    layers: z.array(z.enum(['trends', 'discourse', 'implementation', 'impact'])).optional(),
+
+    // 動向の領域（trendsの場合）
+    trendDomains: z.array(z.enum(['business', 'academic', 'regulatory', 'social'])).optional(),
+
+    // 3軸での主要な視点
+    primaryAxis: z.enum(['product', 'engineering', 'organization']).optional(),
   }),
 });
 

@@ -32,11 +32,22 @@ const categories = ['Philosophy', 'Notes', 'Analysis', 'Curation', 'Meta'] as co
     </section>
   ) : (
     <>
+      <section class="filter-section">
+        <h2>4層で絞り込む</h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-layer="all">全て</button>
+          <button class="filter-btn" data-layer="trends">📊 Trends</button>
+          <button class="filter-btn" data-layer="discourse">💬 Discourse</button>
+          <button class="filter-btn" data-layer="implementation">⚙️ Implementation</button>
+          <button class="filter-btn" data-layer="impact">🔄 Impact</button>
+        </div>
+      </section>
+
       <section class="all-posts">
         <h2>最新記事</h2>
         <ul class="post-list">
           {sortedPosts.map(post => (
-            <li>
+            <li class="post-item" data-layers={post.data.layers?.join(',') || ''}>
               <article class="post-preview">
                 <h3>
                   <a href={`/posts/${post.slug}`}>{post.data.title}</a>
@@ -50,6 +61,18 @@ const categories = ['Philosophy', 'Notes', 'Analysis', 'Curation', 'Meta'] as co
                     })}
                   </time>
                   <span class="category">{post.data.category}</span>
+                  {post.data.layers && post.data.layers.length > 0 && (
+                    <span class="layers">
+                      {post.data.layers.map(layer => (
+                        <span class={`layer-tag ${layer}`}>
+                          {layer === 'trends' && '📊'}
+                          {layer === 'discourse' && '💬'}
+                          {layer === 'implementation' && '⚙️'}
+                          {layer === 'impact' && '🔄'}
+                        </span>
+                      ))}
+                    </span>
+                  )}
                 </div>
                 <p class="description">{post.data.description}</p>
               </article>
@@ -228,4 +251,108 @@ const categories = ['Philosophy', 'Notes', 'Analysis', 'Curation', 'Meta'] as co
       font-size: 0.9rem;
     }
   }
+
+  /* Filter Section */
+  .filter-section {
+    margin: 2rem 0 3rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.03) 0%, rgba(118, 75, 162, 0.03) 100%);
+    border-radius: 12px;
+  }
+
+  .filter-section h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    border-bottom: none;
+  }
+
+  .filter-buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 0.625rem 1.25rem;
+    border: 2px solid var(--border-color);
+    background: white;
+    border-radius: 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .filter-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+    transform: translateY(-2px);
+  }
+
+  .filter-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+  }
+
+  /* Layer Tags */
+  .layers {
+    display: inline-flex;
+    gap: 0.375rem;
+    margin-left: 0.5rem;
+  }
+
+  .layer-tag {
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+
+  /* Post Item Hidden State */
+  .post-item.hidden {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .filter-buttons {
+      gap: 0.5rem;
+    }
+
+    .filter-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+    }
+  }
 </style>
+
+<script>
+  // Layer filter functionality
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const postItems = document.querySelectorAll('.post-item');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const selectedLayer = button.getAttribute('data-layer');
+
+      // Update active button
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      // Filter posts
+      postItems.forEach(item => {
+        const itemLayers = item.getAttribute('data-layers');
+
+        if (selectedLayer === 'all') {
+          item.classList.remove('hidden');
+        } else {
+          if (itemLayers && itemLayers.includes(selectedLayer)) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        }
+      });
+    });
+  });
+</script>

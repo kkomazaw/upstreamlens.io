@@ -59,6 +59,65 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <section>
+    <h2>流れで読む：4つの層</h2>
+    <p>
+      Upstream Lens の記事は、ソフトウェアが生まれる過程を <strong>4つの層</strong> で構造化しています。
+    </p>
+
+    <div class="layer-guide">
+      <div class="guide-item">
+        <h3>📊 Trends（動向）</h3>
+        <p class="guide-subtitle">世の中で何が起きているか</p>
+        <p>
+          ビジネス、学術、規制、社会の動向を観察します。
+        </p>
+        <p class="guide-howto">
+          <strong>読み方：</strong>「なぜ今これが問題なのか」を理解する
+        </p>
+      </div>
+
+      <div class="guide-item">
+        <h3>💬 Discourse（集合知）</h3>
+        <p class="guide-subtitle">コミュニティで何が議論されているか</p>
+        <p>
+          RFC、SIG/WG、標準化の議論を追います。
+        </p>
+        <p class="guide-howto">
+          <strong>読み方：</strong>「どんなアプローチが提案されているか」を把握する
+        </p>
+      </div>
+
+      <div class="guide-item">
+        <h3>⚙️ Implementation（実装）</h3>
+        <p class="guide-subtitle">何がソフトウェアとして実装されたか</p>
+        <p>
+          OSS プロジェクト、ツール、プロトコルを見ます。
+        </p>
+        <p class="guide-howto">
+          <strong>読み方：</strong>「どう妥協し、何を選んだか」を分析する
+        </p>
+      </div>
+
+      <div class="guide-item">
+        <h3>🔄 Impact（影響）</h3>
+        <p class="guide-subtitle">実装されたものが何をもたらしたか</p>
+        <p>
+          フィードバック、新たな課題を観察します。
+        </p>
+        <p class="guide-howto">
+          <strong>読み方：</strong>「次のサイクルにどう繋がるか」を考える
+        </p>
+      </div>
+    </div>
+
+    <p class="layer-note">
+      <strong>循環として理解する：</strong><br />
+      技術は直線的ではなく、循環します。動向（問題認識）→ 集合知（議論・収束）→ 実装（ソフトウェア化）→ 影響（新たな課題）→ 再び動向へ。<br />
+      特定のトピックを追うときは、この4層をセットで読むことを推奨します。
+    </p>
+  </section>
+
+  <section>
     <h2>3軸フレームワークの使い方</h2>
     <p>
       本サイトの記事は、以下の3軸を前提として構造化されています：
@@ -85,3 +144,56 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </ol>
   </section>
 </BaseLayout>
+
+<style>
+  .layer-guide {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .guide-item {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    border-left: 4px solid #667eea;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .guide-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #667eea;
+    font-size: 1.25rem;
+  }
+
+  .guide-subtitle {
+    font-style: italic;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .guide-howto {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  .layer-note {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border-radius: 8px;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 768px) {
+    .layer-guide {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

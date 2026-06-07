@@ -3,78 +3,420 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Philosophy | Upstream Lens">
-  <h1>Philosophy</h1>
+  <article class="philosophy">
+    <h1>Philosophy</h1>
+    <p class="subtitle">Upstream Lens の編集哲学</p>
 
-  <section>
-    <h2>編集方針</h2>
-    <ul>
-      <li><strong>中立を装わない</strong> — 筆者の視点を先に固定する</li>
-      <li><strong>事実と解釈を分離する</strong> — Facts と Interpretation を明確に区別する</li>
-      <li><strong>upstream → downstream の流れを重視する</strong> — 意思決定の起点を追う</li>
-      <li><strong>視点を明示する</strong> — どの立場から見ているかを常に示す</li>
-    </ul>
-  </section>
+    <section id="what-is-upstream">
+      <h2>Upstream とは何か</h2>
+      <p>
+        Upstream Lens における <strong>Upstream</strong> とは、
+        CNCF や OSS コミュニティといった技術コミュニティだけを指すのではない。
+      </p>
+      <p>それは、</p>
+      <ul>
+        <li>ビジネストレンドと投資動向</li>
+        <li>技術研究と学術的知見</li>
+        <li>規制と標準化の動き</li>
+        <li>社会構造と組織文化の変化</li>
+      </ul>
+      <p>
+        といった、<strong>世の中のあらゆる動向</strong>を包含する。
+      </p>
+      <p>
+        これらは単独では「情報」に過ぎないが、<br />
+        <strong>コミュニティという場で集合知として結晶化し、ソフトウェアとして具現化される</strong>。
+      </p>
+      <p>Upstream Lens は、この連鎖的なダイナミズムを追いかける。</p>
+    </section>
 
-  <section>
-    <h2>3軸の思考フレームワーク</h2>
-    <p>
-      本サイトのすべての分析は、以下の3軸を前提とします：
-    </p>
+    <section id="why-upstream">
+      <h2>なぜ Upstream なのか</h2>
+      <p>ソフトウェアは突然生まれない。</p>
+      <ul>
+        <li>ある技術が採用されるのは、先行する問題認識があったから</li>
+        <li>あるアーキテクチャが選択されるのは、組織構造や市場動向に適合したから</li>
+        <li>ある標準が策定されるのは、多様な試みが収束したから</li>
+      </ul>
+      <p>
+        <strong>結果だけを見ても、その背景にある意思決定の構造は見えない</strong>。
+      </p>
+      <p>
+        Upstream Lens は、<br />
+        「なぜそれが選ばれたのか」<br />
+        「なぜそのタイミングだったのか」<br />
+        「何が見送られたのか」<br />
+        を理解するために、<strong>流れの上流を観察する</strong>。
+      </p>
+    </section>
 
-    <div class="framework">
-      <div class="axis">
-        <h3>Product</h3>
-        <p>価値仮説、ユーザー、提供したい体験</p>
+    <section id="four-layers">
+      <h2>何を観察するのか</h2>
+      <p>Upstream Lens は、ソフトウェアが生まれる過程を <strong>4つの層</strong> で捉える。</p>
+
+      <div class="layers">
+        <div class="layer">
+          <div class="layer-icon">📊</div>
+          <h3>1. Trends（動向）</h3>
+          <p class="layer-subtitle">先行指標としての Upstream</p>
+          <div class="layer-content">
+            <p><strong>観察対象：</strong></p>
+            <ul>
+              <li><strong>ビジネス</strong> - スタートアップの資金調達、企業戦略、M&A、市場の課題認識</li>
+              <li><strong>技術研究</strong> - 論文、学術会議、新しい理論やアルゴリズム、パラダイムシフト</li>
+              <li><strong>規制・標準</strong> - 法規制、業界標準、ガバナンス要件、コンプライアンス</li>
+              <li><strong>社会・文化</strong> - リモートワーク、DevOps文化、組織デザイン、エンジニア採用市場</li>
+            </ul>
+            <p class="layer-essence">
+              これらは <strong>「こうなるべき」という集合的な意思</strong> の表れである。
+            </p>
+          </div>
+        </div>
+
+        <div class="layer-arrow">↓</div>
+
+        <div class="layer">
+          <div class="layer-icon">💬</div>
+          <h3>2. Discourse（集合知）</h3>
+          <p class="layer-subtitle">コミュニティでの収束</p>
+          <div class="layer-content">
+            <p><strong>議論の場：</strong></p>
+            <ul>
+              <li>CNCF SIG/WG</li>
+              <li>標準化団体（W3C, IETF, etc.）</li>
+              <li>OSS コミュニティ</li>
+              <li>カンファレンス、RFC、提案書</li>
+            </ul>
+            <p><strong>ここで起きること：</strong></p>
+            <ul>
+              <li>問題の共通認識化</li>
+              <li>解決アプローチの収束</li>
+              <li>トレードオフの明文化</li>
+              <li>合意形成と標準化</li>
+            </ul>
+            <p class="layer-essence">
+              <strong>多様な試みが、ベストプラクティスやパターンとして結晶化する過程</strong> である。
+            </p>
+          </div>
+        </div>
+
+        <div class="layer-arrow">↓</div>
+
+        <div class="layer">
+          <div class="layer-icon">⚙️</div>
+          <h3>3. Implementation（実装）</h3>
+          <p class="layer-subtitle">ソフトウェアとしての具現化</p>
+          <div class="layer-content">
+            <p><strong>具現化の形：</strong></p>
+            <ul>
+              <li>OSS プロジェクト</li>
+              <li>仕様とプロトコル</li>
+              <li>フレームワークとツール</li>
+              <li>プラットフォーム</li>
+            </ul>
+            <p class="layer-essence">
+              しかし、ソフトウェアは完成形ではない。<br />
+              それは <strong>「複数の制約と妥協の結果」</strong> として成立している。
+            </p>
+          </div>
+        </div>
+
+        <div class="layer-arrow">↓</div>
+
+        <div class="layer">
+          <div class="layer-icon">🔄</div>
+          <h3>4. Impact（影響）</h3>
+          <p class="layer-subtitle">フィードバックループ</p>
+          <div class="layer-content">
+            <p><strong>実装がもたらすもの：</strong></p>
+            <ul>
+              <li>新しい課題の発見</li>
+              <li>次世代の技術研究のトリガー</li>
+              <li>規制や標準の更新</li>
+              <li>組織文化や働き方の変化</li>
+            </ul>
+            <p class="layer-essence">
+              <strong>Upstream は一方通行ではなく、循環する</strong>。
+            </p>
+          </div>
+        </div>
+
+        <div class="layer-arrow cycle">↻ 再び Trends へ</div>
+      </div>
+    </section>
+
+    <section id="three-axes">
+      <h2>どう観察するのか</h2>
+
+      <h3>3軸での構造化</h3>
+      <p>すべての観察は、以下の3軸で構造化される。</p>
+
+      <div class="framework">
+        <div class="axis">
+          <h4>Product</h4>
+          <p class="axis-label">Why</p>
+          <p>誰のための価値か、どんな体験を目指すのか</p>
+        </div>
+
+        <div class="axis">
+          <h4>Engineering</h4>
+          <p class="axis-label">How</p>
+          <p>技術的にどう実現するのか、何を犠牲にするのか</p>
+        </div>
+
+        <div class="axis">
+          <h4>Organization / Architecture</h4>
+          <p class="axis-label">Who</p>
+          <p>誰が作るのか、どう運用するのか、どう持続するのか</p>
+        </div>
       </div>
 
-      <div class="axis">
-        <h3>Engineering</h3>
-        <p>技術選択、設計判断、実装可能性</p>
-      </div>
+      <p class="emphasis">
+        <strong>この3軸のどこで、どのようなトレードオフが発生しているか</strong><br />
+        が、すべての意思決定の本質である。
+      </p>
 
-      <div class="axis">
-        <h3>Organization / Architecture</h3>
-        <p>組織構造、運用、ガバナンス、持続性</p>
-      </div>
-    </div>
+      <h3>事実と解釈の分離</h3>
+      <p>Upstream Lens では、以下を明確に区別する。</p>
+      <ul>
+        <li>
+          <strong>Facts（事実）</strong><br />
+          一次情報、公式文書、議論、データ
+        </li>
+        <li>
+          <strong>Interpretation（解釈）</strong><br />
+          筆者の視点による構造化、意味付け、文脈の補完
+        </li>
+      </ul>
+      <p class="emphasis">
+        <strong>中立を装わない。視点を固定する。</strong><br />
+        その上で、読者が自分の解釈を持てるよう、事実を提示する。
+      </p>
+    </section>
 
-    <p>
-      すべての記事・分析は、<br />
-      <strong>この3軸のどこで、どのようなトレードオフが発生しているか</strong><br />
-      を暗黙または明示的に扱います。
-    </p>
-  </section>
+    <section id="success">
+      <h2>成功の定義</h2>
+      <p>Upstream Lens が成功するのは、</p>
+      <ul>
+        <li>読者が <strong>「なぜそうなったのか」</strong> を構造的に理解できたとき</li>
+        <li>技術選択を <strong>「結果」ではなく「プロセス」</strong> として読めるようになったとき</li>
+        <li><strong>自分の判断基準</strong> を持てるようになったとき</li>
+      </ul>
+      <p class="emphasis">
+        <strong>正解を提示するのではなく、思考の前提を共有する</strong>。<br />
+        それが Upstream Lens の役割である。
+      </p>
+    </section>
 
-  <section>
-    <h2>オープンソースコミュニティの捉え方</h2>
-    <ul>
-      <li>SIG / WG / Project などの組織構造は<strong>技術分類ではなく「意思決定の成熟度」</strong>として捉えます</li>
-      <li>プロジェクトは完成形ではなく、<strong>複数の制約と妥協の結果として成立しているもの</strong>として分析します</li>
-      <li>コミュニティのガバナンスモデルそのものが、<strong>技術判断に影響を与える要素</strong>として扱います</li>
-    </ul>
-  </section>
+    <section id="principles">
+      <h2>編集の原則</h2>
+      <ol>
+        <li>
+          <strong>結果ではなく、流れを追う</strong><br />
+          「何が作られたか」より「なぜ作られたか」<br />
+          「どう使うか」より「どう決まったか」
+        </li>
+        <li>
+          <strong>全体像から個別へ</strong><br />
+          動向 → 集合知 → ソフトウェア という流れを常に意識<br />
+          個別の技術も、より大きな文脈の中で位置づける
+        </li>
+        <li>
+          <strong>視点を固定し、構造を明示する</strong><br />
+          Product / Engineering / Organization の3軸で思考する<br />
+          トレードオフを明文化する
+        </li>
+        <li>
+          <strong>一次情報を重視する</strong><br />
+          まとめ記事ではなく、RFC、提案書、Issue、議事録を読む<br />
+          解釈ではなく、議論そのものから構造を抽出する
+        </li>
+        <li>
+          <strong>フィードバックループを意識する</strong><br />
+          今日のソフトウェアは、明日の動向になる<br />
+          歴史は繰り返さないが、パターンは繰り返す
+        </li>
+      </ol>
+    </section>
 
-  <section>
-    <h2>本サイトが目指すもの</h2>
-    <p>
-      Upstream Lensは、正解を提示するサイトではありません。<strong>思考の前提を固定するためのレンズ</strong>です。
-    </p>
-    <p>
-      読者がこのサイトから持ち帰るべきものは：
-    </p>
-    <ul>
-      <li>upstream の視点</li>
-      <li>他の技術記事や議論を異なる角度で読む視座</li>
-      <li>意思決定構造を言語化する枠組み</li>
-    </ul>
-  </section>
+    <section id="goal">
+      <h2>この Philosophy が目指すもの</h2>
+      <p>Upstream Lens は、</p>
+      <ul>
+        <li>技術トレンドを追うメディアではない</li>
+        <li>ツールの使い方を教えるサイトではない</li>
+        <li>ニュースを速報するプラットフォームでもない</li>
+      </ul>
+      <p class="emphasis">
+        <strong>意思決定の構造を言語化し、思考のレンズを提供する場</strong> である。
+      </p>
+      <p>
+        技術は選択の結果ではなく、<br />
+        <strong>選択のプロセスそのもの</strong> である。
+      </p>
+      <p>
+        そのプロセスを観察し、理解し、言語化する。
+      </p>
+      <p>
+        それが Upstream Lens の Philosophy である。
+      </p>
+    </section>
+  </article>
 </BaseLayout>
 
 <style>
+  .philosophy {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 0.5rem;
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .emphasis {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+
+  /* 4層の表示 */
+  .layers {
+    margin: 2rem 0;
+  }
+
+  .layer {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    border-left: 4px solid #667eea;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+  }
+
+  .layer-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .layer h3 {
+    margin-top: 0;
+    color: #667eea;
+  }
+
+  .layer-subtitle {
+    font-style: italic;
+    color: #666;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .layer-content {
+    margin-top: 1rem;
+  }
+
+  .layer-content ul {
+    margin-left: 1.5rem;
+  }
+
+  .layer-essence {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    font-style: italic;
+  }
+
+  .layer-arrow {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #667eea;
+    margin: 0.5rem 0;
+  }
+
+  .layer-arrow.cycle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  /* 3軸フレームワーク */
   .framework {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .axis {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .axis h4 {
+    margin-top: 0;
+    color: #667eea;
+  }
+
+  .axis-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #764ba2;
+    margin: 0.5rem 0;
+  }
+
+  ol {
+    counter-reset: principle;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ol li {
+    counter-increment: principle;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 3rem;
+  }
+
+  ol li::before {
+    content: counter(principle);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
   }
 
   @media (max-width: 768px) {

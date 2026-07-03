@@ -1,0 +1,403 @@
+<!DOCTYPE html><html lang="ja"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="CNCF upstream activity from github"><title>Upstream Github - 2026-07-03 | Upstream Lens</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><style>.post[data-astro-cid-z5xrqrku]{max-width:100%}.post-header[data-astro-cid-z5xrqrku]{margin-bottom:3rem;padding-bottom:2rem;border-bottom:2px solid var(--border-color)}.post-header[data-astro-cid-z5xrqrku] h1[data-astro-cid-z5xrqrku]{margin:0 0 1rem}.post-meta[data-astro-cid-z5xrqrku]{display:flex;gap:1rem;align-items:center;font-size:.875rem;color:var(--text-secondary);margin-bottom:1rem}.category[data-astro-cid-z5xrqrku]{background-color:var(--code-bg);padding:.25rem .75rem;border-radius:3px;font-weight:600;color:var(--text-color)}.tags[data-astro-cid-z5xrqrku]{display:flex;flex-wrap:wrap;gap:.5rem}.tag[data-astro-cid-z5xrqrku]{background-color:var(--border-color);color:var(--text-color);padding:.25rem .75rem;border-radius:3px;font-size:.875rem}.post-content[data-astro-cid-z5xrqrku]{margin:3rem 0;line-height:1.8}.post-content[data-astro-cid-z5xrqrku] h2{margin-top:3rem}.post-content[data-astro-cid-z5xrqrku] h3{margin-top:2rem}.post-content[data-astro-cid-z5xrqrku] img{max-width:100%;height:auto;border-radius:4px;margin:2rem 0}.post-content[data-astro-cid-z5xrqrku] blockquote{border-left:4px solid var(--accent-color);padding-left:1.5rem;margin:2rem 0;color:var(--text-secondary);font-style:italic}.post-footer[data-astro-cid-z5xrqrku]{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border-color)}.post-nav[data-astro-cid-z5xrqrku]{text-align:center}.back-link[data-astro-cid-z5xrqrku]{color:var(--link-color);text-decoration:none;font-weight:600}.back-link[data-astro-cid-z5xrqrku]:hover{color:var(--link-hover);text-decoration:underline}@media(max-width:768px){.post-header[data-astro-cid-z5xrqrku]{margin-bottom:2rem;padding-bottom:1.5rem}.post-header[data-astro-cid-z5xrqrku] h1[data-astro-cid-z5xrqrku]{font-size:1.75rem;line-height:1.3}.post-meta[data-astro-cid-z5xrqrku]{flex-direction:column;align-items:flex-start;gap:.5rem}.post-content[data-astro-cid-z5xrqrku]{margin:2rem 0}.post-content[data-astro-cid-z5xrqrku] h2{margin-top:2rem}.post-content[data-astro-cid-z5xrqrku] h3{margin-top:1.5rem}.post-content[data-astro-cid-z5xrqrku] blockquote{padding-left:1rem;margin:1.5rem 0;font-size:.95rem}.post-content[data-astro-cid-z5xrqrku] pre{margin:1.5rem -1.25rem;border-radius:0;font-size:.875rem}.post-footer[data-astro-cid-z5xrqrku]{margin-top:3rem}.tags[data-astro-cid-z5xrqrku]{gap:.375rem}.tag[data-astro-cid-z5xrqrku]{font-size:.8125rem;padding:.2rem .625rem}}@media(max-width:480px){.post-header[data-astro-cid-z5xrqrku] h1[data-astro-cid-z5xrqrku]{font-size:1.5rem}.post-content[data-astro-cid-z5xrqrku] pre{font-size:.8125rem}}
+</style>
+<link rel="stylesheet" href="/_astro/about.Mt-9HUYb.css"></head> <body> <div class="container"> <header data-astro-cid-3ef6ksr2> <div class="header-top" data-astro-cid-3ef6ksr2> <div class="header-content" data-astro-cid-3ef6ksr2> <div class="site-title" data-astro-cid-3ef6ksr2> <a href="/en/" data-astro-cid-3ef6ksr2>Upstream Lens</a> </div> <p class="tagline" data-astro-cid-3ef6ksr2>Seeing decisions before code is written</p> </div> <div class="language-switcher" data-astro-cid-a2mxz4y6> <a href="/posts/2026/2026-07-03-upstream-github/" class="lang-link" data-astro-cid-a2mxz4y6> 日本語 </a><a href="/en/posts/2026/2026-07-03-upstream-github/" class="lang-link active" aria-current="page" data-astro-cid-a2mxz4y6> English </a> </div>  </div> <nav data-astro-cid-pux6a34n> <button class="mobile-menu-toggle" aria-label="メニュー" id="mobile-menu-toggle" data-astro-cid-pux6a34n> <span class="hamburger" data-astro-cid-pux6a34n></span> </button> <ul id="nav-menu" data-astro-cid-pux6a34n> <li data-astro-cid-pux6a34n> <a href="/en/" class="nav-link" data-astro-cid-pux6a34n> Home </a> </li><li data-astro-cid-pux6a34n> <a href="/en/philosophy" class="nav-link" data-astro-cid-pux6a34n> Philosophy </a> </li><li data-astro-cid-pux6a34n> <a href="/en/posts" class="nav-link active" aria-current="page" data-astro-cid-pux6a34n> Posts </a> </li><li data-astro-cid-pux6a34n> <a href="/en/stories" class="nav-link" data-astro-cid-pux6a34n> Stories </a> </li><li data-astro-cid-pux6a34n> <a href="/en/about" class="nav-link" data-astro-cid-pux6a34n> About </a> </li> </ul> </nav> <script type="module">const e=document.getElementById("mobile-menu-toggle"),n=document.getElementById("nav-menu");e&&n&&(e.addEventListener("click",()=>{const t=n.classList.toggle("open");e.classList.toggle("open"),e.setAttribute("aria-expanded",t.toString())}),n.querySelectorAll("a").forEach(t=>{t.addEventListener("click",()=>{n.classList.remove("open"),e.classList.remove("open"),e.setAttribute("aria-expanded","false")})}),document.addEventListener("click",t=>{!e.contains(t.target)&&!n.contains(t.target)&&(n.classList.remove("open"),e.classList.remove("open"),e.setAttribute("aria-expanded","false"))}));</script>  </header>  <main>  <article class="post" data-astro-cid-z5xrqrku> <header class="post-header" data-astro-cid-z5xrqrku> <h1 data-astro-cid-z5xrqrku>Upstream Github - 2026-07-03</h1> <div class="post-meta" data-astro-cid-z5xrqrku> <time datetime="2026-07-03T00:00:00.000Z" data-astro-cid-z5xrqrku> July 3, 2026 </time> <span class="category" data-astro-cid-z5xrqrku>Notes</span> </div> <div class="tags" data-astro-cid-z5xrqrku> <span class="tag" data-astro-cid-z5xrqrku>upstream</span><span class="tag" data-astro-cid-z5xrqrku>CNCF</span><span class="tag" data-astro-cid-z5xrqrku>kubernetes</span><span class="tag" data-astro-cid-z5xrqrku>issue</span><span class="tag" data-astro-cid-z5xrqrku>kind/bug</span><span class="tag" data-astro-cid-z5xrqrku>sig/node</span><span class="tag" data-astro-cid-z5xrqrku>sig/testing</span><span class="tag" data-astro-cid-z5xrqrku>area/e2e-test-framework</span><span class="tag" data-astro-cid-z5xrqrku>needs-triage</span><span class="tag" data-astro-cid-z5xrqrku>sig/windows</span><span class="tag" data-astro-cid-z5xrqrku>kind/failing-test</span><span class="tag" data-astro-cid-z5xrqrku>sig/release</span><span class="tag" data-astro-cid-z5xrqrku>pr</span><span class="tag" data-astro-cid-z5xrqrku>area/kubectl</span><span class="tag" data-astro-cid-z5xrqrku>release-note</span><span class="tag" data-astro-cid-z5xrqrku>size/L</span><span class="tag" data-astro-cid-z5xrqrku>sig/cli</span><span class="tag" data-astro-cid-z5xrqrku>cncf-cla: yes</span><span class="tag" data-astro-cid-z5xrqrku>needs-ok-to-test</span><span class="tag" data-astro-cid-z5xrqrku>needs-priority</span><span class="tag" data-astro-cid-z5xrqrku>area/apiserver</span><span class="tag" data-astro-cid-z5xrqrku>sig/api-machinery</span><span class="tag" data-astro-cid-z5xrqrku>approved</span><span class="tag" data-astro-cid-z5xrqrku>kind/cleanup</span><span class="tag" data-astro-cid-z5xrqrku>release-note-none</span><span class="tag" data-astro-cid-z5xrqrku>size/M</span><span class="tag" data-astro-cid-z5xrqrku>sig/scheduling</span><span class="tag" data-astro-cid-z5xrqrku>sig/apps</span><span class="tag" data-astro-cid-z5xrqrku>do-not-merge/release-note-label-needed</span><span class="tag" data-astro-cid-z5xrqrku>area/kubelet</span><span class="tag" data-astro-cid-z5xrqrku>sig/storage</span><span class="tag" data-astro-cid-z5xrqrku>size/XXL</span><span class="tag" data-astro-cid-z5xrqrku>kind/api-change</span><span class="tag" data-astro-cid-z5xrqrku>sig/auth</span><span class="tag" data-astro-cid-z5xrqrku>area/code-generation</span><span class="tag" data-astro-cid-z5xrqrku>area/dependency</span><span class="tag" data-astro-cid-z5xrqrku>do-not-merge/work-in-progress</span><span class="tag" data-astro-cid-z5xrqrku>wg/device-management</span><span class="tag" data-astro-cid-z5xrqrku>area/test</span><span class="tag" data-astro-cid-z5xrqrku>kind/flake</span><span class="tag" data-astro-cid-z5xrqrku>sig/security</span><span class="tag" data-astro-cid-z5xrqrku>priority/important-soon</span><span class="tag" data-astro-cid-z5xrqrku>kind/feature</span><span class="tag" data-astro-cid-z5xrqrku>triage/accepted</span><span class="tag" data-astro-cid-z5xrqrku>wg/workload-aware-scheduling</span><span class="tag" data-astro-cid-z5xrqrku>needs-rebase</span><span class="tag" data-astro-cid-z5xrqrku>sig/etcd</span><span class="tag" data-astro-cid-z5xrqrku>cncf-cla: no</span><span class="tag" data-astro-cid-z5xrqrku>size/S</span><span class="tag" data-astro-cid-z5xrqrku>size/XS</span><span class="tag" data-astro-cid-z5xrqrku>do-not-merge/needs-kind</span><span class="tag" data-astro-cid-z5xrqrku>do-not-merge/invalid-commit-message</span><span class="tag" data-astro-cid-z5xrqrku>good first issue</span><span class="tag" data-astro-cid-z5xrqrku>help wanted</span><span class="tag" data-astro-cid-z5xrqrku>kind/documentation</span><span class="tag" data-astro-cid-z5xrqrku>website</span><span class="tag" data-astro-cid-z5xrqrku>area/jobs</span><span class="tag" data-astro-cid-z5xrqrku>area/config</span><span class="tag" data-astro-cid-z5xrqrku>test-infra</span><span class="tag" data-astro-cid-z5xrqrku>area/vertical-pod-autoscaler</span><span class="tag" data-astro-cid-z5xrqrku>autoscaler</span><span class="tag" data-astro-cid-z5xrqrku>area/cluster-autoscaler</span><span class="tag" data-astro-cid-z5xrqrku>area/helm-charts</span><span class="tag" data-astro-cid-z5xrqrku>ok-to-test</span><span class="tag" data-astro-cid-z5xrqrku>area/documentation</span><span class="tag" data-astro-cid-z5xrqrku>area/api</span><span class="tag" data-astro-cid-z5xrqrku>kops</span><span class="tag" data-astro-cid-z5xrqrku>area/artifacts</span><span class="tag" data-astro-cid-z5xrqrku>sig/k8s-infra</span><span class="tag" data-astro-cid-z5xrqrku>area/registry.k8s.io</span><span class="tag" data-astro-cid-z5xrqrku>k8s.io</span><span class="tag" data-astro-cid-z5xrqrku>lgtm</span><span class="tag" data-astro-cid-z5xrqrku>sig/network</span><span class="tag" data-astro-cid-z5xrqrku>area/access</span><span class="tag" data-astro-cid-z5xrqrku>area/infra</span><span class="tag" data-astro-cid-z5xrqrku>area/terraform</span><span class="tag" data-astro-cid-z5xrqrku>area/groups</span><span class="tag" data-astro-cid-z5xrqrku>area/infra/gcp</span><span class="tag" data-astro-cid-z5xrqrku>enhancements</span><span class="tag" data-astro-cid-z5xrqrku>containerd</span><span class="tag" data-astro-cid-z5xrqrku>area/cri</span><span class="tag" data-astro-cid-z5xrqrku>area/snapshotters</span> </div> </header> <div class="post-content" data-astro-cid-z5xrqrku> <h2 id="overview">Overview</h2>
+<p>This is an automated collection of upstream activity from github.</p>
+<h2 id="-high-priority-updates">🔥 High Priority Updates</h2>
+<h3 id="kuberneteskubernetes140189-kubectl-create-cluster-info-dump-output-with-owner-only-permissions">kubernetes/kubernetes#140189: kubectl: create cluster-info dump output with owner-only permissions</h3>
+<h4 id="what-type-of-pr-is-this">What type of PR is this?</h4>
+<p>/kind bug
+/sig cli
+/sig security
+/area kubectl</p>
+<h4 id="what-this-pr-does--why-we-need-it">What this PR does / why we need it:</h4>
+<p><code>kubectl cluster-info dump --output-directory</code> writes every dump file through <code>setupOutputWriter</code>, which used <code>os.Create</code> (mode <code>0666</code> before umask, typically <code>0644</code>) inside direc…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140189">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes140188-was-kep-5547-integrate-job-controller-with-workloadbuilder-lib-and-building-blocks-api">kubernetes/kubernetes#140188: [WAS] KEP-5547: Integrate Job Controller with workloadbuilder lib and building blocks API</h3>
+<h4 id="what-type-of-pr-is-this-1">What type of PR is this?</h4>
+<p>/kind feature</p>
+<h4 id="what-this-pr-does--why-we-need-it-1">What this PR does / why we need it:</h4>
+<ul>
+<li>Integrate Job controller with workloadbuild library and the building blocks APIs</li>
+</ul>
+<h4 id="which-issues-this-pr-is-related-to">Which issue(s) this PR is related to:</h4>
+<p>Ref #139359</p>
+<h4 id="special-notes-for-your-reviewer">Special notes for your reviewer:</h4>
+<p>Depends on:</p>
+<ul>
+<li>https:…</li>
+</ul>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140188">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes140186-kep-5823-pod-level-checkpointrestore">kubernetes/kubernetes#140186: KEP 5823: Pod-level Checkpoint/Restore</h3>
+<p>This pull request implements KEP 5823: Pod-level Checkpoint/Restore.</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140186">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: Yes</li>
+</ul>
+<h3 id="kuberneteskubernetes140184-wip-graduate-was-apis-to-beta">kubernetes/kubernetes#140184: [WIP] Graduate WAS APIs to beta</h3>
+<h4 id="what-type-of-pr-is-this-2">What type of PR is this?</h4>
+<p>/kind feature
+/kind api-change</p>
+<h4 id="what-this-pr-does--why-we-need-it-2">What this PR does / why we need it:</h4>
+<p>TODO</p>
+<h4 id="which-issues-this-pr-is-related-to-1">Which issue(s) this PR is related to:</h4>
+<p>KEP: <a href="https://github.com/kubernetes/enhancements/issues/4671">https://github.com/kubernetes/enhancements/issues/4671</a></p>
+<h4 id="special-notes-for-your-reviewer-1">Special notes for your reviewer:</h4>
+<p>This is still WIP - some tests…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140184">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h2 id="updates">Updates</h2>
+<h3 id="kuberneteskubernetes140191-e2e-pod-inplace-resize-container-resource-quotalimit-ranger-tests-use-hardcoded-resource-sizes-too-large-for-resource-constrained-nodes">kubernetes/kubernetes#140191: e2e: Pod InPlace Resize Container (resource-quota)/(limit-ranger) tests use hardcoded resource sizes too large for resource-constrained nodes</h3>
+<h3 id="what-happened">What happened?</h3>
+<p>The <code>Pod InPlace Resize Container (resource-quota)</code> and <code>Pod InPlace Resize Container (limit-ranger)</code> e2e tests in <code>test/e2e/node/pod_resize.go</code> (<code>doPodResizeResourceQuotaTests</code> / <code>doPodResizeLimitRangerTests</code>) hardcode a base container size of <code>300m CPU / 300Mi memory</code>. Each tes…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/issues/140191">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: 2</li>
+<li>State: open</li>
+</ul>
+<h3 id="kuberneteskubernetes140187-failing-test-restartallcontainerscontainerrestartrules-e2e-time-out-on-hyper-v-isolated-windows-capz-windows-master-hyperv">kubernetes/kubernetes#140187: [Failing Test] RestartAllContainers/ContainerRestartRules e2e time out on Hyper-V-isolated Windows (capz-windows-master-hyperv)</h3>
+<h3 id="which-jobs-are-failing">Which jobs are failing?</h3>
+<p><code>ci-kubernetes-e2e-capz-master-windows-hyperv-serial-slow</code></p>
+<p>The process-isolated equivalent <code>ci-kubernetes-e2e-capz-master-windows-serial-slow</code> is <strong>green</strong> for the same specs — the failure is specific to Hyper-V isolation.</p>
+<h3 id="which-tests-are-failing">Which tests are failing?</h3>
+<p>All `RestartAllC…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/issues/140187">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: 1</li>
+<li>State: open</li>
+</ul>
+<h3 id="kuberneteskubernetes140185-kubeloginexe-and-kubectlexe-not-signed">kubernetes/kubernetes#140185: kubelogin.exe and kubectl.exe not signed</h3>
+<p>We are currently implementing Application Control for Business and our developer use the kubernetes software.
+Now we want to whitelist kubelogin.exe and kubectl.exe but to our surprise both executables aren’t signed at all :</p>
+<p>kubectl.exe :</p>
+<p>&#x3C;img width=“410” height=“456” alt=“Image” src=“<a href="https://gi">https://gi</a>…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/issues/140185">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: 3</li>
+<li>State: open</li>
+</ul>
+<h3 id="kuberneteskubernetes140202-kubectl-cp-recognize-absolute-windows-drive-letter-paths">kubernetes/kubernetes#140202: kubectl cp: recognize absolute Windows drive-letter paths</h3>
+<h4 id="what-type-of-pr-is-this-3">What type of PR is this?</h4>
+<p>/kind bug</p>
+<h4 id="what-this-pr-does--why-we-need-it-3">What this PR does / why we need it:</h4>
+<p><code>kubectl cp</code> splits each argument on the first <code>:</code> to separate a pod spec
+from a file path. On Windows this misinterprets an absolute path such as
+<code>C:\Temp\foo.txt</code> as a pod named <code>C</code> with remote path <code>\Temp\foo.txt</code>…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140202">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-03</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes140201-fix-vapmap-params-to-consistently-used-the-typed-representation-when-available">kubernetes/kubernetes#140201: Fix VAP/MAP params to consistently used the typed representation when available</h3>
+<h4 id="what-type-of-pr-is-this-4">What type of PR is this?</h4>
+<p>/kind bug</p>
+<h4 id="what-this-pr-does--why-we-need-it-4">What this PR does / why we need it:</h4>
+<p>This fixes a bug where slight differences in the typed and unstructured representation of objects, such as quantity being a string vs. being a typed object, would be observable to CEL expressions <em>only</em> when a …</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140201">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-03</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes140200-reduce-allocations-for-list-requests-served-from-the-watch-cache">kubernetes/kubernetes#140200: Reduce allocations for list requests served from the watch cache</h3>
+<p>/kind cleanup</p>
+<h4 id="what-this-pr-does--why-we-need-it-5">What this PR does / why we need it:</h4>
+<p>This reduces allocations when serving LIST requests by preallocating when loading data from the watch cache B tree.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>goos: linux</span></span>
+<span class="line"><span>goarch: amd64</span></span>
+<span class="line"><span>pkg: k8s.io/apiserver/pkg/storage/cacher</span></span>
+<span class="line"><span>cpu: Intel(R) Xeon(R) CPU @ 2.20GHz</span></span>
+<span class="line"><span>        ...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140200)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-07-02</span></span>
+<span class="line"><span>- Comments: undefined</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span>- Draft: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/kubernetes#140199: Reduce allocations in protobuf list streaming</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/kind cleanup</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#### What this PR does / why we need it:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>This reduces allocs when streaming protobuf lists via some simple pre-allocations.</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>goos: linux
+goarch: amd64
+pkg: k8s.io/apimachinery/pkg/runtime/serializer/protobuf
+cpu: Intel(R) Xeon(R) CPU @ 2.20GHz
+goos: linux
+goarch: amd6…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140199">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes140198-tainteviction-check-live-taints-before-evicting-pods">kubernetes/kubernetes#140198: tainteviction: check live taints before evicting pods</h3>
+<!--
+Thank you for contributing to Kubernetes! Before submitting this PR,
+please make sure you have read the contribution guidelines:
+https://github.com/kubernetes/kubernetes/blob/master/CONTRIBUTING.md
+-->
+<h4 id="what-type-of-pr-is-this-5">What type of PR is this?</h4>
+<p>/kind bug</p>
+<h4 id="what-this-pr-does--why-we-need-it-6">What this PR does / why we need it:</h4>
+<p>…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140198">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes140197-nodelifecycle-mark-pods-not-ready-on-false-to-unknown-transition">kubernetes/kubernetes#140197: nodelifecycle: mark pods not ready on false to unknown transition</h3>
+<!--
+Thank you for contributing to Kubernetes! Before submitting this PR,
+please make sure you have read the contribution guidelines:
+https://github.com/kubernetes/kubernetes/blob/master/CONTRIBUTING.md
+-->
+<h4 id="what-type-of-pr-is-this-6">What type of PR is this?</h4>
+<p>/kind bug</p>
+<h4 id="what-this-pr-does--why-we-need-it-7">What this PR does / why we need it:</h4>
+<p>…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140197">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes140196-kubelet-stop-logging-raw-http-probe-header-values-at--v4">kubernetes/kubernetes#140196: kubelet: stop logging raw HTTP probe header values at -v=4</h3>
+<h4 id="what-type-of-pr-is-this-7">What type of PR is this?</h4>
+<p>/kind bug</p>
+<h4 id="what-this-pr-does--why-we-need-it-8">What this PR does / why we need it:</h4>
+<p>The kubelet HTTP prober logged the full <code>HTTPGet.HTTPHeaders</code> slice, including header values, in its V(4) <code>"HTTP-Probe"</code> log line.</p>
+<p>Since these headers are user supplied, values may contain credentials such a…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140196">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes140194-implement-volume-health-api">kubernetes/kubernetes#140194: Implement volume health api</h3>
+<p>Implement API changes for supporting Volume health</p>
+<p>/sig storage</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140194">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes140193-wip-dra-resource-slice-tracker-informer">kubernetes/kubernetes#140193: WIP: DRA: resource slice tracker informer</h3>
+<h4 id="what-type-of-pr-is-this-8">What type of PR is this?</h4>
+<p>/kind cleanup</p>
+<h4 id="what-this-pr-does--why-we-need-it-9">What this PR does / why we need it:</h4>
+<p>This switches to the new type-safe informer API (<a href="https://github.com/kubernetes/kubernetes/pull/139821">https://github.com/kubernetes/kubernetes/pull/139821</a>).</p>
+<h4 id="which-issues-this-pr-is-related-to-2">Which issue(s) this PR is related to:</h4>
+<p>N/A</p>
+<h4 id="special-notes-for-your-reviewer-2">Special notes for your reviewer:</h4>
+<h4 id="">…</h4>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140193">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: Yes</li>
+</ul>
+<h3 id="kuberneteskubernetes140192-test-reduce-resource-footprint-of-pod-resize-resource-quotalimit-ranger-e2e-tests">kubernetes/kubernetes#140192: test: reduce resource footprint of pod resize resource-quota/limit-ranger e2e tests</h3>
+<p><strong>What type of PR is this?</strong></p>
+<p>/kind flake</p>
+<p><strong>What this PR does / why we need it:</strong></p>
+<p>The <code>Pod InPlace Resize Container (resource-quota)</code> and <code>(limit-ranger)</code> e2e tests each create 2 Guaranteed-QoS pods via <code>CreateBatch</code>, using a hardcoded baseline of 300m CPU / 300Mi memory per container — 600m/600M…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140192">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes140190-kubeletuserns-dont-allocate-ranges-that-include-id-232-1">kubernetes/kubernetes#140190: kubelet/userns: don’t allocate ranges that include ID 2^32-1</h3>
+<h4 id="what-type-of-pr-is-this-9">What type of PR is this?</h4>
+<p>/kind bug
+/sig node</p>
+<h4 id="what-this-pr-does--why-we-need-it-10">What this PR does / why we need it:</h4>
+<p>The kubelet’s user namespace pool covers <code>[idsPerPod, 2^32)</code> by default (<code>getKubeletMappings</code>), so with the default 65536 IDs per pod the last allocatable block is <code>[4294901760, 4294967295]</code>. The ker…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140190">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes140183-scheduler-update-podgroupstatus-when-pod-schedulernames-differ">kubernetes/kubernetes#140183: scheduler: update PodGroup.Status when pod SchedulerNames differ</h3>
+<p><strong>What type of PR is this?</strong>
+/kind bug</p>
+<p><strong>What this PR does / why we need it:</strong>
+When <code>QueuedPodInfos()</code> detects mismatched <code>.spec.schedulerName</code> or priority values across pods in a group, it returns an error early and calls <code>FailureHandler</code> for each pod — but never reaches `submitPodGroupAlgorit…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/140183">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-02</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes140182-wip-not-ready-for-review-inject-top-controller-name-and-type-directly-in-pods">kubernetes/kubernetes#140182: [WIP, not ready for review] Inject top controller name and type directly in pods</h3>
+<p>…od’s annotation</p>
+<!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/com...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140182)
+
+**Metadata:**
+- Created: 2026-07-02
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#140180: Add a message when preemption succeeds
+
+#### What type of PR is this?
+
+/kind feature
+
+#### What this PR does / why we need it:
+
+This PR adds a message to preemption plugin status when it succeeds. Currently we only add the message from preemption when preemption fails:
+```
+0/1 nodes are available: 1 Insufficient cpu. preemption: 0...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140180)
+
+**Metadata:**
+- Created: 2026-07-02
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#140178: WIP: test watch-list-off benchmark
+
+&#x3C;!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140178)
+
+**Metadata:**
+- Created: 2026-07-02
+- Comments: undefined
+- State: open
+- Draft: Yes
+
+### kubernetes/kubernetes#140177: scheduler: Only check conflicts for racing PodScheduled condition updates
+
+&#x3C;!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140177)
+
+**Metadata:**
+- Created: 2026-07-02
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/website#56366: Fix grammar error in What Happens After A Node Restart page
+
+
+**Problem:**
+
+The following sentence on line 161 in `/docs/reference/node/what-happens-on-restart/` contains two grammatical errors:
+
+"The node renews the lease and reconcile it's status."
+
+**Proposed Solution:**
+
+Should be:
+
+ "The node renews the lease and reconciles its status."
+
+
+Fixes:
+- `recon...
+
+🔗 [Link](https://github.com/kubernetes/website/issues/56366)
+
+**Metadata:**
+- Created: 2026-07-02
+- Comments: 6
+- State: open
+
+### kubernetes/test-infra#37380: SIG-Storage: run container-object-storage-interface e2e on kops
+
+Move the COSI E2E presubmit from the EKS/Kind-style setup to the k8s-infra-prow-build cluster with kubetest2-kops dependencies.
+
+The job now checks out kops, uses the kops test service account and GCE presets, and invokes the repo-side kops E2E entrypoint while remaining optional during bring-up.
+
+🔗 [Link](https://github.com/kubernetes/test-infra/pull/37380)
+
+**Metadata:**
+- Created: 2026-07-02
+- Comments: undefined
+- State: open
+- Draft: Yes
+
+### kubernetes/autoscaler#9926: VPA: reactive pressure detection using PSI and memory.events for real-time in-place resize
+
+&#x3C;!--
+Thanks for taking the time to raise a feature request! Please answer these questions as best you can before submitting.
+-->
+<p><strong>Which component are you using?</strong>:
+/area vertical-pod-autoscaler</p>
+ </div> <footer class="post-footer" data-astro-cid-z5xrqrku> <nav class="post-nav" data-astro-cid-z5xrqrku> <a href="/en/posts" class="back-link" data-astro-cid-z5xrqrku>← Back to Posts</a> </nav> </footer> </article>  </main> <footer data-astro-cid-sz7xmlte> <div class="footer-content" data-astro-cid-sz7xmlte> <p class="copyright" data-astro-cid-sz7xmlte> © 2026 Upstream Lens. All rights reserved. </p> <p class="disclaimer-note" data-astro-cid-sz7xmlte> This site is not affiliated with any specific foundation, organization, or project. </p> <nav class="footer-nav" data-astro-cid-sz7xmlte> <a href="/en/disclaimer" data-astro-cid-sz7xmlte>Disclaimer</a> <span class="separator" data-astro-cid-sz7xmlte>•</span> <a href="/en/author" data-astro-cid-sz7xmlte>Author</a> <span class="separator" data-astro-cid-sz7xmlte>•</span> <a href="https://github.com/kkomazaw/upstreamlens.io" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>GitHub</a> </nav> </div> </footer>  </div> </body></html> 

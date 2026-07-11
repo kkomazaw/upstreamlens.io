@@ -1,0 +1,726 @@
+<!DOCTYPE html><html lang="ja"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="CNCF upstream activity from github"><title>Upstream Github - 2026-07-11 | Upstream Lens</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><style>.post[data-astro-cid-egg7nqdx]{max-width:100%}.post-header[data-astro-cid-egg7nqdx]{margin-bottom:3rem;padding-bottom:2rem;border-bottom:2px solid var(--border-color)}.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 1rem}.post-meta[data-astro-cid-egg7nqdx]{display:flex;gap:1rem;align-items:center;font-size:.875rem;color:var(--text-secondary);margin-bottom:1rem}.category[data-astro-cid-egg7nqdx]{background-color:var(--code-bg);padding:.25rem .75rem;border-radius:3px;font-weight:600;color:var(--text-color)}.tags[data-astro-cid-egg7nqdx]{display:flex;flex-wrap:wrap;gap:.5rem}.tag[data-astro-cid-egg7nqdx]{background-color:var(--border-color);color:var(--text-color);padding:.25rem .75rem;border-radius:3px;font-size:.875rem}.post-content[data-astro-cid-egg7nqdx]{margin:3rem 0;line-height:1.8}.post-content[data-astro-cid-egg7nqdx] h2{margin-top:3rem}.post-content[data-astro-cid-egg7nqdx] h3{margin-top:2rem}.post-content[data-astro-cid-egg7nqdx] img{max-width:100%;height:auto;border-radius:4px;margin:2rem 0}.post-content[data-astro-cid-egg7nqdx] blockquote{border-left:4px solid var(--accent-color);padding-left:1.5rem;margin:2rem 0;color:var(--text-secondary);font-style:italic}.post-footer[data-astro-cid-egg7nqdx]{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border-color)}.post-nav[data-astro-cid-egg7nqdx]{text-align:center}.back-link[data-astro-cid-egg7nqdx]{color:var(--link-color);text-decoration:none;font-weight:600}.back-link[data-astro-cid-egg7nqdx]:hover{color:var(--link-hover);text-decoration:underline}@media(max-width:768px){.post-header[data-astro-cid-egg7nqdx]{margin-bottom:2rem;padding-bottom:1.5rem}.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{font-size:1.75rem;line-height:1.3}.post-meta[data-astro-cid-egg7nqdx]{flex-direction:column;align-items:flex-start;gap:.5rem}.post-content[data-astro-cid-egg7nqdx]{margin:2rem 0}.post-content[data-astro-cid-egg7nqdx] h2{margin-top:2rem}.post-content[data-astro-cid-egg7nqdx] h3{margin-top:1.5rem}.post-content[data-astro-cid-egg7nqdx] blockquote{padding-left:1rem;margin:1.5rem 0;font-size:.95rem}.post-content[data-astro-cid-egg7nqdx] pre{margin:1.5rem -1.25rem;border-radius:0;font-size:.875rem}.post-footer[data-astro-cid-egg7nqdx]{margin-top:3rem}.tags[data-astro-cid-egg7nqdx]{gap:.375rem}.tag[data-astro-cid-egg7nqdx]{font-size:.8125rem;padding:.2rem .625rem}}@media(max-width:480px){.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{font-size:1.5rem}.post-content[data-astro-cid-egg7nqdx] pre{font-size:.8125rem}}
+</style>
+<link rel="stylesheet" href="/_astro/about.Mt-9HUYb.css"></head> <body> <div class="container"> <header data-astro-cid-3ef6ksr2> <div class="header-top" data-astro-cid-3ef6ksr2> <div class="header-content" data-astro-cid-3ef6ksr2> <div class="site-title" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2>Upstream Lens</a> </div> <p class="tagline" data-astro-cid-3ef6ksr2>Seeing decisions before code is written</p> </div> <div class="language-switcher" data-astro-cid-a2mxz4y6> <a href="/posts/2026/2026-07-11-upstream-github/" class="lang-link active" aria-current="page" data-astro-cid-a2mxz4y6> 日本語 </a><a href="/en/posts/2026/2026-07-11-upstream-github/" class="lang-link" data-astro-cid-a2mxz4y6> English </a> </div>  </div> <nav data-astro-cid-pux6a34n> <button class="mobile-menu-toggle" aria-label="メニュー" id="mobile-menu-toggle" data-astro-cid-pux6a34n> <span class="hamburger" data-astro-cid-pux6a34n></span> </button> <ul id="nav-menu" data-astro-cid-pux6a34n> <li data-astro-cid-pux6a34n> <a href="/" class="nav-link" data-astro-cid-pux6a34n> Home </a> </li><li data-astro-cid-pux6a34n> <a href="/philosophy" class="nav-link" data-astro-cid-pux6a34n> Philosophy </a> </li><li data-astro-cid-pux6a34n> <a href="/posts" class="nav-link active" aria-current="page" data-astro-cid-pux6a34n> Posts </a> </li><li data-astro-cid-pux6a34n> <a href="/stories" class="nav-link" data-astro-cid-pux6a34n> Stories </a> </li><li data-astro-cid-pux6a34n> <a href="/about" class="nav-link" data-astro-cid-pux6a34n> About </a> </li> </ul> </nav> <script type="module">const e=document.getElementById("mobile-menu-toggle"),n=document.getElementById("nav-menu");e&&n&&(e.addEventListener("click",()=>{const t=n.classList.toggle("open");e.classList.toggle("open"),e.setAttribute("aria-expanded",t.toString())}),n.querySelectorAll("a").forEach(t=>{t.addEventListener("click",()=>{n.classList.remove("open"),e.classList.remove("open"),e.setAttribute("aria-expanded","false")})}),document.addEventListener("click",t=>{!e.contains(t.target)&&!n.contains(t.target)&&(n.classList.remove("open"),e.classList.remove("open"),e.setAttribute("aria-expanded","false"))}));</script>  </header>  <main>  <article class="post" data-astro-cid-egg7nqdx> <header class="post-header" data-astro-cid-egg7nqdx> <h1 data-astro-cid-egg7nqdx>Upstream Github - 2026-07-11</h1> <div class="post-meta" data-astro-cid-egg7nqdx> <time datetime="2026-07-11T00:00:00.000Z" data-astro-cid-egg7nqdx> 2026年7月11日 </time> <span class="category" data-astro-cid-egg7nqdx>Notes</span> </div> <div class="tags" data-astro-cid-egg7nqdx> <span class="tag" data-astro-cid-egg7nqdx>upstream</span><span class="tag" data-astro-cid-egg7nqdx>CNCF</span><span class="tag" data-astro-cid-egg7nqdx>kubernetes</span><span class="tag" data-astro-cid-egg7nqdx>issue</span><span class="tag" data-astro-cid-egg7nqdx>sig/scheduling</span><span class="tag" data-astro-cid-egg7nqdx>sig/node</span><span class="tag" data-astro-cid-egg7nqdx>sig/api-machinery</span><span class="tag" data-astro-cid-egg7nqdx>kind/feature</span><span class="tag" data-astro-cid-egg7nqdx>needs-triage</span><span class="tag" data-astro-cid-egg7nqdx>wg/device-management</span><span class="tag" data-astro-cid-egg7nqdx>kind/flake</span><span class="tag" data-astro-cid-egg7nqdx>pr</span><span class="tag" data-astro-cid-egg7nqdx>area/kubelet</span><span class="tag" data-astro-cid-egg7nqdx>size/XL</span><span class="tag" data-astro-cid-egg7nqdx>release-note-none</span><span class="tag" data-astro-cid-egg7nqdx>cncf-cla: yes</span><span class="tag" data-astro-cid-egg7nqdx>needs-priority</span><span class="tag" data-astro-cid-egg7nqdx>kind/bug</span><span class="tag" data-astro-cid-egg7nqdx>release-note</span><span class="tag" data-astro-cid-egg7nqdx>size/L</span><span class="tag" data-astro-cid-egg7nqdx>needs-ok-to-test</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/work-in-progress</span><span class="tag" data-astro-cid-egg7nqdx>size/S</span><span class="tag" data-astro-cid-egg7nqdx>kind/failing-test</span><span class="tag" data-astro-cid-egg7nqdx>area/dependency</span><span class="tag" data-astro-cid-egg7nqdx>area/test</span><span class="tag" data-astro-cid-egg7nqdx>kind/cleanup</span><span class="tag" data-astro-cid-egg7nqdx>sig/testing</span><span class="tag" data-astro-cid-egg7nqdx>lgtm</span><span class="tag" data-astro-cid-egg7nqdx>size/XS</span><span class="tag" data-astro-cid-egg7nqdx>approved</span><span class="tag" data-astro-cid-egg7nqdx>size/M</span><span class="tag" data-astro-cid-egg7nqdx>needs-rebase</span><span class="tag" data-astro-cid-egg7nqdx>size/XXL</span><span class="tag" data-astro-cid-egg7nqdx>sig/apps</span><span class="tag" data-astro-cid-egg7nqdx>sig/instrumentation</span><span class="tag" data-astro-cid-egg7nqdx>area/apiserver</span><span class="tag" data-astro-cid-egg7nqdx>kind/api-change</span><span class="tag" data-astro-cid-egg7nqdx>sig/network</span><span class="tag" data-astro-cid-egg7nqdx>sig/scalability</span><span class="tag" data-astro-cid-egg7nqdx>cncf-cla: no</span><span class="tag" data-astro-cid-egg7nqdx>wg/workload-aware-scheduling</span><span class="tag" data-astro-cid-egg7nqdx>ok-to-test</span><span class="tag" data-astro-cid-egg7nqdx>dependencies</span><span class="tag" data-astro-cid-egg7nqdx>go</span><span class="tag" data-astro-cid-egg7nqdx>minikube</span><span class="tag" data-astro-cid-egg7nqdx>area/infra</span><span class="tag" data-astro-cid-egg7nqdx>area/prow</span><span class="tag" data-astro-cid-egg7nqdx>sig/k8s-infra</span><span class="tag" data-astro-cid-egg7nqdx>area/infra/ibmcloud</span><span class="tag" data-astro-cid-egg7nqdx>k8s.io</span><span class="tag" data-astro-cid-egg7nqdx>area/artifacts</span><span class="tag" data-astro-cid-egg7nqdx>area/registry.k8s.io</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/hold</span><span class="tag" data-astro-cid-egg7nqdx>committee/steering</span><span class="tag" data-astro-cid-egg7nqdx>area/elections</span><span class="tag" data-astro-cid-egg7nqdx>community</span><span class="tag" data-astro-cid-egg7nqdx>cloud-provider-gcp</span><span class="tag" data-astro-cid-egg7nqdx>area/cluster-autoscaler</span><span class="tag" data-astro-cid-egg7nqdx>autoscaler</span><span class="tag" data-astro-cid-egg7nqdx>area/vertical-pod-autoscaler</span><span class="tag" data-astro-cid-egg7nqdx>sig/autoscaling</span><span class="tag" data-astro-cid-egg7nqdx>area/provider/cluster-api</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/release-note-label-needed</span><span class="tag" data-astro-cid-egg7nqdx>prometheus</span><span class="tag" data-astro-cid-egg7nqdx>release</span><span class="tag" data-astro-cid-egg7nqdx>graphite_exporter</span><span class="tag" data-astro-cid-egg7nqdx>common</span><span class="tag" data-astro-cid-egg7nqdx>promlens</span><span class="tag" data-astro-cid-egg7nqdx>containerd</span><span class="tag" data-astro-cid-egg7nqdx>overlaybd</span> </div> </header> <div class="post-content" data-astro-cid-egg7nqdx> <h2 id="overview">Overview</h2>
+<p>This is an automated collection of upstream activity from github.</p>
+<h2 id="-high-priority-updates">🔥 High Priority Updates</h2>
+<h3 id="kubernetesautoscaler9962-aep-9936-per-vpa-observation-window">kubernetes/autoscaler#9962: AEP-9936: Per-VPA Observation Window</h3>
+<p>This is a draft AEP for #9936 (Per-VPA Observation Window), triaged into <code>triage/accepted</code> by @omerap12.</p>
+<p>The proposal adds an optional <code>observationPeriodSeconds</code> field on <code>PodUpdatePolicy</code>. During the window, the Updater treats the VPA as if <code>updateMode</code> were <code>Off</code>, regardless of the configured mod…</p>
+<p>🔗 <a href="https://github.com/kubernetes/autoscaler/pull/9962">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-10</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="prometheuspromlens-040--2026-07-10">prometheus/promlens: 0.4.0 / 2026-07-10</h3>
+<p>PromLens is no longer maintained and has been archived. Much of its functionality has been merged into the Prometheus server’s “Explain” tab, where it is kept up to date.</p>
+<ul>
+<li>[CHANGE] PromQL: The <code>holt_winters</code> function is now called <code>double_exponential_smoothing</code>, following its rename in Prometheus 3.0. #266</li>
+<li>[CHANGE] Logging: Switch from go-kit/log to Go’s standard library log/slog. The log output format has changed. #149</li>
+<li>[CHANGE] Docker images are now also published to GHCR (`ghcr.io/pr…</li>
+</ul>
+<p>🔗 <a href="https://github.com/prometheus/promlens/releases/tag/v0.4.0">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Version: v0.4.0</li>
+<li>Published: 2026-07-10</li>
+<li>Prerelease: No</li>
+</ul>
+<h2 id="updates">Updates</h2>
+<h3 id="kuberneteskubernetes140424-dra-define-an-upper-bound-or-overflow-safety-contract-for-device-request-count">kubernetes/kubernetes#140424: DRA: define an upper bound or overflow-safety contract for device request count</h3>
+<h2 id="summary">Summary</h2>
+<p>For <code>DeviceAllocationModeExactCount</code>, the device request <code>Count</code> is an <code>int64</code> and is currently validated only for its lower bound.</p>
+<p>Both <code>ExactDeviceRequest.Count</code> and <code>DeviceSubRequest.Count</code> flow through <code>validateDeviceAllocationMode</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="go"><code><span class="line"><span style="color:#F97583">case</span><span style="color:#E1E4E8"> resource.DeviceAllocationModeExactCou</span><span style="color:#F97583">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/kubernetes/issues/140424)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">kubernetes#</span><span style="color:#79B8FF">140423</span><span style="color:#E1E4E8">: Non</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">deterministic victim ordering in pod group preemption causes flaky </span><span style="color:#9ECBFF">`TestPodGroupEvaluator_SelectVictimsOnDomain`</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### Which jobs are flaking?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">`pull-kubernetes-unit-windows-master`</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### Which tests are flaking?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">`[sig-scheduling] k8s.io/kubernetes/pkg/scheduler/framework: preemption`</span><span style="color:#E1E4E8"> — </span><span style="color:#9ECBFF">`TestPodGroupEvaluator_SelectVictimsOnDomain/Efficiency:_Preempt_minimum_number_of_victims`</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### Since when has it been flaking</span><span style="color:#F97583">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/kubernetes/issues/140423)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">kubernetes#</span><span style="color:#79B8FF">140420</span><span style="color:#E1E4E8">: TestSubmitPodGroupAlgorithmResult</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">One_unschedulable</span><span style="color:#9ECBFF">` flakes on Windows due to non-deterministic pod ordering in PodGroup scheduling</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">### Which jobs are flaking?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">pull-kubernetes-unit-windows-master</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">### Which tests are flaking?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">- `</span><span style="color:#E1E4E8">TestSubmitPodGroupAlgorithmResult</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">One_unschedulable</span><span style="color:#9ECBFF">`</span></span>
+<span class="line"><span style="color:#9ECBFF">- `</span><span style="color:#E1E4E8">TestSubmitPodGroupAlgorithmResult</span><span style="color:#9ECBFF">` (parent)</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">### Since when has it been flaking?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">Since commit `</span><span style="color:#FDAEB7;font-style:italic">8eb66b73ef2</span><span style="color:#9ECBFF">` ("Add support for PodGroups in sche...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">🔗 [Link](https://github.com/kubernetes/kubernetes/issues/140420)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">**Metadata:**</span></span>
+<span class="line"><span style="color:#9ECBFF">- Created: 2026-07-10</span></span>
+<span class="line"><span style="color:#9ECBFF">- Comments: 1</span></span>
+<span class="line"><span style="color:#9ECBFF">- State: open</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">### kubernetes/kubernetes#140432: Add scaling exclusive cpus checkpoint tests</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">#### What type of PR is this?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">/kind feature</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">#### What this PR does / why we need it:</span></span>
+<span class="line"><span style="color:#9ECBFF">This is an enhancement of https://github.com/kubernetes/kubernetes/pull/140314 by store/restore checkpoint tests.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">Extend TestCheckpointStateRestore and TestCheckpointStateStore to cover the InPlacePodVerti...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140432)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">**Metadata:**</span></span>
+<span class="line"><span style="color:#9ECBFF">- Created: 2026-07-11</span></span>
+<span class="line"><span style="color:#9ECBFF">- Comments: undefined</span></span>
+<span class="line"><span style="color:#9ECBFF">- State: open</span></span>
+<span class="line"><span style="color:#9ECBFF">- Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">### kubernetes/kubernetes#140431: DRA: roll back reserved state in allocateDevice</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">#### What type of PR is this?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">/kind bug</span></span>
+<span class="line"><span style="color:#9ECBFF">/sig node</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">#### What this PR does / why we need it:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">The structured DRA allocator can leave reserved state behind when it stops considering a candidate device, which can make a schedulable pod fail to schedule.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">allocateDevice reserves a device's shared count...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140431)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">**Metadata:**</span></span>
+<span class="line"><span style="color:#9ECBFF">- Created: 2026-07-10</span></span>
+<span class="line"><span style="color:#9ECBFF">- Comments: undefined</span></span>
+<span class="line"><span style="color:#9ECBFF">- State: open</span></span>
+<span class="line"><span style="color:#9ECBFF">- Draft: Yes</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">### kubernetes/kubernetes#140430: Fix DRA test flake caused by goroutine leak racing with TempDir cleanup</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">#### What type of PR is this?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">/kind bug</span></span>
+<span class="line"><span style="color:#9ECBFF">/kind failing-test</span></span>
+<span class="line"><span style="color:#9ECBFF">/kind flake</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">#### What this PR does / why we need it:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">With ResourceHealthStatus enabled (Beta, default on since 1.36), RegisterPlugin spawns a goroutine that runs WatchResources stream and writes to healthInfoCache's state file in ...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140430)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">**Metadata:**</span></span>
+<span class="line"><span style="color:#9ECBFF">- Created: 2026-07-10</span></span>
+<span class="line"><span style="color:#9ECBFF">- Comments: undefined</span></span>
+<span class="line"><span style="color:#9ECBFF">- State: open</span></span>
+<span class="line"><span style="color:#9ECBFF">- Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">### kubernetes/kubernetes#140429: kubelet/cadvisor: disable container discovery when using CRI stats</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">&#x3C;!--  Thanks for sending a pull request!  Here are some tips for you:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140429)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">**Metadata:**</span></span>
+<span class="line"><span style="color:#9ECBFF">- Created: 2026-07-10</span></span>
+<span class="line"><span style="color:#9ECBFF">- Comments: undefined</span></span>
+<span class="line"><span style="color:#9ECBFF">- State: open</span></span>
+<span class="line"><span style="color:#9ECBFF">- Draft: Yes</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">### kubernetes/kubernetes#140427: test/e2e/node: add probe stress test for HTTP, TCP, and gRPC liveness probes</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">Fixes #115782</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#9ECBFF">## What this does</span></span>
+<span class="line"><span style="color:#9ECBFF">Adds a `</span><span style="color:#E1E4E8">[Serial][Slow]</span><span style="color:#9ECBFF">` e2e test in `</span><span style="color:#E1E4E8">test</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">e2e</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">node</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">probe_stress.</span><span style="color:#F97583">go</span><span style="color:#9ECBFF">` that:</span></span>
+<span class="line"><span style="color:#9ECBFF">- Creates a pod with 20 containers, each running a **1-second** liveness probe</span></span>
+<span class="line"><span style="color:#9ECBFF">- Covers all three probe transports: **HTTP**, **TCP**, **gRPC**</span></span>
+<span class="line"><span style="color:#9ECBFF">- Observes for **2 minutes** and asserts `</span><span style="color:#E1E4E8">restart</span><span style="color:#F97583">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/kubernetes/pull/140427)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: undefined</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">kubernetes#</span><span style="color:#79B8FF">140426</span><span style="color:#E1E4E8">: pytorch workloads are used instead of tensor flow</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">&#x3C;!--</span><span style="color:#E1E4E8">  Thanks </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> sending a pull request</span><span style="color:#F97583">!</span><span style="color:#E1E4E8">  Here are some tips </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> you:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">1.</span><span style="color:#E1E4E8"> If this is your first time, please read our contributor guidelines: https:</span><span style="color:#6A737D">//git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/kubernetes/pull/140426)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: undefined</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">kubernetes#</span><span style="color:#79B8FF">140425</span><span style="color:#E1E4E8">: Fix non</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">deterministic victim ordering in pod group preemption</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">#### What </span><span style="color:#F97583">type</span><span style="color:#E1E4E8"> of PR is this?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">kind bug</span></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">kind flake</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">#### What this PR does </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> why we need it:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">MoreImportantVictim used time.</span><span style="color:#B392F0">Now</span><span style="color:#E1E4E8">() as fallback when pods lack StartTime, producing non</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">deterministic sort order across platforms. Add UID</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">based tie</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">breaker and set explicit StartTimes in the Effic</span><span style="color:#F97583">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/kubernetes/pull/140425)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: undefined</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">kubernetes#</span><span style="color:#79B8FF">140422</span><span style="color:#E1E4E8">: resourceclaim controller: Add owner kind labels to create metric</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">&#x3C;!--</span><span style="color:#E1E4E8">  Thanks </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> sending a pull request</span><span style="color:#F97583">!</span><span style="color:#E1E4E8">  Here are some tips </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> you:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF">1.</span><span style="color:#E1E4E8"> If this is your first time, please read our contributor guidelines: https:</span><span style="color:#6A737D">//git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/kubernetes/pull/140422)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: undefined</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">kubernetes#</span><span style="color:#79B8FF">140421</span><span style="color:#E1E4E8">: Fix non</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">deterministic pod ordering in PodGroup scheduling</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">#### What </span><span style="color:#F97583">type</span><span style="color:#E1E4E8"> of PR is this?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">kind bug</span></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">kind flake</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">#### What this PR does </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> why we need it:</span></span>
+<span class="line"><span style="color:#E1E4E8">PodGroupMemberPodsOrderingFunc returned </span><span style="color:#79B8FF">0</span><span style="color:#F97583"> for</span><span style="color:#E1E4E8"> pods with equal priority, attempts, and timestamp. On Windows, the low</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">resolution system clock means pods created in quick succession often share the sam</span><span style="color:#F97583">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/kubernetes/pull/140421)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: undefined</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">kubernetes#</span><span style="color:#79B8FF">140419</span><span style="color:#E1E4E8">: Fix ConvertToNative </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> Mutating admission policies</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">#### What </span><span style="color:#F97583">type</span><span style="color:#E1E4E8"> of PR is this?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">kind bug</span></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">kind cleanup</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">#### What this PR does </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> why we need it:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">This PR fixes an issue in Mutating Admission Policy (MAP) during patch evaluation by explicitly supporting </span><span style="color:#F97583">type</span><span style="color:#E1E4E8"> conversions to structpb types, and refines the associated test suite.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">Specifical</span><span style="color:#F97583">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/kubernetes/pull/140419)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: undefined</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">kubernetes#</span><span style="color:#79B8FF">140418</span><span style="color:#E1E4E8">: Disable SchemalessTypeRef </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> MutatingAdmissionPolicies</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">#### What </span><span style="color:#F97583">type</span><span style="color:#E1E4E8"> of PR is this?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">kind bug</span></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">kind cleanup</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">#### What this PR does </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> why we need it:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">This PR refactors how </span><span style="color:#9ECBFF">`admission.LazyObject`</span><span style="color:#E1E4E8"> evaluates CEL representations to disable </span><span style="color:#9ECBFF">`SchemalessTypeRef`</span><span style="color:#E1E4E8"> by </span><span style="color:#F97583">default</span><span style="color:#E1E4E8"> while explicitly preserving it </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> Validating Admission Policies (VAPs). </span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">T</span><span style="color:#F97583">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/kubernetes/pull/140418)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: undefined</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">kubernetes#</span><span style="color:#79B8FF">140417</span><span style="color:#E1E4E8">: kubelet: add failure threshold info to probe failure events</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">#### What </span><span style="color:#F97583">type</span><span style="color:#E1E4E8"> of PR is this?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">kind bug</span></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">kind cleanup</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">#### What this PR does </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> why we need it:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">When a container probe (liveness, readiness, or startup) fails, Kubernetes emits a warning event. However, this event was recorded with the same format regardless of whether the failure reached t</span><span style="color:#F97583">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/kubernetes/pull/140417)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: undefined</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">kubernetes#</span><span style="color:#79B8FF">140416</span><span style="color:#E1E4E8">: Migrate ObjectMeta immutability checks to DV</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">#### What </span><span style="color:#F97583">type</span><span style="color:#E1E4E8"> of PR is this?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">kind feature</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">#### What this PR does </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> why we need it:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">This PR migrates the immutability checks of four </span><span style="color:#9ECBFF">`ObjectMeta`</span><span style="color:#E1E4E8"> fields (</span><span style="color:#9ECBFF">`UID`</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">`CreationTimestamp`</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">`DeletionTimestamp`</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">`DeletionGracePeriodSeconds`</span><span style="color:#E1E4E8">) from handwritten validation to declarative validation.</span></span>
+<span class="line"><span style="color:#F97583">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/kubernetes/pull/140416)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: undefined</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">kubernetes#</span><span style="color:#79B8FF">140415</span><span style="color:#E1E4E8">: Scale the Services repair loops </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> very large Service counts</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">What </span><span style="color:#F97583">type</span><span style="color:#E1E4E8"> of PR is this?</span><span style="color:#F97583">**</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">kind feature</span></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">sig network</span></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">sig scalability</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">What this PR does </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> why we need it:</span><span style="color:#F97583">**</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">The Services repair loops have two hard</span><span style="color:#F97583">-</span><span style="color:#E1E4E8">coded timings that </span><span style="color:#F97583">break</span><span style="color:#E1E4E8"> down at very large Service counts, where a single runOnce pass — a full quorum List of every Service — takes minutes:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/kubernetes/pull/140415)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: undefined</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">kubernetes#</span><span style="color:#79B8FF">140414</span><span style="color:#E1E4E8">: Retry services repair initial sync with backoff instead of waiting a full interval</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">What </span><span style="color:#F97583">type</span><span style="color:#E1E4E8"> of PR is this?</span><span style="color:#F97583">**</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">kind bug</span></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">sig network</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">What this PR does </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> why we need it:</span><span style="color:#F97583">**</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">The ClusterIP</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">NodePort repair loops treat the FIRST successful sync specially: the apiserver</span><span style="color:#9ECBFF">'</span><span style="color:#FDAEB7;font-style:italic">s post-start hook blocks readiness on it. But when that first runOnce fails transiently (storage not yet warm ri...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140414)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">**Metadata:**</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Created: 2026-07-10</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Comments: undefined</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- State: open</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">### kubernetes/kubernetes#140413: Add TAS gang preemption performance scenarios</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">#### What type of PR is this?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">/kind feature</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">#### What this PR does / why we need it:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">This PR introduces a new scheduler performance benchmark scenario, `GangPreemptionTopology`, to evaluate the performance of gang scheduling preemption when the preemptor pods are subject to Topology Aware Schedul...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140413)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">**Metadata:**</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Created: 2026-07-10</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Comments: undefined</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- State: open</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Draft: Yes</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">### kubernetes/kubernetes#140412: Remove post filters from pod group cycle</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">#### What type of PR is this?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">/kind feature</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">#### What this PR does / why we need it:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">This PR disables all PostFilters from the pod group cycle. This is a follow up to https://github.com/kubernetes/kubernetes/pull/139674 which introduced a PodGroupPostFilter. We expect all PostFilter owners ...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140412)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">**Metadata:**</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Created: 2026-07-10</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Comments: undefined</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- State: open</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">### kubernetes/kubernetes#140411: fix: correctly track validating webhook latency across parallel dispatch and sequential retries</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">#### What type of PR is this?</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">/kind bug</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">#### What this PR does / why we need it:</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">the apiserver_request_sli_duration_seconds was miscalculating the SLI latency for requests involving validating webhooks. The SLI formula subtracts webhook latency from total elapsed time. </span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">the original max was ...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140411)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">**Metadata:**</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Created: 2026-07-10</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Comments: undefined</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- State: open</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">### kubernetes/kubernetes#140410: test/client-go: fix data race in TestRequestMaxRetries</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">#### What type of PR is this?</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">/kind bug</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">#### What this PR does / why we need it:</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">A data race was found in `TestRequestMaxRetries` in `staging/src/k8s.io/client-go/rest/request_test.go`. The test server</span><span style="color:#9ECBFF">'</span><span style="color:#E1E4E8">s HTTP handler (</span><span style="color:#9ECBFF">`retryOneTimeHandler`</span><span style="color:#E1E4E8">) and the subtest cleanup loop read, write, and reset th</span><span style="color:#F97583">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/kubernetes/pull/140410)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: undefined</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">kubernetes#</span><span style="color:#79B8FF">140408</span><span style="color:#E1E4E8">: Add topology spreading gang preemption performance scenarios</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">#### What </span><span style="color:#F97583">type</span><span style="color:#E1E4E8"> of PR is this?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">/</span><span style="color:#E1E4E8">kind feature</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">#### What this PR does </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> why we need it:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">This PR introduces a new scheduler performance benchmark scenario, </span><span style="color:#9ECBFF">`GangPreemptionTopologySpreading`</span><span style="color:#E1E4E8">, to evaluate the performance of gang scheduling preemption when the preemptor pods also have topology spr</span><span style="color:#F97583">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/kubernetes/pull/140408)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: undefined</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">minikube#</span><span style="color:#79B8FF">23322</span><span style="color:#E1E4E8">: </span><span style="color:#B392F0">chore</span><span style="color:#E1E4E8">(deps): bump golang.org</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">x</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">crypto from </span><span style="color:#FDAEB7;font-style:italic">0.45.0</span><span style="color:#E1E4E8"> to </span><span style="color:#FDAEB7;font-style:italic">0.52.0</span><span style="color:#E1E4E8"> in </span><span style="color:#F97583">/</span><span style="color:#E1E4E8">hack</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">prow</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">minitest</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">Bumps [golang.org</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">x</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">crypto](https:</span><span style="color:#6A737D">//github.com/golang/crypto) from 0.45.0 to 0.52.0.</span></span>
+<span class="line"><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8">details</span><span style="color:#F97583">></span></span>
+<span class="line"><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8">summary</span><span style="color:#F97583">></span><span style="color:#E1E4E8">Commits</span><span style="color:#F97583">&#x3C;/</span><span style="color:#E1E4E8">summary</span><span style="color:#F97583">></span></span>
+<span class="line"><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8">ul</span><span style="color:#F97583">></span></span>
+<span class="line"><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8">li</span><span style="color:#F97583">>&#x3C;</span><span style="color:#E1E4E8">a href</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"https://github.com/golang/crypto/commit/a1c0d9929856c8aba2b31f079340f00578eda803"</span><span style="color:#F97583">>&#x3C;</span><span style="color:#E1E4E8">code</span><span style="color:#F97583">></span><span style="color:#E1E4E8">a1c0d99</span><span style="color:#F97583">&#x3C;/</span><span style="color:#E1E4E8">code</span><span style="color:#F97583">>&#x3C;/</span><span style="color:#E1E4E8">a</span><span style="color:#F97583">></span><span style="color:#F97583"> go</span><span style="color:#E1E4E8">.mod: update golang.org</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">x dependencies</span><span style="color:#F97583">&#x3C;/</span><span style="color:#E1E4E8">li</span><span style="color:#F97583">></span></span>
+<span class="line"><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8">li</span><span style="color:#F97583">>&#x3C;</span><span style="color:#E1E4E8">a </span><span style="color:#F97583">...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">🔗 [Link](https:</span><span style="color:#6A737D">//github.com/kubernetes/minikube/pull/23322)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">**</span><span style="color:#E1E4E8">Metadata:</span><span style="color:#F97583">**</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Created: </span><span style="color:#79B8FF">2026</span><span style="color:#F97583">-</span><span style="color:#79B8FF">07</span><span style="color:#F97583">-</span><span style="color:#79B8FF">10</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Comments: undefined</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> State: open</span></span>
+<span class="line"><span style="color:#F97583">-</span><span style="color:#E1E4E8"> Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">### kubernetes</span><span style="color:#F97583">/</span><span style="color:#E1E4E8">k8s.io#</span><span style="color:#79B8FF">9703</span><span style="color:#E1E4E8">: add docs </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> rotating cluster credentials</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">I added docs to show how we rotate credentials </span><span style="color:#F97583">for</span><span style="color:#E1E4E8"> IBM build clusters that don</span><span style="color:#9ECBFF">'</span><span style="color:#FDAEB7;font-style:italic">t use Workload Identity. I also added minimal readmes to every cluster + argocd status badges.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">🔗 [Link](https://github.com/kubernetes/k8s.io/pull/9703)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">**Metadata:**</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Created: 2026-07-10</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Comments: undefined</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- State: open</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">### kubernetes/k8s.io#9702: Bump git-sync to v4.7.1</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">**What this PR does / why we need it**:</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">Bump git-sync to v4.7.1</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">**If you are promoting an image, please make sure you have done the following:**</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- [X] I have verified the digest with [gcrane](https://github.com/google/go-containerregistry/blob/main/cmd/gcrane/README.md) and added it as a co...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">🔗 [Link](https://github.com/kubernetes/k8s.io/pull/9702)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">**Metadata:**</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Created: 2026-07-10</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Comments: undefined</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- State: open</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">- Draft: No</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">### kubernetes/k8s.io#9698: Image promotion for scl-image-builder v0.1.55</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">Image promotion for scl-image-builder v0.1.55</span></span>
+<span class="line"><span style="color:#FDAEB7;font-style:italic">This is an automated PR generated from `kpromo`</span></span></code></pre>
+<p>kpromo pr —fork drew-viles —project scl-image-builder —reviewers “@AverageMarcus @jsturtevant @kkeshavamurthy @mboersma @drew-viles” —tag v0.1.55</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span></span></span>
+<span class="line"><span>/hold</span></span>
+<span class="line"><span>cc: @AverageMarcus @jsturtevant @kkeshava...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/k8s.io/pull/9698)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-07-10</span></span>
+<span class="line"><span>- Comments: undefined</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span>- Draft: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/community#9069: Update date for the Steering question and answer session for the 2026 Steering election</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>This PR updates the 2026 Steering election schedule for the Steering Q&#x26;A from July 29 to August 5 as discussed in issue https://github.com/kubernetes/steering/issues/312</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/assign @npolshakova @sreeram-venkitesh </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/community/pull/9069)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-07-10</span></span>
+<span class="line"><span>- Comments: undefined</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span>- Draft: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/cloud-provider-gcp#1244: chore(deps): bump golang from 1.26.4 to 1.26.5 in /metis</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Bumps golang from 1.26.4 to 1.26.5.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/cloud-provider-gcp/pull/1244)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-07-10</span></span>
+<span class="line"><span>- Comments: undefined</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span>- Draft: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/autoscaler#9966: [BUG]: clusterapi provider can't process machinedeployment managed labels</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#x3C;!--</span></span>
+<span class="line"><span>Please answer these questions before submitting your bug report. Thanks!</span></span>
+<span class="line"><span>--></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Which component are you using?**:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/area cluster-autoscaler</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**What version of the component are you using?**:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#x3C;!--</span></span>
+<span class="line"><span>What version of the relevant component are you using? Either the image tag or helm chart version.</span></span>
+<span class="line"><span>...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/autoscaler/issues/9966)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-07-10</span></span>
+<span class="line"><span>- Comments: 1</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/autoscaler#9963: AEP-8026 Phase 2: expose recommendationMarginFraction per-VPA</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Which component are you using?**:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/area vertical-pod-autoscaler</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Is your feature request designed to solve a problem? If so describe the problem this feature should solve.**:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Different workloads want different safety margins on top of the recommender's usage-based prediction. Today, `--recomme...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/autoscaler/issues/9963)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-07-10</span></span>
+<span class="line"><span>- Comments: 1</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/autoscaler#9961: clusterapi: Machines are classified as failed based on status.failureMessage even while the machine controller is still reconciling them</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Which component are you using?**:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/area cluster-autoscaler</span></span>
+<span class="line"><span>/area provider/cluster-api</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**What version of the component are you using?**:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Component version: Cluster Autoscaler 1.35</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>behaviour introduced by #7989 and #7950, merged into 1.33; still present on master.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**What k8s version are you usi...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/autoscaler/issues/9961)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-07-10</span></span>
+<span class="line"><span>- Comments: 2</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/autoscaler#9968: Improve logging visibility in CanInPlaceUpdate</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#### What type of PR is this?</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/kind cleanup</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#### What this PR does / why we need it:</span></span>
+<span class="line"><span>This PR adds missing `klog.V(4)` debug logs to the early-return paths of the `CanInPlaceUpdate` function within `PodsInPlaceRestrictionImpl`. </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Previously, if an in-place update was deferred/evicted due to ...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/autoscaler/pull/9968)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-07-10</span></span>
+<span class="line"><span>- Comments: undefined</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span>- Draft: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/autoscaler#9967: fix: cluster api machinedeployment managed labels</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#### What type of PR is this?</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/kind bug</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#### What this PR does / why we need it:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#### Which issue(s) this PR fixes:</span></span>
+<span class="line"><span>&#x3C;!--</span></span>
+<span class="line"><span>*Automatically closes linked issue when PR is merged.</span></span>
+<span class="line"><span>Usage: `Fixes #&#x3C;issue number>`, or `Fixes (paste link of issue)`.</span></span>
+<span class="line"><span>_If PR is about `failing-tests or flakes`, p...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/autoscaler/pull/9967)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-07-10</span></span>
+<span class="line"><span>- Comments: undefined</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span>- Draft: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### prometheus/prometheus: 3.13.1 / 2026-07-10</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>This is a bugfix release for 3.13 LTS.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>- [BUGFIX] TSDB: Fix the head-chunk cache returning samples from the wrong chunk, or spurious not-found errors, to range queries after head-chunk truncation. #19134</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/prometheus/prometheus/releases/tag/v3.13.1)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Version: v3.13.1</span></span>
+<span class="line"><span>- Published: 2026-07-10</span></span>
+<span class="line"><span>- Prerelease: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### prometheus/graphite_exporter: 0.17.0 / 2026-07-08</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>* [FEATURE] Add metric and debug log for dropped samples #301</span></span>
+<span class="line"><span>* [FEATURE] Support scale param in metric mapping #298</span></span>
+<span class="line"><span>* [ENHANCEMENT] getool: sort labels in blocks for Mimir compatibility #294</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/prometheus/graphite_exporter/releases/tag/v0.17.0)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Version: v0.17.0</span></span>
+<span class="line"><span>- Published: 2026-07-10</span></span>
+<span class="line"><span>- Prerelease: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### prometheus/common: v0.70.0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## What's Changed</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>* config: fix TLSVersion.String() printing pointer address by @s3onghyun in https://github.com/prometheus/common/pull/929</span></span>
+<span class="line"><span>* build(deps): bump golang.org/x/net from 0.55.0 to 0.56.0 by @dependabot[bot] in https://github.com/prometheus/common/pull/933</span></span>
+<span class="line"><span>* Manually go mod tidy by @SuperQ in https://github.com/prometheus/common/pull/934</span></span>
+<span class="line"><span>* Synchronize common files from prometheus/prometheus by @prombot in https://github.com/prometheus/common/pull/937</span></span>
+<span class="line"><span>* route: add support for th...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/prometheus/common/releases/tag/v0.70.0)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Version: v0.70.0</span></span>
+<span class="line"><span>- Published: 2026-07-10</span></span>
+<span class="line"><span>- Prerelease: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### containerd/containerd#13763: containerd 2.2 cannot parse the bootstrap response from a 2.3 runc shim</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>A containerd 2.2 runtime-v2 manager cannot start `containerd-shim-runc-v2` from containerd 2.3.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>The 2.3 shim accepts the legacy CLI, environment, and stdin invocation used by containerd 2.2 and starts the shim process.</span></span>
+<span class="line"><span>However, it unconditionally writes the new protobuf-encoded `BootstrapResult` to...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/containerd/containerd/issues/13763)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-07-10</span></span>
+<span class="line"><span>- Comments: 0</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### containerd/overlaybd: v1.0.18</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## Features</span></span>
+<span class="line"><span>- **zfile**: add Intel QAT hardware acceleration for LZ4 decompression [#406](https://github.com/containerd/overlaybd/pull/406) ([xiecl666](https://github.com/containerd/overlaybd/commit/c11cc93792a560ff84c031a2df9e90d8d745711d))</span></span>
+<span class="line"><span>- add UDS credential helper mode [#412](https://github.com/containerd/overlaybd/pull/412) ([Xiaoxuan Wang](https://github.com/containerd/overlaybd/commit/504b99fe190d3570bc6797ceea109876350ed0ce))</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## Continuous Integration</span></span>
+<span class="line"><span>- add Dependabot to keep dependenc...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/containerd/overlaybd/releases/tag/v1.0.18)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Version: v1.0.18</span></span>
+<span class="line"><span>- Published: 2026-07-10</span></span>
+<span class="line"><span>- Prerelease: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>---</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>*This content was automatically collected on 2026-07-11 02:26:50*</span></span></code></pre> </div> <footer class="post-footer" data-astro-cid-egg7nqdx> <nav class="post-nav" data-astro-cid-egg7nqdx> <a href="/posts" class="back-link" data-astro-cid-egg7nqdx>← 記事一覧に戻る</a> </nav> </footer> </article>  </main> <footer data-astro-cid-sz7xmlte> <div class="footer-content" data-astro-cid-sz7xmlte> <p class="copyright" data-astro-cid-sz7xmlte> © 2026 Upstream Lens. All rights reserved. </p> <p class="disclaimer-note" data-astro-cid-sz7xmlte> This site is not affiliated with any specific foundation, organization, or project. </p> <nav class="footer-nav" data-astro-cid-sz7xmlte> <a href="/disclaimer" data-astro-cid-sz7xmlte>Disclaimer</a> <span class="separator" data-astro-cid-sz7xmlte>•</span> <a href="/author" data-astro-cid-sz7xmlte>Author</a> <span class="separator" data-astro-cid-sz7xmlte>•</span> <a href="https://github.com/kkomazaw/upstreamlens.io" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>GitHub</a> </nav> </div> </footer>  </div> </body></html> 

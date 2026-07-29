@@ -1,0 +1,645 @@
+<!DOCTYPE html><html lang="ja"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="CNCF upstream activity from github"><title>Upstream Github - 2026-07-29 | Upstream Lens</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><style>.post[data-astro-cid-egg7nqdx]{max-width:100%}.post-header[data-astro-cid-egg7nqdx]{margin-bottom:3rem;padding-bottom:2rem;border-bottom:2px solid var(--border-color)}.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 1rem}.post-meta[data-astro-cid-egg7nqdx]{display:flex;gap:1rem;align-items:center;font-size:.875rem;color:var(--text-secondary);margin-bottom:1rem}.category[data-astro-cid-egg7nqdx]{background-color:var(--code-bg);padding:.25rem .75rem;border-radius:3px;font-weight:600;color:var(--text-color)}.tags[data-astro-cid-egg7nqdx]{display:flex;flex-wrap:wrap;gap:.5rem}.tag[data-astro-cid-egg7nqdx]{background-color:var(--border-color);color:var(--text-color);padding:.25rem .75rem;border-radius:3px;font-size:.875rem}.post-content[data-astro-cid-egg7nqdx]{margin:3rem 0;line-height:1.8}.post-content[data-astro-cid-egg7nqdx] h2{margin-top:3rem}.post-content[data-astro-cid-egg7nqdx] h3{margin-top:2rem}.post-content[data-astro-cid-egg7nqdx] img{max-width:100%;height:auto;border-radius:4px;margin:2rem 0}.post-content[data-astro-cid-egg7nqdx] blockquote{border-left:4px solid var(--accent-color);padding-left:1.5rem;margin:2rem 0;color:var(--text-secondary);font-style:italic}.post-footer[data-astro-cid-egg7nqdx]{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border-color)}.post-nav[data-astro-cid-egg7nqdx]{text-align:center}.back-link[data-astro-cid-egg7nqdx]{color:var(--link-color);text-decoration:none;font-weight:600}.back-link[data-astro-cid-egg7nqdx]:hover{color:var(--link-hover);text-decoration:underline}@media(max-width:768px){.post-header[data-astro-cid-egg7nqdx]{margin-bottom:2rem;padding-bottom:1.5rem}.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{font-size:1.75rem;line-height:1.3}.post-meta[data-astro-cid-egg7nqdx]{flex-direction:column;align-items:flex-start;gap:.5rem}.post-content[data-astro-cid-egg7nqdx]{margin:2rem 0}.post-content[data-astro-cid-egg7nqdx] h2{margin-top:2rem}.post-content[data-astro-cid-egg7nqdx] h3{margin-top:1.5rem}.post-content[data-astro-cid-egg7nqdx] blockquote{padding-left:1rem;margin:1.5rem 0;font-size:.95rem}.post-content[data-astro-cid-egg7nqdx] pre{margin:1.5rem -1.25rem;border-radius:0;font-size:.875rem}.post-footer[data-astro-cid-egg7nqdx]{margin-top:3rem}.tags[data-astro-cid-egg7nqdx]{gap:.375rem}.tag[data-astro-cid-egg7nqdx]{font-size:.8125rem;padding:.2rem .625rem}}@media(max-width:480px){.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{font-size:1.5rem}.post-content[data-astro-cid-egg7nqdx] pre{font-size:.8125rem}}
+</style>
+<link rel="stylesheet" href="/_astro/about.Mt-9HUYb.css"></head> <body> <div class="container"> <header data-astro-cid-3ef6ksr2> <div class="header-top" data-astro-cid-3ef6ksr2> <div class="header-content" data-astro-cid-3ef6ksr2> <div class="site-title" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2>Upstream Lens</a> </div> <p class="tagline" data-astro-cid-3ef6ksr2>Seeing decisions before code is written</p> </div> <div class="language-switcher" data-astro-cid-a2mxz4y6> <a href="/posts/2026/2026-07-29-upstream-github/" class="lang-link active" aria-current="page" data-astro-cid-a2mxz4y6> 日本語 </a><a href="/en/posts/2026/2026-07-29-upstream-github/" class="lang-link" data-astro-cid-a2mxz4y6> English </a> </div>  </div> <nav data-astro-cid-pux6a34n> <button class="mobile-menu-toggle" aria-label="メニュー" id="mobile-menu-toggle" data-astro-cid-pux6a34n> <span class="hamburger" data-astro-cid-pux6a34n></span> </button> <ul id="nav-menu" data-astro-cid-pux6a34n> <li data-astro-cid-pux6a34n> <a href="/" class="nav-link" data-astro-cid-pux6a34n> Home </a> </li><li data-astro-cid-pux6a34n> <a href="/philosophy" class="nav-link" data-astro-cid-pux6a34n> Philosophy </a> </li><li data-astro-cid-pux6a34n> <a href="/posts" class="nav-link active" aria-current="page" data-astro-cid-pux6a34n> Posts </a> </li><li data-astro-cid-pux6a34n> <a href="/stories" class="nav-link" data-astro-cid-pux6a34n> Stories </a> </li><li data-astro-cid-pux6a34n> <a href="/about" class="nav-link" data-astro-cid-pux6a34n> About </a> </li> </ul> </nav> <script type="module">const e=document.getElementById("mobile-menu-toggle"),n=document.getElementById("nav-menu");e&&n&&(e.addEventListener("click",()=>{const t=n.classList.toggle("open");e.classList.toggle("open"),e.setAttribute("aria-expanded",t.toString())}),n.querySelectorAll("a").forEach(t=>{t.addEventListener("click",()=>{n.classList.remove("open"),e.classList.remove("open"),e.setAttribute("aria-expanded","false")})}),document.addEventListener("click",t=>{!e.contains(t.target)&&!n.contains(t.target)&&(n.classList.remove("open"),e.classList.remove("open"),e.setAttribute("aria-expanded","false"))}));</script>  </header>  <main>  <article class="post" data-astro-cid-egg7nqdx> <header class="post-header" data-astro-cid-egg7nqdx> <h1 data-astro-cid-egg7nqdx>Upstream Github - 2026-07-29</h1> <div class="post-meta" data-astro-cid-egg7nqdx> <time datetime="2026-07-29T00:00:00.000Z" data-astro-cid-egg7nqdx> 2026年7月29日 </time> <span class="category" data-astro-cid-egg7nqdx>Notes</span> </div> <div class="tags" data-astro-cid-egg7nqdx> <span class="tag" data-astro-cid-egg7nqdx>upstream</span><span class="tag" data-astro-cid-egg7nqdx>CNCF</span><span class="tag" data-astro-cid-egg7nqdx>kubernetes</span><span class="tag" data-astro-cid-egg7nqdx>issue</span><span class="tag" data-astro-cid-egg7nqdx>needs-triage</span><span class="tag" data-astro-cid-egg7nqdx>autoscaler</span><span class="tag" data-astro-cid-egg7nqdx>area/cluster-autoscaler</span><span class="tag" data-astro-cid-egg7nqdx>kind/feature</span><span class="tag" data-astro-cid-egg7nqdx>area/vertical-pod-autoscaler</span><span class="tag" data-astro-cid-egg7nqdx>area/helm-charts</span><span class="tag" data-astro-cid-egg7nqdx>pr</span><span class="tag" data-astro-cid-egg7nqdx>cncf-cla: no</span><span class="tag" data-astro-cid-egg7nqdx>size/XXL</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/work-in-progress</span><span class="tag" data-astro-cid-egg7nqdx>needs-ok-to-test</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/release-note-label-needed</span><span class="tag" data-astro-cid-egg7nqdx>needs-rebase</span><span class="tag" data-astro-cid-egg7nqdx>cncf-cla: yes</span><span class="tag" data-astro-cid-egg7nqdx>size/XS</span><span class="tag" data-astro-cid-egg7nqdx>release-note-none</span><span class="tag" data-astro-cid-egg7nqdx>kind/bug</span><span class="tag" data-astro-cid-egg7nqdx>sig/node</span><span class="tag" data-astro-cid-egg7nqdx>sig/testing</span><span class="tag" data-astro-cid-egg7nqdx>kind/failing-test</span><span class="tag" data-astro-cid-egg7nqdx>needs-sig</span><span class="tag" data-astro-cid-egg7nqdx>area/test</span><span class="tag" data-astro-cid-egg7nqdx>sig/windows</span><span class="tag" data-astro-cid-egg7nqdx>needs-priority</span><span class="tag" data-astro-cid-egg7nqdx>area/apiserver</span><span class="tag" data-astro-cid-egg7nqdx>sig/api-machinery</span><span class="tag" data-astro-cid-egg7nqdx>release-note</span><span class="tag" data-astro-cid-egg7nqdx>size/L</span><span class="tag" data-astro-cid-egg7nqdx>area/kubelet</span><span class="tag" data-astro-cid-egg7nqdx>kind/cleanup</span><span class="tag" data-astro-cid-egg7nqdx>lgtm</span><span class="tag" data-astro-cid-egg7nqdx>size/M</span><span class="tag" data-astro-cid-egg7nqdx>sig/auth</span><span class="tag" data-astro-cid-egg7nqdx>approved</span><span class="tag" data-astro-cid-egg7nqdx>kind/api-change</span><span class="tag" data-astro-cid-egg7nqdx>sig/apps</span><span class="tag" data-astro-cid-egg7nqdx>triage/accepted</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/cherry-pick-not-approved</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/needs-kind</span><span class="tag" data-astro-cid-egg7nqdx>ok-to-test</span><span class="tag" data-astro-cid-egg7nqdx>sig/scheduling</span><span class="tag" data-astro-cid-egg7nqdx>kind/flake</span><span class="tag" data-astro-cid-egg7nqdx>area/e2e-test-framework</span><span class="tag" data-astro-cid-egg7nqdx>size/S</span><span class="tag" data-astro-cid-egg7nqdx>language/ja</span><span class="tag" data-astro-cid-egg7nqdx>area/localization</span><span class="tag" data-astro-cid-egg7nqdx>website</span><span class="tag" data-astro-cid-egg7nqdx>language/ko</span><span class="tag" data-astro-cid-egg7nqdx>test-infra</span><span class="tag" data-astro-cid-egg7nqdx>area/jobs</span><span class="tag" data-astro-cid-egg7nqdx>area/config</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/hold</span><span class="tag" data-astro-cid-egg7nqdx>release</span><span class="tag" data-astro-cid-egg7nqdx>kops</span><span class="tag" data-astro-cid-egg7nqdx>area/addons</span><span class="tag" data-astro-cid-egg7nqdx>containerd</span><span class="tag" data-astro-cid-egg7nqdx>overlaybd</span><span class="tag" data-astro-cid-egg7nqdx>accelerated-container-image</span><span class="tag" data-astro-cid-egg7nqdx>cncf</span><span class="tag" data-astro-cid-egg7nqdx>lfx mentorship</span><span class="tag" data-astro-cid-egg7nqdx>Term 3: Sept-Nov</span><span class="tag" data-astro-cid-egg7nqdx>2026</span><span class="tag" data-astro-cid-egg7nqdx>Mentors Confirmed</span><span class="tag" data-astro-cid-egg7nqdx>Maintainer/Contribex Approved</span><span class="tag" data-astro-cid-egg7nqdx>Proposal</span><span class="tag" data-astro-cid-egg7nqdx>Validation Passed</span><span class="tag" data-astro-cid-egg7nqdx>CNCF Approved</span><span class="tag" data-astro-cid-egg7nqdx>Exported</span><span class="tag" data-astro-cid-egg7nqdx>mentoring</span> </div> </header> <div class="post-content" data-astro-cid-egg7nqdx> <h2 id="overview">Overview</h2>
+<p>This is an automated collection of upstream activity from github.</p>
+<h2 id="-high-priority-updates">🔥 High Priority Updates</h2>
+<h3 id="kubernetesautoscaler10074-address-security-vulnerabilities">kubernetes/autoscaler#10074: Address Security Vulnerabilities</h3>
+<p>Security scanners are currently flagging several vulnerabilities in the latest release (0.21.0).</p>
+<p>Flagged CVEs:</p>
+<ul>
+<li>CVE-2026-39821</li>
+<li>CVE-2026-39830</li>
+<li>CVE-2026-39831</li>
+<li>CVE-2026-39832</li>
+<li>CVE-2026-39833</li>
+<li>CVE-2026-39834</li>
+<li>CVE-2026-42508</li>
+<li>CVE-2026-46595</li>
+</ul>
+<p>A bump to the project’s Go toolchain (to the latest…</p>
+<p>🔗 <a href="https://github.com/kubernetes/autoscaler/issues/10074">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-28</li>
+<li>Comments: 1</li>
+<li>State: open</li>
+</ul>
+<h3 id="kubernetesautoscaler10069-fix-reporting-simulated-pod-count-log-in-hinting-simulator">kubernetes/autoscaler#10069: Fix reporting simulated pod count log in hinting simulator</h3>
+<h4 id="what-type-of-pr-is-this">What type of PR is this?</h4>
+<p>/kind bug</p>
+<!--
+Add one of the following kinds:
+/kind bug
+/kind cleanup
+/kind documentation
+/kind feature
+
+Optionally add one or more of the following kinds if applicable:
+/kind api-change
+/kind deprecation
+/kind failing-test
+/kind flake
+/kind regression
+-...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/pull/10069)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### cncf/mentoring#2022: [CNCF LFX Proposal] Meshery Grounding AI in the Meshery Registry
+
+### CNCF Project
+
+Meshery
+
+### Term
+
+2026 Term 3 (Sep-Nov)
+
+### Program Name
+
+Grounding AI in the Meshery Registry
+
+### Program Description
+
+## Description
+
+The Meshery Registry holds thousands of components across hundreds of Models spanning Kubernetes, the CNCF landscape, and the major clouds, tog...
+
+🔗 [Link](https://github.com/cncf/mentoring/issues/2022)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: 16
+- State: open
+
+### cncf/mentoring#2019: [CNCF LFX Proposal] Meshery MCP Server
+
+### CNCF Project
+
+Meshery
+
+### Term
+
+2026 Term 3 (Sep-Nov)
+
+### Program Name
+
+MCP Server
+
+### Program Description
+
+## Description
+ 
+Meshery manages cloud and cloud native infrastructure through Designs, Models, Connections, and a live topology continuously discovered by MeshSync. All of it is reacha...
+
+🔗 [Link](https://github.com/cncf/mentoring/issues/2019)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: 12
+- State: open
+
+### cncf/mentoring#2003: [CNCF LFX Proposal] KubeEdge Enable RuntimeClass and Confidential Containers on KubeEdge
+
+### CNCF Project
+
+KubeEdge
+
+### Term
+
+2026 Term 3 (Sep-Nov)
+
+### Program Name
+
+Enable RuntimeClass and Confidential Containers on KubeEdge
+
+### Program Description
+
+## Description
+
+KubeEdge does not yet provide complete RuntimeClass support for workloads running on edge nodes. This prevents users fr...
+
+🔗 [Link](https://github.com/cncf/mentoring/issues/2003)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: 12
+- State: open
+
+## Updates
+
+### kubernetes/autoscaler#10071: Shared node autoscaling API for hard eviction controls
+
+&#x3C;!--
+Thanks for taking the time to raise a feature request! Please answer these questions as best you can before submitting.
+-->
+<p><strong>Which component are you using?</strong>:</p>
+<p>/area cluster-autoscaler</p>
+<p>**Is your feature request designed to solve a problem? If so describe the problem this feature should solve…</p>
+<p>🔗 <a href="https://github.com/kubernetes/autoscaler/issues/10071">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-28</li>
+<li>Comments: 1</li>
+<li>State: open</li>
+</ul>
+<h3 id="kubernetesautoscaler10070-vpa-chart-crds-upgrade-job">kubernetes/autoscaler#10070: VPA chart: CRDs upgrade job</h3>
+<p>/area vertical-pod-autoscaler</p>
+<p>Hi,
+currently I’m puzzled how to ship VPA in our IaC platform properly due to known helm behavior that it installs crds, but is not updating.
+[Many charts](<a href="https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/charts/crds/template">https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/charts/crds/template</a>…</p>
+<p>🔗 <a href="https://github.com/kubernetes/autoscaler/issues/10070">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-28</li>
+<li>Comments: 2</li>
+<li>State: open</li>
+</ul>
+<h3 id="kubernetesautoscaler10073-add-vke-cloud-provider-for-cluster-autoscaler">kubernetes/autoscaler#10073: Add VKE cloud provider for Cluster Autoscaler.</h3>
+<h4 id="what-type-of-pr-is-this-1">What type of PR is this?</h4>
+<p>/kind feature</p>
+<h4 id="what-this-pr-does--why-we-need-it">What this PR does / why we need it:</h4>
+<p>Adds an in-tree Cluster Autoscaler cloud provider for PortvMind Public Cloud Kubernetes Engine(<a href="https://github.com/vmindtech/vke">https://github.com/vmindtech/vke</a>).</p>
+<p>VKE exposes node groups via its control-plane API and authenticates with…</p>
+<p>🔗 <a href="https://github.com/kubernetes/autoscaler/pull/10073">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-28</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: Yes</li>
+</ul>
+<h3 id="kuberneteskubernetes141013-failing-test-node-ec2-instances-are-failing-after-running-test-successfully">kubernetes/kubernetes#141013: [failing test]: node ec2 instances are failing after running test successfully.</h3>
+<h3 id="which-jobs-are-failing">Which jobs are failing?</h3>
+<ul>
+<li><a href="https://testgrid.k8s.io/sig-node-containerd#ci-containerd-node-e2e-ec2">https://testgrid.k8s.io/sig-node-containerd#ci-containerd-node-e2e-ec2</a></li>
+<li><a href="https://testgrid.k8s.io/sig-node-containerd#ci-containerd-node-e2e-serial-ec2">https://testgrid.k8s.io/sig-node-containerd#ci-containerd-node-e2e-serial-ec2</a></li>
+</ul>
+<h3 id="which-tests-are-failing">Which tests are failing?</h3>
+<p>The overall job appears red</p>
+<h3 id="since-when-has-it-been-failing">Since when has it been failing?</h3>
+<p>Last 3-4 runs.</p>
+<h3 id="t">T…</h3>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/issues/141013">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-28</li>
+<li>Comments: 4</li>
+<li>State: open</li>
+</ul>
+<h3 id="kuberneteskubernetes141010-serviceaccountissuerdiscovery-testing-should-allow-any-supported-algorithm">kubernetes/kubernetes#141010: ServiceAccountIssuerDiscovery testing should allow any supported algorithm</h3>
+<h3 id="what-happened">What happened?</h3>
+<p>We switched to using ES384 and ran into an issue with conformance testing where the ServiceAccountIssuerDiscovery testcase failed.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>[FAIL] [sig-auth] ServiceAccounts ServiceAccountIssuerDiscovery should support OIDC discovery of service account issuer [Conformance]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Pod logs:...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/kubernetes/issues/141010)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-07-28</span></span>
+<span class="line"><span>- Comments: 4</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/kubernetes#141016: test/utils/image: bump glibc-dns-testing to 2.1.1</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/kind failing-test</span></span>
+<span class="line"><span>/sig windows</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#### What this PR does / why we need it:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>The Windows `hostnameOverride` e2e tests in `test/e2e/common/node/pod_hostnameoverride.go` have been failing on `ci-kubernetes-e2e-capz-master-windows` since 2026-07-23, with all runs erroring out the same way:</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>flag prov…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/141016">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-29</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes141015-keep-core-type-paramkind-informers-running-when-an-admission-policy-is-unbound">kubernetes/kubernetes#141015: Keep core-type paramKind informers running when an admission policy is unbound</h3>
+<h4 id="what-type-of-pr-is-this-2">What type of PR is this?</h4>
+<p>/kind bug</p>
+<h4 id="what-this-pr-does--why-we-need-it-1">What this PR does / why we need it:</h4>
+<p>A <code>ValidatingAdmissionPolicy</code> (or <code>MutatingAdmissionPolicy</code>) whose <code>paramKind</code> is a built-in type such as <code>v1/ConfigMap</code> permanently loses param resolution the first time the policy has no bindings. Only an apiserver…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/141015">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-07-29</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes141014-fix-pod-sandbox-limits-when-only-some-containers-declare-limits">kubernetes/kubernetes#141014: Fix pod sandbox limits when only some containers declare limits</h3>
+<!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141014)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: Yes
+
+### kubernetes/kubernetes#141012: Sync supported service account token algorithms to test image
+
+#### What type of PR is this?
+
+/kind cleanup
+/kind failing-test
+
+#### What this PR does / why we need it:
+
+Updates the test image to support all the algorithms we support for signing service account tokens.
+
+#### Which issue(s) this PR is related to:
+
+https://github.com/kubernetes/kuberne...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141012)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#141011: migrate `ReplicaSet.Spec.Selector` to DV
+
+&#x3C;!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141011)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: Yes
+
+### kubernetes/kubernetes#141009: Drop unbounded cardinality labels from apiserver_request_terminations_total
+
+#### What type of PR is this?
+
+/kind cleanup
+
+#### What this PR does / why we need it:
+
+This is an alpha metric. We need drop all unbounded cardinality labels from it while we still can. 
+
+#### Which issue(s) this PR is related to:
+
+Fixes https://github.com/kubernetes/kubernetes/issues/141...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141009)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#141008: [1.34] Automated cherry pick of #139172: Add binary envvar value e2e
+
+Cherry pick of #139172 on release-1.34.
+
+#139172: Add binary envvar value e2e
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+#### What type of PR is this?
+/kind bug
+
+Adds an e2e that...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141008)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#141006: Automated cherry pick of #140882: kubelet: detach probe workers from the pod sync context
+
+Cherry pick of #140882 on release-1.36.
+
+#140882: kubelet: detach probe workers from the pod sync context
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+#### Not a clean pick
+
+The fix itself ...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141006)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#141005: Automated cherry pick of #140882: kubelet: detach probe workers from the pod sync context
+
+Cherry pick of #140882 on release-1.35.
+
+#140882: kubelet: detach probe workers from the pod sync context
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+#### Not a clean pick
+
+The fix itself ...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141005)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#141004: [1.36] Automated cherry pick of #140387: Always set UpdatePodResources when a starting container is resized
+
+Cherry pick of #140387 on release-1.36.
+
+#140387: Always set UpdatePodResources when a starting container is resized
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+```release-note
+NONE...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141004)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#141003: [1.35] Automated cherry pick of #140387: Always set UpdatePodResources when a starting container is resized
+
+Cherry pick of #140387 on release-1.35.
+
+#140387: Always set UpdatePodResources when a starting container is resized
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+```release-note
+NONE...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141003)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#141002: [1.35] Automated cherry pick of #139172: Add binary envvar value e2e
+
+Cherry pick of #139172 on release-1.35.
+
+#139172: Add binary envvar value e2e
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+#### What type of PR is this?
+/kind bug
+
+Adds an e2e that...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141002)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#141001: Automated cherry pick of #140966: client-go: restore FakeCustomStore conformance to cache.Store
+
+Cherry pick of #140966 on release-1.36.
+
+#140966: client-go: restore FakeCustomStore conformance to cache.Store
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+#### What type of PR is this?
+/k...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141001)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#141000: [1.36] Automated cherry pick of #139172: Add binary envvar value e2e
+
+Cherry pick of #139172 on release-1.36.
+
+#139172: Add binary envvar value e2e
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+#### What type of PR is this?
+/kind bug
+
+Adds an e2e that...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141000)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#140999: Make MoreImportantVictim deterministic for equal start times
+
+**What type of PR is this?**
+/kind flake
+/kind cleanup
+
+**What this PR does / why we need it**
+`MoreImportantVictim` compared victims by `EarliestStartTime` with `Before`, which returns false (treats them as equal) when the start times are equal. For pods without a recorded `Status.StartTime`, `GetP...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140999)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#140998: Add retry logic for transient API server errors in e2e framework
+
+#### What type of PR is this?
+/kind bug
+
+#### What this PR does / why we need it:
+This commit introduces an IsRetryableAPIError function to correctly identify transient API server errors such as connection refused, 503, and server timeouts. It wraps the GetControlPlaneNodes call in a polling loop us...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140998)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#140997: Fix silent error suppression causing resource leaks in e2e tests
+
+#### What type of PR is this?
+/kind cleanup
+
+#### What this PR does / why we need it:
+This change wraps several Delete and DeleteCollection calls in the e2e test suite with framework.ExpectNoError to prevent silent resource leaks. Previously error returns were completely discarded using an empty ass...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140997)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#140996: Fix daemon readiness check to inspect kubelet logs
+
+#### What type of PR is this?
+/kind bug
+
+#### What this PR does / why we need it:
+This commit addresses daemon readiness checks in disruptive tests. Previously, waitUp only verified that the /healthz endpoint returned HTTP 200, which can occur before the daemon is actually ready to schedule pods (e....
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140996)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#140995: Fix PVC deletion race condition during StatefulSet cleanup
+
+#### What type of PR is this?
+/kind bug
+
+#### What this PR does / why we need it:
+This commit resolves a race condition in the e2e test framework during StatefulSet cleanup. Previously, DeleteAllStatefulSets immediately deleted PVCs without checking if active pods still referenced them, which could ...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140995)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#140994: Fix graceful shutdown of goroutines in daemon_restart test
+
+#### What type of PR is this?
+/kind bug
+
+#### What this PR does / why we need it:
+This PR ensures graceful shutdown of the controller goroutine in test/e2e/apps/daemon_restart.go. Previously, the cleanup routine merely invoked context cancellation without allowing the cache.NewInformer controller ti...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/140994)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/website#56653: [ja] Update content/ja/docs/tutorials/kubernetes-basics/create-cluster/_index.md
+
+**This is a Feature Request**
+
+**What would you like to be added**
+
+Update the Japanese translation of `content/ja/docs/tutorials/kubernetes-basics/create-cluster/_index.md` to match the latest English version.
+
+**Website Link**
+
+- Japanese: https://kubernetes.io/ja/docs/tutorials/kubernetes-basics/...
+
+🔗 [Link](https://github.com/kubernetes/website/issues/56653)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: 1
+- State: open
+
+### kubernetes/website#56652: Running Multiple Instances of Your App - Misleading description
+
+Under the section [Scaling a Deployment](https://kubernetes.io/docs/tutorials/kubernetes-basics/scale/scale-intro/#scaling-a-deployment), there is an explanation of the output of `kubectl get deployments`. The point READY shows the ratio of CURRENT/DESIRED replicas is misleading and should be READY/...
+
+🔗 [Link](https://github.com/kubernetes/website/issues/56652)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: 1
+- State: open
+
+### kubernetes/website#56649: [ko] Update content/ko/docs/concepts/services-networking/_index.md
+
+**This is a Feature Request**
+
+**What would you like to be added**
+
+Update the Korean translation of `content/ko/docs/concepts/services-networking/_index.md` to match the latest English version.
+
+**Website Link**
+
+- Korean: https://kubernetes.io/ko/docs/concepts/services-networking/
+- English: https...
+
+🔗 [Link](https://github.com/kubernetes/website/issues/56649)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: 1
+- State: open
+
+### kubernetes/website#56646: [ko] Update content/ko/docs/setup/production-environment/tools/kubeadm/ha-topology.md
+
+**This is a Feature Request**
+
+**What would you like to be added**
+
+Update the Korean translation of `content/ko/docs/setup/production-environment/tools/kubeadm/ha-topology.md` to match the latest English version.
+
+**Website Link**
+
+- Korean: https://kubernetes.io/ko/docs/setup/production-environmen...
+
+🔗 [Link](https://github.com/kubernetes/website/issues/56646)
+
+**Metadata:**
+- Created: 2026-07-28
+- Comments: 1
+- State: open
+
+### kubernetes/website#56644: [ja] Translate content/en/blog/_posts/2026/open-source-maintainership-in-the-age-of-ai.md into Japanese
+
+**This is a Feature Request**
+
+&#x3C;!-- Please only use this template for submitting feature/enhancement requests -->
+<!-- See https://kubernetes.io/docs/contribute/start/ for guidance on writing an actionable issue description. -->
+<p><strong>What would you like to be added</strong></p>
+ </div> <footer class="post-footer" data-astro-cid-egg7nqdx> <nav class="post-nav" data-astro-cid-egg7nqdx> <a href="/posts" class="back-link" data-astro-cid-egg7nqdx>← 記事一覧に戻る</a> </nav> </footer> </article>  </main> <footer data-astro-cid-sz7xmlte> <div class="footer-content" data-astro-cid-sz7xmlte> <p class="copyright" data-astro-cid-sz7xmlte> © 2026 Upstream Lens. All rights reserved. </p> <p class="disclaimer-note" data-astro-cid-sz7xmlte> This site is not affiliated with any specific foundation, organization, or project. </p> <nav class="footer-nav" data-astro-cid-sz7xmlte> <a href="/disclaimer" data-astro-cid-sz7xmlte>Disclaimer</a> <span class="separator" data-astro-cid-sz7xmlte>•</span> <a href="/author" data-astro-cid-sz7xmlte>Author</a> <span class="separator" data-astro-cid-sz7xmlte>•</span> <a href="https://github.com/kkomazaw/upstreamlens.io" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>GitHub</a> </nav> </div> </footer>  </div> </body></html> 

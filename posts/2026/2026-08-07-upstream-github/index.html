@@ -1,0 +1,334 @@
+<!DOCTYPE html><html lang="ja"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="CNCF upstream activity from github"><title>Upstream Github - 2026-08-07 | Upstream Lens</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><style>.post[data-astro-cid-egg7nqdx]{max-width:100%}.post-header[data-astro-cid-egg7nqdx]{margin-bottom:3rem;padding-bottom:2rem;border-bottom:2px solid var(--border-color)}.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 1rem}.post-meta[data-astro-cid-egg7nqdx]{display:flex;gap:1rem;align-items:center;font-size:.875rem;color:var(--text-secondary);margin-bottom:1rem}.category[data-astro-cid-egg7nqdx]{background-color:var(--code-bg);padding:.25rem .75rem;border-radius:3px;font-weight:600;color:var(--text-color)}.tags[data-astro-cid-egg7nqdx]{display:flex;flex-wrap:wrap;gap:.5rem}.tag[data-astro-cid-egg7nqdx]{background-color:var(--border-color);color:var(--text-color);padding:.25rem .75rem;border-radius:3px;font-size:.875rem}.post-content[data-astro-cid-egg7nqdx]{margin:3rem 0;line-height:1.8}.post-content[data-astro-cid-egg7nqdx] h2{margin-top:3rem}.post-content[data-astro-cid-egg7nqdx] h3{margin-top:2rem}.post-content[data-astro-cid-egg7nqdx] img{max-width:100%;height:auto;border-radius:4px;margin:2rem 0}.post-content[data-astro-cid-egg7nqdx] blockquote{border-left:4px solid var(--accent-color);padding-left:1.5rem;margin:2rem 0;color:var(--text-secondary);font-style:italic}.post-footer[data-astro-cid-egg7nqdx]{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border-color)}.post-nav[data-astro-cid-egg7nqdx]{text-align:center}.back-link[data-astro-cid-egg7nqdx]{color:var(--link-color);text-decoration:none;font-weight:600}.back-link[data-astro-cid-egg7nqdx]:hover{color:var(--link-hover);text-decoration:underline}@media(max-width:768px){.post-header[data-astro-cid-egg7nqdx]{margin-bottom:2rem;padding-bottom:1.5rem}.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{font-size:1.75rem;line-height:1.3}.post-meta[data-astro-cid-egg7nqdx]{flex-direction:column;align-items:flex-start;gap:.5rem}.post-content[data-astro-cid-egg7nqdx]{margin:2rem 0}.post-content[data-astro-cid-egg7nqdx] h2{margin-top:2rem}.post-content[data-astro-cid-egg7nqdx] h3{margin-top:1.5rem}.post-content[data-astro-cid-egg7nqdx] blockquote{padding-left:1rem;margin:1.5rem 0;font-size:.95rem}.post-content[data-astro-cid-egg7nqdx] pre{margin:1.5rem -1.25rem;border-radius:0;font-size:.875rem}.post-footer[data-astro-cid-egg7nqdx]{margin-top:3rem}.tags[data-astro-cid-egg7nqdx]{gap:.375rem}.tag[data-astro-cid-egg7nqdx]{font-size:.8125rem;padding:.2rem .625rem}}@media(max-width:480px){.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{font-size:1.5rem}.post-content[data-astro-cid-egg7nqdx] pre{font-size:.8125rem}}
+</style>
+<link rel="stylesheet" href="/_astro/about.Mt-9HUYb.css"></head> <body> <div class="container"> <header data-astro-cid-3ef6ksr2> <div class="header-top" data-astro-cid-3ef6ksr2> <div class="header-content" data-astro-cid-3ef6ksr2> <div class="site-title" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2>Upstream Lens</a> </div> <p class="tagline" data-astro-cid-3ef6ksr2>Seeing decisions before code is written</p> </div> <div class="language-switcher" data-astro-cid-a2mxz4y6> <a href="/posts/2026/2026-08-07-upstream-github/" class="lang-link active" aria-current="page" data-astro-cid-a2mxz4y6> 日本語 </a><a href="/en/posts/2026/2026-08-07-upstream-github/" class="lang-link" data-astro-cid-a2mxz4y6> English </a> </div>  </div> <nav data-astro-cid-pux6a34n> <button class="mobile-menu-toggle" aria-label="メニュー" id="mobile-menu-toggle" data-astro-cid-pux6a34n> <span class="hamburger" data-astro-cid-pux6a34n></span> </button> <ul id="nav-menu" data-astro-cid-pux6a34n> <li data-astro-cid-pux6a34n> <a href="/" class="nav-link" data-astro-cid-pux6a34n> Home </a> </li><li data-astro-cid-pux6a34n> <a href="/philosophy" class="nav-link" data-astro-cid-pux6a34n> Philosophy </a> </li><li data-astro-cid-pux6a34n> <a href="/posts" class="nav-link active" aria-current="page" data-astro-cid-pux6a34n> Posts </a> </li><li data-astro-cid-pux6a34n> <a href="/stories" class="nav-link" data-astro-cid-pux6a34n> Stories </a> </li><li data-astro-cid-pux6a34n> <a href="/about" class="nav-link" data-astro-cid-pux6a34n> About </a> </li> </ul> </nav> <script type="module">const e=document.getElementById("mobile-menu-toggle"),n=document.getElementById("nav-menu");e&&n&&(e.addEventListener("click",()=>{const t=n.classList.toggle("open");e.classList.toggle("open"),e.setAttribute("aria-expanded",t.toString())}),n.querySelectorAll("a").forEach(t=>{t.addEventListener("click",()=>{n.classList.remove("open"),e.classList.remove("open"),e.setAttribute("aria-expanded","false")})}),document.addEventListener("click",t=>{!e.contains(t.target)&&!n.contains(t.target)&&(n.classList.remove("open"),e.classList.remove("open"),e.setAttribute("aria-expanded","false"))}));</script>  </header>  <main>  <article class="post" data-astro-cid-egg7nqdx> <header class="post-header" data-astro-cid-egg7nqdx> <h1 data-astro-cid-egg7nqdx>Upstream Github - 2026-08-07</h1> <div class="post-meta" data-astro-cid-egg7nqdx> <time datetime="2026-08-07T00:00:00.000Z" data-astro-cid-egg7nqdx> 2026年8月7日 </time> <span class="category" data-astro-cid-egg7nqdx>Notes</span> </div> <div class="tags" data-astro-cid-egg7nqdx> <span class="tag" data-astro-cid-egg7nqdx>upstream</span><span class="tag" data-astro-cid-egg7nqdx>CNCF</span><span class="tag" data-astro-cid-egg7nqdx>kubernetes</span><span class="tag" data-astro-cid-egg7nqdx>release</span><span class="tag" data-astro-cid-egg7nqdx>issue</span><span class="tag" data-astro-cid-egg7nqdx>kind/bug</span><span class="tag" data-astro-cid-egg7nqdx>priority/important-soon</span><span class="tag" data-astro-cid-egg7nqdx>sig/network</span><span class="tag" data-astro-cid-egg7nqdx>area/dns</span><span class="tag" data-astro-cid-egg7nqdx>needs-triage</span><span class="tag" data-astro-cid-egg7nqdx>sig/scheduling</span><span class="tag" data-astro-cid-egg7nqdx>sig/api-machinery</span><span class="tag" data-astro-cid-egg7nqdx>kind/feature</span><span class="tag" data-astro-cid-egg7nqdx>area/apiserver</span><span class="tag" data-astro-cid-egg7nqdx>sig/node</span><span class="tag" data-astro-cid-egg7nqdx>wg/device-management</span><span class="tag" data-astro-cid-egg7nqdx>pr</span><span class="tag" data-astro-cid-egg7nqdx>size/S</span><span class="tag" data-astro-cid-egg7nqdx>cncf-cla: no</span><span class="tag" data-astro-cid-egg7nqdx>needs-ok-to-test</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/release-note-label-needed</span><span class="tag" data-astro-cid-egg7nqdx>needs-priority</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/needs-kind</span><span class="tag" data-astro-cid-egg7nqdx>area/test</span><span class="tag" data-astro-cid-egg7nqdx>kind/cleanup</span><span class="tag" data-astro-cid-egg7nqdx>size/M</span><span class="tag" data-astro-cid-egg7nqdx>kind/api-change</span><span class="tag" data-astro-cid-egg7nqdx>release-note-none</span><span class="tag" data-astro-cid-egg7nqdx>sig/apps</span><span class="tag" data-astro-cid-egg7nqdx>cncf-cla: yes</span><span class="tag" data-astro-cid-egg7nqdx>sig/testing</span><span class="tag" data-astro-cid-egg7nqdx>release-note</span><span class="tag" data-astro-cid-egg7nqdx>size/XXL</span><span class="tag" data-astro-cid-egg7nqdx>sig/instrumentation</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/work-in-progress</span><span class="tag" data-astro-cid-egg7nqdx>area/kubelet</span><span class="tag" data-astro-cid-egg7nqdx>area/kube-proxy</span><span class="tag" data-astro-cid-egg7nqdx>area/kubectl</span><span class="tag" data-astro-cid-egg7nqdx>lgtm</span><span class="tag" data-astro-cid-egg7nqdx>area/cloudprovider</span><span class="tag" data-astro-cid-egg7nqdx>sig/storage</span><span class="tag" data-astro-cid-egg7nqdx>sig/cluster-lifecycle</span><span class="tag" data-astro-cid-egg7nqdx>size/L</span><span class="tag" data-astro-cid-egg7nqdx>sig/auth</span><span class="tag" data-astro-cid-egg7nqdx>approved</span><span class="tag" data-astro-cid-egg7nqdx>sig/cli</span><span class="tag" data-astro-cid-egg7nqdx>sig/architecture</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/cherry-pick-not-approved</span><span class="tag" data-astro-cid-egg7nqdx>area/code-generation</span><span class="tag" data-astro-cid-egg7nqdx>sig/cloud-provider</span><span class="tag" data-astro-cid-egg7nqdx>area/dependency</span><span class="tag" data-astro-cid-egg7nqdx>sig/security</span><span class="tag" data-astro-cid-egg7nqdx>triage/accepted</span><span class="tag" data-astro-cid-egg7nqdx>size/XS</span><span class="tag" data-astro-cid-egg7nqdx>enhancements</span><span class="tag" data-astro-cid-egg7nqdx>kind/kep</span><span class="tag" data-astro-cid-egg7nqdx>autoscaler</span><span class="tag" data-astro-cid-egg7nqdx>website</span><span class="tag" data-astro-cid-egg7nqdx>language/ko</span><span class="tag" data-astro-cid-egg7nqdx>area/localization</span><span class="tag" data-astro-cid-egg7nqdx>perf-tests</span><span class="tag" data-astro-cid-egg7nqdx>sig/release</span><span class="tag" data-astro-cid-egg7nqdx>needs-kind</span><span class="tag" data-astro-cid-egg7nqdx>ok-to-test</span><span class="tag" data-astro-cid-egg7nqdx>area/release-eng</span><span class="tag" data-astro-cid-egg7nqdx>envoyproxy</span><span class="tag" data-astro-cid-egg7nqdx>help wanted</span><span class="tag" data-astro-cid-egg7nqdx>area/api</span><span class="tag" data-astro-cid-egg7nqdx>gateway</span><span class="tag" data-astro-cid-egg7nqdx>containerd</span><span class="tag" data-astro-cid-egg7nqdx>area/cri</span><span class="tag" data-astro-cid-egg7nqdx>cncf</span><span class="tag" data-astro-cid-egg7nqdx>kind/initiative</span><span class="tag" data-astro-cid-egg7nqdx>review/tech</span><span class="tag" data-astro-cid-egg7nqdx>sub/project-reviews</span><span class="tag" data-astro-cid-egg7nqdx>toc</span><span class="tag" data-astro-cid-egg7nqdx>review/governance</span><span class="tag" data-astro-cid-egg7nqdx>kind/review</span><span class="tag" data-astro-cid-egg7nqdx>needs-group</span> </div> </header> <div class="post-content" data-astro-cid-egg7nqdx> <h2 id="overview">Overview</h2>
+<p>This is an automated collection of upstream activity from github.</p>
+<h2 id="-high-priority-updates">🔥 High Priority Updates</h2>
+<h3 id="kuberneteskubernetes141226-update-golangorgx-deps">kubernetes/kubernetes#141226: Update golang.org/x deps</h3>
+<p>Update to golang.org/x/text@v0.39.0+ for <a href="https://pkg.go.dev/vuln/GO-2026-5970">https://pkg.go.dev/vuln/GO-2026-5970</a></p>
+<p>Update to golang.org/x/net@v0.55.0+ for <a href="https://pkg.go.dev/vuln/GO-2026-5026">https://pkg.go.dev/vuln/GO-2026-5026</a></p>
+<p>/kind bug
+/sig architecture security</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Update golang.org/x/text and golang.org/x/net dependencies to include security up...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141226)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-08-06</span></span>
+<span class="line"><span>- Comments: undefined</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span>- Draft: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/kubernetes#141225: Update golang.org/x deps</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Update to golang.org/x/text@v0.39.0+ for https://pkg.go.dev/vuln/GO-2026-5970</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Update to golang.org/x/net@v0.55.0+ for https://pkg.go.dev/vuln/GO-2026-5026</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/kind bug</span></span>
+<span class="line"><span>/sig architecture security</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>```release-note</span></span>
+<span class="line"><span>Update golang.org/x/text and golang.org/x/net dependencies to include security up...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141225)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-08-06</span></span>
+<span class="line"><span>- Comments: undefined</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span>- Draft: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/kubernetes#141224: Update golang.org/x deps</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Update to golang.org/x/text@v0.39.0+ for https://pkg.go.dev/vuln/GO-2026-5970</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Update to golang.org/x/net@v0.55.0+ for https://pkg.go.dev/vuln/GO-2026-5026</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/kind bug</span></span>
+<span class="line"><span>/sig architecture security</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>```release-note</span></span>
+<span class="line"><span>Update golang.org/x/text and golang.org/x/net dependencies to include security up...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/kubernetes/pull/141224)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-08-06</span></span>
+<span class="line"><span>- Comments: undefined</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span>- Draft: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/enhancements#6266: Sync KEP-4671 with v1.37 final state</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#x3C;!-- </span></span>
+<span class="line"><span>	Please use the following format when naming your PR</span></span>
+<span class="line"><span>	&#x3C; Issue Number >:&#x3C; Issue Description ></span></span>
+<span class="line"><span>	e.g. KEP-000: adding beta graduation criteria</span></span>
+<span class="line"><span>	</span></span>
+<span class="line"><span>	Avoid using phrases like `fixes #NNNN` in the description</span></span>
+<span class="line"><span>	unless the pull request is to change the KEP status to </span></span>
+<span class="line"><span>	implemented or KEP has been ...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/enhancements/pull/6266)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-08-06</span></span>
+<span class="line"><span>- Comments: undefined</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span>- Draft: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/release#4487: Bump the actions group with 5 updates</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Bumps the actions group with 5 updates:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>| Package | From | To |</span></span>
+<span class="line"><span>| --- | --- | --- |</span></span>
+<span class="line"><span>| [step-security/harden-runner](https://github.com/step-security/harden-runner) | `2.20.0` | `2.20.1` |</span></span>
+<span class="line"><span>| [github/codeql-action/init](https://github.com/github/codeql-action) | `4.37.5` | `4.37.6` |</span></span>
+<span class="line"><span>| [github/codeql...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/release/pull/4487)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-08-07</span></span>
+<span class="line"><span>- Comments: undefined</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span>- Draft: No</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### cncf/toc#2269: Proposal: Create a Tech Review guide</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Currently we provide several helper docs for conducting governance reviews in &#x3C;https://github.com/cncf/toc/tree/main/toc_subprojects/project-reviews-subproject> but we don't have a guide for conducting a technical review.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>In particular now that technical reviews are to review the upstream GTR we co...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/cncf/toc/issues/2269)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-08-06</span></span>
+<span class="line"><span>- Comments: 0</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## Updates</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/kubernetes: v1.37.0-rc.0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>See [kubernetes-announce@](https://groups.google.com/forum/#!forum/kubernetes-announce). Additional binary downloads are linked in the [CHANGELOG](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.37.md).</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>See the [CHANGELOG](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.37.md) for more details.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/kubernetes/releases/tag/v1.37.0-rc.0)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Version: v1.37.0-rc.0</span></span>
+<span class="line"><span>- Published: 2026-08-06</span></span>
+<span class="line"><span>- Prerelease: Yes</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/kubernetes#141229: Kubernetes v1.35.1 bundles CoreDNS v1.13.1 — 3 minor versions behind upstream v1.14.6, exposing clusters to 49+ known CVEs</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>## Summary</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Kubernetes v1.35.1 bundles `registry.k8s.io/coredns/coredns:v1.13.1` as the</span></span>
+<span class="line"><span>default DNS provider. The upstream CoreDNS project has since released v1.14.6,</span></span>
+<span class="line"><span>which addresses the vast majority of known vulnerabilities present in v1.13.1.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Since Kubernetes controls which CoreDNS version ships...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/kubernetes/issues/141229)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-08-06</span></span>
+<span class="line"><span>- Comments: 2</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/kubernetes#141227: Preemption victim selection has no signal for whether a victim's replacement can reschedule elsewhere -- DaemonSet pods and Deployment pods are treated identically</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### What happened?</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**TL;DR:** when a higher-priority pod preempts and has a choice between multiple equal-priority victims on a node, the only signal the scheduler uses to pick which one to evict is pod age (`MoreImportantPod`, older wins) — nothing accounts for whether the victim's replacement can...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/kubernetes/issues/141227)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-08-06</span></span>
+<span class="line"><span>- Comments: 2</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/kubernetes#141221: KCM supports start informer before acquiring a lease</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### What would you like to be added?</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>The scheduler can start the informer before obtaining the lease and cache data, so that the standby instance can quickly perform scheduling when obtaining the lease. Can the KCM also start the informer to synchronize data, so that related work can be quickly sta...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>🔗 [Link](https://github.com/kubernetes/kubernetes/issues/141221)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>**Metadata:**</span></span>
+<span class="line"><span>- Created: 2026-08-06</span></span>
+<span class="line"><span>- Comments: 3</span></span>
+<span class="line"><span>- State: open</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### kubernetes/kubernetes#141220: kube-apiserver fails PostStartHook on startup: nodeport repair Services LIST is not retried when the watch cache is initializing</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>### What happened?</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>On a cluster with a large Services collection, `kube-apiserver` exits roughly 60s after every start:</span></span>
+<span class="line"><span></span></span></code></pre>
+<p>E repair.go:85] “Unhandled Error” err=“unable to refresh the port block: storage is (re)initializing”
+F hooks.go:204] PostStartHook “start-service-ip-repair-controllers” fail…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/issues/141220">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-08-06</li>
+<li>Comments: 1</li>
+<li>State: open</li>
+</ul>
+<h3 id="kuberneteskubernetes141217---watch-cache-sizes-has-applied-to-custom-resources-since-v128-contrary-to-its-documentation">kubernetes/kubernetes#141217: <code>--watch-cache-sizes</code> has applied to custom resources since v1.28, contrary to its documentation</h3>
+<h3 id="what-happened">What happened?</h3>
+<p>The <code>--watch-cache-sizes</code> flag is documented as having no effect on custom resources:</p>
+<blockquote>
+<p>This option is only meaningful for resources built into the apiserver, <strong>not ones defined by CRDs</strong> or aggregated from external servers […]</p>
+</blockquote>
+<p>In practice, since v1.28 the flag <em>does</em> take effe…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/issues/141217">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-08-06</li>
+<li>Comments: 1</li>
+<li>State: open</li>
+</ul>
+<h3 id="kuberneteskubernetes141216-dra-a-negative-device-consumescounters-value-is-accepted-and-over-commits-a-shared-counter-set">kubernetes/kubernetes#141216: DRA: a negative device consumesCounters value is accepted and over-commits a shared counter set</h3>
+<h3 id="what-happened-1">What happened?</h3>
+<p>A device’s <code>consumesCounters</code> value may be negative. ResourceSlice validation accepts it, and the
+structured allocator subtracts it from the counter set, so a negative consumption inflates the set’s
+available capacity and admits an allocation that over-commits the set.</p>
+<p>`validate…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/issues/141216">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-08-06</li>
+<li>Comments: 2</li>
+<li>State: open</li>
+</ul>
+<h3 id="kuberneteskubernetes141214-dra-allocator-should-fail-closed-per-node-on-a-malformed-resourceslice-nodeselector-term-count">kubernetes/kubernetes#141214: DRA: allocator should fail closed (per-node) on a malformed ResourceSlice nodeSelector term count</h3>
+<h3 id="what-happened-2">What happened?</h3>
+<p>Follow-up to #141212 and #141213. The validation fix in #141213 stops a new or modified ResourceSlice from carrying a per-device <code>nodeSelector</code> whose term count is not exactly one. It ratchets the new constraint, so a slice with a multi-term selector that was stored before the fi…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/issues/141214">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-08-06</li>
+<li>Comments: 1</li>
+<li>State: open</li>
+</ul>
+<h3 id="kuberneteskubernetes141212-dra-per-device-nodeselector-with-multiple-terms-passes-validation-and-aborts-the-scheduling-cycle">kubernetes/kubernetes#141212: DRA: per-device nodeSelector with multiple terms passes validation and aborts the scheduling cycle</h3>
+<h3 id="what-happened-3">What happened?</h3>
+<p>A per-device <code>nodeSelector</code> on a ResourceSlice device may contain more than one node selector term.</p>
+<p>ResourceSlice API validation accepts such an object, even though the API contract requires exactly one term. When structured allocation selects that device, the allocator rejects …</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/issues/141212">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-08-06</li>
+<li>Comments: 1</li>
+<li>State: open</li>
+</ul>
+<h3 id="kuberneteskubernetes141233-dra-reject-negative-device-counter-values">kubernetes/kubernetes#141233: DRA: reject negative device counter values</h3>
+<p>Fixes #141216.</p>
+<p>Reject negative <code>Counter.value</code> quantities during <code>ResourceSlice</code> validation. This prevents a negative <code>consumesCounters</code> value from increasing a shared counter set’s apparent available capacity.</p>
+<p>Add a regression test that verifies the validation error for a negative device counter …</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/141233">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-08-07</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes141231-migrate-resourcequotaspecscopes-to-declarative-validation">kubernetes/kubernetes#141231: Migrate ResourceQuota.Spec.Scopes to declarative validation</h3>
+<h4 id="what-type-of-pr-is-this">What type of PR is this?</h4>
+<p>/kind cleanup
+/sig api-machinery</p>
+<h4 id="what-this-pr-does--why-we-need-it">What this PR does / why we need it:</h4>
+<p>Migrates the immutability validation of <code>ResourceQuota.Spec.Scopes</code> to declarative validation, following the pattern of previous migrations from the tracking issue:</p>
+<ul>
+<li>Adds `+k8s:alpha(since: ”…</li>
+</ul>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/141231">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-08-06</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes141228-apiserver-park-and-resume-slow-watch-streams-instead-of-terminating-them-watchcachestallresume">kubernetes/kubernetes#141228: apiserver: park and resume slow watch streams instead of terminating them (WatchCacheStallResume)</h3>
+<h4 id="what-type-of-pr-is-this-1">What type of PR is this?</h4>
+<p>/kind feature
+/sig api-machinery</p>
+<h4 id="what-this-pr-does--why-we-need-it-1">What this PR does / why we need it</h4>
+<p>Today, when a watch client cannot keep up and its delivery buffer fills, the apiserver blocks the shared dispatch path for up to a shared per-dispatch-round time budget (a ~100 ms accumulation c…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/141228">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-08-06</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: Yes</li>
+</ul>
+<h3 id="kuberneteskubernetes141223-use-errorsas-for-unwrapping-in-errortoapistatus-and-storageiserrcode">kubernetes/kubernetes#141223: Use errors.As for unwrapping in ErrorToAPIStatus and storage.isErrCode</h3>
+<h4 id="what-type-of-pr-is-this-2">What type of PR is this?</h4>
+<p>/kind cleanup</p>
+<h4 id="what-this-pr-does--why-we-need-it-2">What this PR does / why we need it:</h4>
+<p>Replace direct type assertions with <code>errors.As</code> so that wrapped errors are correctly identified. This makes <code>ErrorToAPIStatus</code> find <code>statusError</code> implementations inside error chains, and makes `storage.IsCo…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/141223">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-08-06</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes141222-kubelet-rollback-in-memory-pod-allocation-on-checkpoint-write-failure">kubernetes/kubernetes#141222: kubelet: rollback in-memory pod allocation on checkpoint write failure</h3>
+<h4 id="what-type-of-pr-is-this-3">What type of PR is this?</h4>
+<p>/kind bug</p>
+<h4 id="what-this-pr-does--why-we-need-it-3">What this PR does / why we need it:</h4>
+<p>When the Kubelet allocation manager attempts to persist a pod’s resource allocation during admission, failures in writing the checkpoint to disk (such as a read-only filesystem, I/O errors, or disk full) were handled…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/141222">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-08-06</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes141219-corev1-add-alpha-declarative-validation-for-podspecactivedeadlineseconds">kubernetes/kubernetes#141219: core/v1: add alpha declarative validation for PodSpec.ActiveDeadlineSeconds</h3>
+<p>/kind feature
+/sig api-machinery</p>
+<p>This adds declarative validation for <code>spec.activeDeadlineSeconds</code> on PodSpec, gated alpha as of 1.37. While working on it I also found and fixed a redundant ObjectMeta validation call on the pod update paths, so that’s included here too.</p>
+<h3 id="what-changed">What changed</h3>
+<p>`A…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/141219">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-08-06</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes141218-create-tls-secret-in-preparetest-when-capsnapshotmetadata-is-enabled">kubernetes/kubernetes#141218: Create TLS secret in PrepareTest when CapSnapshotMetadata is enabled</h3>
+<h2 id="what-type-of-pr-is-this-4">What type of PR is this?</h2>
+<p>/kind bug</p>
+<h2 id="what-this-pr-does--why-we-need-it-4">What this PR does / why we need it</h2>
+<p>When <code>CSI_PROW_ENABLE_SNAPSHOT_METADATA=true</code>, the csi-hostpath driver’s <code>PrepareTest()</code> keeps the <code>csi-snapshot-metadata</code> sidecar container and its <code>csi-snapshot-metadata-server-certs</code> volume in the StatefulSet. However, …</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/141218">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-08-06</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes141215-fix-benchmarkratcheting-set-locked-feature-gate-crdvalidationratcheting">kubernetes/kubernetes#141215: fix BenchmarkRatcheting set locked feature gate CRDValidationRatcheting</h3>
+ </div> <footer class="post-footer" data-astro-cid-egg7nqdx> <nav class="post-nav" data-astro-cid-egg7nqdx> <a href="/posts" class="back-link" data-astro-cid-egg7nqdx>← 記事一覧に戻る</a> </nav> </footer> </article>  </main> <footer data-astro-cid-sz7xmlte> <div class="footer-content" data-astro-cid-sz7xmlte> <p class="copyright" data-astro-cid-sz7xmlte> © 2026 Upstream Lens. All rights reserved. </p> <p class="disclaimer-note" data-astro-cid-sz7xmlte> This site is not affiliated with any specific foundation, organization, or project. </p> <nav class="footer-nav" data-astro-cid-sz7xmlte> <a href="/disclaimer" data-astro-cid-sz7xmlte>Disclaimer</a> <span class="separator" data-astro-cid-sz7xmlte>•</span> <a href="/author" data-astro-cid-sz7xmlte>Author</a> <span class="separator" data-astro-cid-sz7xmlte>•</span> <a href="https://github.com/kkomazaw/upstreamlens.io" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>GitHub</a> </nav> </div> </footer>  </div> </body></html> 

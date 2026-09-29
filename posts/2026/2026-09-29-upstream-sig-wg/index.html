@@ -1,0 +1,495 @@
+<!DOCTYPE html><html lang="ja"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="CNCF upstream activity from sig-wg"><title>Upstream Sig-wg - 2026-09-29 | Upstream Lens</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><style>.post[data-astro-cid-egg7nqdx]{max-width:100%}.post-header[data-astro-cid-egg7nqdx]{margin-bottom:3rem;padding-bottom:2rem;border-bottom:2px solid var(--border-color)}.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 1rem}.post-meta[data-astro-cid-egg7nqdx]{display:flex;gap:1rem;align-items:center;font-size:.875rem;color:var(--text-secondary);margin-bottom:1rem}.category[data-astro-cid-egg7nqdx]{background-color:var(--code-bg);padding:.25rem .75rem;border-radius:3px;font-weight:600;color:var(--text-color)}.tags[data-astro-cid-egg7nqdx]{display:flex;flex-wrap:wrap;gap:.5rem}.tag[data-astro-cid-egg7nqdx]{background-color:var(--border-color);color:var(--text-color);padding:.25rem .75rem;border-radius:3px;font-size:.875rem}.post-content[data-astro-cid-egg7nqdx]{margin:3rem 0;line-height:1.8}.post-content[data-astro-cid-egg7nqdx] h2{margin-top:3rem}.post-content[data-astro-cid-egg7nqdx] h3{margin-top:2rem}.post-content[data-astro-cid-egg7nqdx] img{max-width:100%;height:auto;border-radius:4px;margin:2rem 0}.post-content[data-astro-cid-egg7nqdx] blockquote{border-left:4px solid var(--accent-color);padding-left:1.5rem;margin:2rem 0;color:var(--text-secondary);font-style:italic}.post-footer[data-astro-cid-egg7nqdx]{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border-color)}.post-nav[data-astro-cid-egg7nqdx]{text-align:center}.back-link[data-astro-cid-egg7nqdx]{color:var(--link-color);text-decoration:none;font-weight:600}.back-link[data-astro-cid-egg7nqdx]:hover{color:var(--link-hover);text-decoration:underline}@media(max-width:768px){.post-header[data-astro-cid-egg7nqdx]{margin-bottom:2rem;padding-bottom:1.5rem}.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{font-size:1.75rem;line-height:1.3}.post-meta[data-astro-cid-egg7nqdx]{flex-direction:column;align-items:flex-start;gap:.5rem}.post-content[data-astro-cid-egg7nqdx]{margin:2rem 0}.post-content[data-astro-cid-egg7nqdx] h2{margin-top:2rem}.post-content[data-astro-cid-egg7nqdx] h3{margin-top:1.5rem}.post-content[data-astro-cid-egg7nqdx] blockquote{padding-left:1rem;margin:1.5rem 0;font-size:.95rem}.post-content[data-astro-cid-egg7nqdx] pre{margin:1.5rem -1.25rem;border-radius:0;font-size:.875rem}.post-footer[data-astro-cid-egg7nqdx]{margin-top:3rem}.tags[data-astro-cid-egg7nqdx]{gap:.375rem}.tag[data-astro-cid-egg7nqdx]{font-size:.8125rem;padding:.2rem .625rem}}@media(max-width:480px){.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{font-size:1.5rem}.post-content[data-astro-cid-egg7nqdx] pre{font-size:.8125rem}}
+</style>
+<link rel="stylesheet" href="/_astro/about.Mt-9HUYb.css"></head> <body> <div class="container"> <header data-astro-cid-3ef6ksr2> <div class="header-top" data-astro-cid-3ef6ksr2> <div class="header-content" data-astro-cid-3ef6ksr2> <div class="site-title" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2>Upstream Lens</a> </div> <p class="tagline" data-astro-cid-3ef6ksr2>Seeing decisions before code is written</p> </div> <div class="language-switcher" data-astro-cid-a2mxz4y6> <a href="/posts/2026/2026-09-29-upstream-sig-wg/" class="lang-link active" aria-current="page" data-astro-cid-a2mxz4y6> 日本語 </a><a href="/en/posts/2026/2026-09-29-upstream-sig-wg/" class="lang-link" data-astro-cid-a2mxz4y6> English </a> </div>  </div> <nav data-astro-cid-pux6a34n> <button class="mobile-menu-toggle" aria-label="メニュー" id="mobile-menu-toggle" data-astro-cid-pux6a34n> <span class="hamburger" data-astro-cid-pux6a34n></span> </button> <ul id="nav-menu" data-astro-cid-pux6a34n> <li data-astro-cid-pux6a34n> <a href="/" class="nav-link" data-astro-cid-pux6a34n> Home </a> </li><li data-astro-cid-pux6a34n> <a href="/philosophy" class="nav-link" data-astro-cid-pux6a34n> Philosophy </a> </li><li data-astro-cid-pux6a34n> <a href="/posts" class="nav-link active" aria-current="page" data-astro-cid-pux6a34n> Posts </a> </li><li data-astro-cid-pux6a34n> <a href="/stories" class="nav-link" data-astro-cid-pux6a34n> Stories </a> </li><li data-astro-cid-pux6a34n> <a href="/about" class="nav-link" data-astro-cid-pux6a34n> About </a> </li> </ul> </nav> <script type="module">const e=document.getElementById("mobile-menu-toggle"),n=document.getElementById("nav-menu");e&&n&&(e.addEventListener("click",()=>{const t=n.classList.toggle("open");e.classList.toggle("open"),e.setAttribute("aria-expanded",t.toString())}),n.querySelectorAll("a").forEach(t=>{t.addEventListener("click",()=>{n.classList.remove("open"),e.classList.remove("open"),e.setAttribute("aria-expanded","false")})}),document.addEventListener("click",t=>{!e.contains(t.target)&&!n.contains(t.target)&&(n.classList.remove("open"),e.classList.remove("open"),e.setAttribute("aria-expanded","false"))}));</script>  </header>  <main>  <article class="post" data-astro-cid-egg7nqdx> <header class="post-header" data-astro-cid-egg7nqdx> <h1 data-astro-cid-egg7nqdx>Upstream Sig-wg - 2026-09-29</h1> <div class="post-meta" data-astro-cid-egg7nqdx> <time datetime="2026-09-29T00:00:00.000Z" data-astro-cid-egg7nqdx> 2026年9月29日 </time> <span class="category" data-astro-cid-egg7nqdx>Notes</span> </div> <div class="tags" data-astro-cid-egg7nqdx> <span class="tag" data-astro-cid-egg7nqdx>upstream</span><span class="tag" data-astro-cid-egg7nqdx>CNCF</span><span class="tag" data-astro-cid-egg7nqdx>SIG</span><span class="tag" data-astro-cid-egg7nqdx>meeting-notes</span><span class="tag" data-astro-cid-egg7nqdx>sig-node</span><span class="tag" data-astro-cid-egg7nqdx>KEP</span><span class="tag" data-astro-cid-egg7nqdx>proposal</span><span class="tag" data-astro-cid-egg7nqdx>kubernetes</span> </div> </header> <div class="post-content" data-astro-cid-egg7nqdx> <h2 id="overview">Overview</h2>
+<p>This is an automated collection of upstream activity from sig-wg.</p>
+<h2 id="-high-priority-updates">🔥 High Priority Updates</h2>
+<h3 id="meeting-notes-update-sig-node">Meeting Notes Update: sig-node</h3>
+<p>KEP-5677: make v1alpha3 lifecycle tags explicit, assign harche as reviewer</p>
+<p>Signed-off-by: Nour <a href="mailto:nurmn3m@gmail.com">nurmn3m@gmail.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/a72ecdc8291d29b0a34e27664095753561938891">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-09-28</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 3</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-1">Meeting Notes Update: sig-node</h3>
+<p>KEP-5677: address review feedback</p>
+<p>Signed-off-by: Nour <a href="mailto:nurmn3m@gmail.com">nurmn3m@gmail.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/aa1e47ef053b7f1724de0a80104b0a70695a2112">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-09-28</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 1</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-2">Meeting Notes Update: sig-node</h3>
+<p>Update KEP for beta promotion in v1.38</p>
+<p>Signed-off-by: Nour <a href="mailto:nurmn3m@gmail.com">nurmn3m@gmail.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/2cfdbd10e977413d15b1cfc4e920a24b57d6bab9">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-08-26</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 3</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-3">Meeting Notes Update: sig-node</h3>
+<p>align KEP with the merged 1.37 implementation</p>
+<p>Signed-off-by: Nour <a href="mailto:nurmn3m@gmail.com">nurmn3m@gmail.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/a0907f8d53fb61485673560d36a304b3bcd3a6b0">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-08-21</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 1</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-4">Meeting Notes Update: sig-node</h3>
+<p>kep: address reviewers comments 09272026</p>
+<p>Added on separate commit to make reviewing process easier.
+Will squash once reviewers are happy.</p>
+<p>Signed-off-by: Talor Itzhak <a href="mailto:titzhak@redhat.com">titzhak@redhat.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/7c4398e0fab944c2d62d68a10501eb7bd10eb17c">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-09-27</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 1</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-5">Meeting Notes Update: sig-node</h3>
+<p>kep: address reviewers comments 09242026</p>
+<ul>
+<li>evaluate more about the upgrade/downgrade process</li>
+<li>emphasis QoS cgroup manager role and changes in this KEP.</li>
+</ul>
+<p>Signed-off-by: Talor Itzhak <a href="mailto:titzhak@redhat.com">titzhak@redhat.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/898faef31d328941c0833deffa9a249eaa3f5fd6">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-09-24</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 1</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-6">Meeting Notes Update: sig-node</h3>
+<p>kep: address reviewers comments 09232026</p>
+<ul>
+<li>
+<p>Remove FeatureGate since the flags themselves are used as feature gate.
+adding hugepages to  <code>--system-reserved</code> and/or <code>--kube-reserved</code>
+acts as enablement/disablement mechanism similar to what FeatureGate does.</p>
+</li>
+<li>
+<p>Add rollout cases</p>
+</li>
+</ul>
+<p>Signed-off-by: Ta…</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/71104bca7ae1652ad9c290a3856992ac19b09ab5">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-09-23</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 2</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-7">Meeting Notes Update: sig-node</h3>
+<p>kep: address reviewers comments 09222026 (2)</p>
+<p>Signed-off-by: Talor Itzhak <a href="mailto:titzhak@redhat.com">titzhak@redhat.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/8bed505e954eec35081ebe13ac71970f64a35d50">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-09-22</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 1</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-8">Meeting Notes Update: sig-node</h3>
+<p>kep: address reviewers comments 09222026</p>
+<p>Using separate commit to make reviewing process easier.
+Will squash before merge.</p>
+<p>Signed-off-by: Talor Itzhak <a href="mailto:titzhak@redhat.com">titzhak@redhat.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/0c05ca1ef28d71a4d56f8744eeba8ff8671575c7">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-09-22</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 3</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-9">Meeting Notes Update: sig-node</h3>
+<p>kep: address reviewers comments 09162026</p>
+<p>Using separate commit to make reviewing process easier.
+Will squash before merge.</p>
+<p>Signed-off-by: Talor Itzhak <a href="mailto:titzhak@redhat.com">titzhak@redhat.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/70098e620b7bc17c3233042d1a0d460f8aca2569">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-09-16</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 2</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-10">Meeting Notes Update: sig-node</h3>
+<p>kep: add ppr file</p>
+<p>Signed-off-by: Talor Itzhak <a href="mailto:titzhak@redhat.com">titzhak@redhat.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/0c7e15c91f5f6428f2402879739ac8bdd8f6f10b">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-09-16</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 1</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-11">Meeting Notes Update: sig-node</h3>
+<p>KEP-6252: Align with latest KEP template</p>
+<p>Add missing sections required by the KEP template:</p>
+<ul>
+<li>Deprecation sub-section under Graduation Criteria</li>
+<li>Infrastructure Needed (Optional) section</li>
+<li>Restore truncated Release Signoff Checklist item text</li>
+</ul>
+<p>Signed-off-by: Talor Itzhak <a href="mailto:titzhak@redhat.com">titzhak@redhat.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/6758b05c314af18f7829305983695de868ff8052">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-09-16</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 1</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-12">Meeting Notes Update: sig-node</h3>
+<p>KEP-6252: Add KEP-5894 Node System Partition compatibility note</p>
+<p>Clarify that —system-reserved/—kube-reserved hugepages cover host
+services, not system partition Pods, and that no changes are made to
+the systemPartition configuration.</p>
+<p>Signed-off-by: Talor Itzhak <a href="mailto:titzhak@redhat.com">titzhak@redhat.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/25b95bec22e2a99839ed9cdf8c6ca62e82cb913e">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-08-31</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 2</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-13">Meeting Notes Update: sig-node</h3>
+<p>KEP-6252: Support hugepages in kubelet system-reserved and kube-reserved</p>
+<p>Add KEP for extending —system-reserved and —kube-reserved kubelet flags
+to accept hugepages resources, enabling proper reservation of hugepages
+consumed by system daemons like OVS-DPDK.</p>
+<p>Signed-off-by: Talor Itzhak &#x3C;titzhak@…</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/4aee20b2eb8446deb5c7d3554501f90c5a76e533">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-07-20</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 2</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6301-from-nmn3mrpsr-beta">KEP unknown: Merge pull request #6301 from nmn3m/rpsr-beta</h3>
+<p>KEP-5677: resourcepoolstatus request target third alp…</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/5677-dra-resource-availability-visibility/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-29</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-kep-5677-make-v1alpha3-lifecycle-tags-explicit-assign-harche-as-reviewer">KEP unknown: KEP-5677: make v1alpha3 lifecycle tags explicit, assign harche as reviewer</h3>
+<p>Signed-off-by: Nour &#x3C;nur…</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/5677-dra-resource-availability-visibility/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6218-from-matthyxrestart">KEP unknown: Merge pull request #6218 from matthyx/restart</h3>
+<p>KEP-4438: specify termination reconciliation and life…</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/4438-container-restart-termination/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6321-from-mengqiyobjcompression">KEP unknown: Merge pull request #6321 from mengqiy/objcompression</h3>
+<p>KEP-6264: storage object compression</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-api-machinery/6264-storage-object-compression/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-update-section-for-9-byte-header-and-benchmark">KEP unknown: update section for 9 byte header and benchmark</h3>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-api-machinery/6264-storage-object-compression/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6233-from-ai-armlesskep-6232-memory-manager-drift-tolerance">KEP unknown: Merge pull request #6233 from AI-Armless/kep-6232-memory-manager-drift-tolerance</h3>
+<p>KEP-6232: Tolerate…</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/6232-memory-manager-drift-tolerance/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-kep-5677-address-review-feedback">KEP unknown: KEP-5677: address review feedback</h3>
+<p>Signed-off-by: Nour <a href="mailto:nurmn3m@gmail.com">nurmn3m@gmail.com</a></p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/5677-dra-resource-availability-visibility/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6323-from-hirazawauikep-6318-mutable-container-probes">KEP unknown: Merge pull request #6323 from HirazawaUi/kep-6318-mutable-container-probes</h3>
+<p>KEP-6318: Allow in-place…</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/6318-mutable-container-probes/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6309-from-rthalliseykubectl-drain-reporting">KEP unknown: Merge pull request #6309 from rthallisey/kubectl-drain-reporting</h3>
+<p>KEP-5683: Kubectl drain reporting …</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/5683-lifecycle-conditions/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6435-from-tallclairdynamic-containers">KEP unknown: Merge pull request #6435 from tallclair/dynamic-containers</h3>
+<p>KEP-5972: Dynamic Containers - add misse…</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/5972-dynamic-containers/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6354-from-everpeacekep-5491-beta">KEP unknown: Merge pull request #6354 from everpeace/KEP-5491-beta</h3>
+<p>KEP-5491: DRA List Types for Attributes: prom…</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-scheduling/5491-dra-list-types-for-attributes/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6418-from-veraqinmaster">KEP unknown: Merge pull request #6418 from VeraQin/master</h3>
+<p>KEP-5996: Push feature DefaultPodSysctls to Beta</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/5996-default-pod-sysctls/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6360-from-galal-husseinkep_3541_beta_update">KEP unknown: Merge pull request #6360 from galal-hussein/kep_3541_beta_update</h3>
+<p>KEP 3541: Update Statefulset Recre…</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-apps/3541-add-recreate-strategy-to-statefulset/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6338-from-amritansh1502kep-h2c-probes">KEP unknown: Merge pull request #6338 from amritansh1502/kep-h2c-probes</h3>
+<p>KEP-5999: update for beta graduation</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/5999-h2c-container-probes/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6339-from-zylxjtu4885">KEP unknown: Merge pull request #6339 from zylxjtu/4885</h3>
+<p>KEP-4885: move from alpha to beta</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-windows/4885-windows-cpu-and-memory-affinity/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-kep-5999-update-for-beta-graduation">KEP unknown: KEP-5999: update for beta graduation</h3>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/5999-h2c-container-probes/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-09</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6373-from-jpbetzkep-external-node-liveness">KEP unknown: Merge pull request #6373 from jpbetz/kep-external-node-liveness</h3>
+<p>KEP-6371: External Node Liveness De…</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/6371-external-node-liveness-detection/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-address-prr-comments-and-minor-status-update">KEP unknown: Address PRR comments and Minor status update</h3>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-windows/4885-windows-cpu-and-memory-affinity/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-24</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-add-feature-gate">KEP unknown: Add feature gate</h3>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/6371-external-node-liveness-detection/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6372-from-troychiupromote-dra-optional-node-operations-beta">KEP unknown: Merge pull request #6372 from troychiu/promote-dra-optional-node-operations-beta</h3>
+<p>KEP-5945: DRA Opti…</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/5945-dra-optional-node-operations/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-retarget-third-alpha-in-v138-beta-in-v139">KEP unknown: Retarget third Alpha in v1.38, Beta in v1.39</h3>
+<p>Signed-off-by: Nour <a href="mailto:nurmn3m@gmail.com">nurmn3m@gmail.com</a></p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/5677-dra-resource-availability-visibility/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-25</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-address-review-feedback-on-beta-promotion">KEP unknown: Address review feedback on beta promotion</h3>
+<p>Signed-off-by: Nour <a href="mailto:nurmn3m@gmail.com">nurmn3m@gmail.com</a></p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/5677-dra-resource-availability-visibility/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-17</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-update-kep-for-beta-promotion-in-v138">KEP unknown: Update KEP for beta promotion in v1.38</h3>
+<p>Signed-off-by: Nour <a href="mailto:nurmn3m@gmail.com">nurmn3m@gmail.com</a></p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/5677-dra-resource-availability-visibility/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-08-26</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-align-kep-with-the-merged-137-implementation">KEP unknown: align KEP with the merged 1.37 implementation</h3>
+<p>Signed-off-by: Nour <a href="mailto:nurmn3m@gmail.com">nurmn3m@gmail.com</a></p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/5677-dra-resource-availability-visibility/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-08-21</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6062-from-saschagrunertkepoci-artifact-security-profiles">KEP unknown: Merge pull request #6062 from saschagrunert/kep/oci-artifact-security-profiles</h3>
+<p>KEP-6061: OCI artifa…</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/6061-oci-artifact-security-profiles/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6385-from-jefftreekep-5866-beta">KEP unknown: Merge pull request #6385 from Jefftree/kep-5866-beta</h3>
+<p>KEP-5866: Target Beta graduation in v1.38</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-api-machinery/5866-server-side-sharded-list-and-watch/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6379-from-aculnaigstor-3106">KEP unknown: Merge pull request #6379 from aculnaig/stor-3106</h3>
+<p>KEP-1432: add Unknown volume health status and hea…</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-storage/1432-volume-health-monitor/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-add-example-external-implementation-to-alpha-criteria">KEP unknown: Add example external implementation to alpha criteria</h3>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-node/6371-external-node-liveness-detection/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h3 id="kep-unknown-merge-pull-request-6059-from-cniackzkep-csi-global-mount-fallback">KEP unknown: Merge pull request #6059 from cniackz/kep-csi-global-mount-fallback</h3>
+<p>KEP-6058: CSI volume reconstruc…</p>
+<p>Kubernetes Enhancement Proposal update</p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/blob/master/keps/sig-storage/6058-csi-global-mount-fallback/README.md">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>KEP Number: unknown</li>
+<li>Updated: 2026-09-28</li>
+<li>Status: Unknown</li>
+</ul>
+<h2 id="updates">Updates</h2>
+<h3 id="meeting-notes-update-sig-node-14">Meeting Notes Update: sig-node</h3>
+<p>drop beta PRR entry while targeting alpha</p>
+<p>Signed-off-by: Nour <a href="mailto:nurmn3m@gmail.com">nurmn3m@gmail.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/eed8de29697623b9f8a38a68e9d321884be5c866">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-09-28</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 1</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-15">Meeting Notes Update: sig-node</h3>
+<p>Retarget third Alpha in v1.38, Beta in v1.39</p>
+<p>Signed-off-by: Nour <a href="mailto:nurmn3m@gmail.com">nurmn3m@gmail.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/725f07d27b26c8cc8a68577210917d0421232388">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-09-25</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 3</li>
+</ul>
+<h3 id="meeting-notes-update-sig-node-16">Meeting Notes Update: sig-node</h3>
+<p>Address review feedback on beta promotion</p>
+<p>Signed-off-by: Nour <a href="mailto:nurmn3m@gmail.com">nurmn3m@gmail.com</a></p>
+<p>🔗 <a href="https://github.com/kubernetes/enhancements/commit/fbbadb6cb604cdf2fe4ebffe99c7678e7d8d23f7">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Date: 2026-09-17</li>
+<li>Repository: kubernetes/enhancements</li>
+<li>Files Updated: 1</li>
+</ul>
+<hr>
+<p><em>This content was automatically collected on 2026-09-29 04:09:43</em></p> </div> <footer class="post-footer" data-astro-cid-egg7nqdx> <nav class="post-nav" data-astro-cid-egg7nqdx> <a href="/posts" class="back-link" data-astro-cid-egg7nqdx>← 記事一覧に戻る</a> </nav> </footer> </article>  </main> <footer data-astro-cid-sz7xmlte> <div class="footer-content" data-astro-cid-sz7xmlte> <p class="copyright" data-astro-cid-sz7xmlte> © 2026 Upstream Lens. All rights reserved. </p> <p class="disclaimer-note" data-astro-cid-sz7xmlte> This site is not affiliated with any specific foundation, organization, or project. </p> <nav class="footer-nav" data-astro-cid-sz7xmlte> <a href="/disclaimer" data-astro-cid-sz7xmlte>Disclaimer</a> <span class="separator" data-astro-cid-sz7xmlte>•</span> <a href="/author" data-astro-cid-sz7xmlte>Author</a> <span class="separator" data-astro-cid-sz7xmlte>•</span> <a href="https://github.com/kkomazaw/upstreamlens.io" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>GitHub</a> </nav> </div> </footer>  </div> </body></html> 

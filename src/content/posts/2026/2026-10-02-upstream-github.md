@@ -1,0 +1,743 @@
+---
+title: "Upstream Github - 2026-10-02"
+description: "CNCF upstream activity from github"
+pubDate: 2026-10-02
+category: "Notes"
+tags: ["upstream", "CNCF", "kubernetes", "issue", "kind/failing-test", "sig/release", "needs-triage", "kind/bug", "sig/api-machinery", "sig/auth", "area/kubelet", "sig/node", "sig/scheduling", "kind/flake", "pr", "area/kubectl", "release-note", "size/L", "kind/feature", "sig/cli", "cncf-cla: yes", "needs-ok-to-test", "needs-priority", "size/S", "release-note-none", "ok-to-test", "do-not-merge/needs-sig", "size/XL", "area/apiserver", "kind/regression", "area/test", "sig/testing", "do-not-merge/work-in-progress", "kind/cleanup", "lgtm", "sig/architecture", "do-not-merge/hold", "size/XS", "approved", "size/M", "sig/scalability", "area/provider/gcp", "sig/cloud-provider", "sig/storage", "cncf-cla: no", "do-not-merge/release-note-label-needed", "do-not-merge/needs-kind", "sig/network", "area/kube-proxy", "size/XXL", "area/prow", "sig/k8s-infra", "k8s.io", "area/jobs", "area/config", "test-infra", "area/images", "area/vertical-pod-autoscaler", "area/helm-charts", "autoscaler", "area/addon-resizer", "kind/documentation", "kind/api-change", "language/en", "website", "language/vi", "area/localization", "release", "registry.k8s.io", "envoyproxy", "envoy"]
+draft: false
+---
+
+## Overview
+
+This is an automated collection of upstream activity from github.
+
+## 🔥 High Priority Updates
+
+### kubernetes/kubernetes#142599: Summary API PSI total is in microseconds on the cadvisor stats path but nanoseconds with CRI stats
+
+### What happened?
+
+`PSIData.Total` in the kubelet Summary API is documented as nanoseconds, and KEP-4205 says the same. With the default cadvisor stats provider the kubelet reports the cgroup's raw value, which is in microseconds. With `PodAndContainerStatsFromCRI` enabled the value comes from cont...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/issues/142599)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: 7
+- State: open
+
+### kubernetes/kubernetes#142593: APF: add simulation tests quantifying KEP-1040 properties and overload gaps
+
+#### What type of PR is this?
+/kind feature
+
+#### What this PR does / why we need it:
+
+API Priority and Fairness (APF) behavior emerges from the interaction of multiple coupled mechanisms: virtual-time fair queuing (`QueueSet`), shuffle sharding (`handSize`), head-of-line width reservation (`ca...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142593)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: Yes
+
+### kubernetes/kubernetes#142585: refactor(volume): pass context.Context to KubeletVolumeHost.WaitForCacheSync
+
+#### What type of PR is this?
+/kind cleanup
+
+#### What this PR does / why we need it:
+This PR updates the `KubeletVolumeHost.WaitForCacheSync` interface method to accept `context.Context`, addressing a lingering TODO in `pkg/kubelet/volume_host.go` as part of contextual logging (KEP-1602):
+
+- ...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142585)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### envoyproxy/envoy: v1.39.2
+
+repo: Release v1.39.2
+
+**Summary of changes**:
+
+* Security fixes:
+  - [CVE-2026-35189](https://github.com/google/boringssl/blob/main/docs/advisories/2026-09-29.md): tls: updated BoringSSL to fix excessive memory allocation when parsing certificates with `nameRelativeToCRLIssuer` CRL Distribution Points, which could be exploited for remote denial of service during TLS handshakes.
+
+* Build/packaging:
+  - Removed Debian bullseye (11) packaging, as bullseye is end-of-life and its repositories are no...
+
+🔗 [Link](https://github.com/envoyproxy/envoy/releases/tag/v1.39.2)
+
+**Metadata:**
+- Version: v1.39.2
+- Published: 2026-10-01
+- Prerelease: No
+
+### envoyproxy/envoy: v1.38.5
+
+repo: Release v1.38.5
+
+**Summary of changes**:
+
+* Security fixes:
+  - [CVE-2026-35189](https://github.com/google/boringssl/blob/main/docs/advisories/2026-09-29.md): tls: patched BoringSSL to fix excessive memory allocation when parsing certificates with `nameRelativeToCRLIssuer` CRL Distribution Points, which could be exploited for remote denial of service during TLS handshakes. The BoringSSL FIPS build (`--config=boringssl-fips`) does not receive this patch.
+
+* Build/packaging:
+  - Removed Debi...
+
+🔗 [Link](https://github.com/envoyproxy/envoy/releases/tag/v1.38.5)
+
+**Metadata:**
+- Version: v1.38.5
+- Published: 2026-10-01
+- Prerelease: No
+
+### envoyproxy/envoy: v1.37.7
+
+repo: Release v1.37.7
+
+**Summary of changes**:
+
+* Security fixes:
+  - [CVE-2026-35189](https://github.com/google/boringssl/blob/main/docs/advisories/2026-09-29.md): tls: patched BoringSSL to fix excessive memory allocation when parsing certificates with `nameRelativeToCRLIssuer` CRL Distribution Points, which could be exploited for remote denial of service during TLS handshakes. The BoringSSL FIPS build (`--define boringssl=fips`) does not receive this patch.
+
+* Build/packaging:
+  - Removed Debi...
+
+🔗 [Link](https://github.com/envoyproxy/envoy/releases/tag/v1.37.7)
+
+**Metadata:**
+- Version: v1.37.7
+- Published: 2026-10-01
+- Prerelease: No
+
+### envoyproxy/envoy: v1.36.11
+
+**Summary of changes**:
+
+* Security fixes:
+  - [CVE-2026-35189](https://github.com/google/boringssl/blob/main/docs/advisories/2026-09-29.md): tls: patched BoringSSL to fix excessive memory allocation when parsing certificates with `nameRelativeToCRLIssuer` CRL Distribution Points, which could be exploited for remote denial of service during TLS handshakes. Note that the FIPS build is not patched.
+
+* Build/packaging:
+  - Removed Debian bullseye (11) packaging, as bullseye is end-of-life and...
+
+🔗 [Link](https://github.com/envoyproxy/envoy/releases/tag/v1.36.11)
+
+**Metadata:**
+- Version: v1.36.11
+- Published: 2026-10-01
+- Prerelease: No
+
+## Updates
+
+### kubernetes/kubernetes#142609: [Failing test] ci-kubernetes-build.Overall
+
+### Which jobs are failing?
+
+[sig-release-master-blocking#build-master](https://testgrid.k8s.io/sig-release-master-blocking#build-master)
+
+### Which tests are failing?
+
+sig-release-master-blocking#build-master
+
+### Since when has it been failing?
+
+ Every run since 2026-10-01 ~18:22 UTC. The last pas...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/issues/142609)
+
+**Metadata:**
+- Created: 2026-10-02
+- Comments: 1
+- State: open
+
+### kubernetes/kubernetes#142606: kube-apiserver built with Go 1.27 returns 431 for impersonated or front-proxy users with about 500 groups
+
+### What happened?
+
+We're reporting this ahead of v1.38 because it only appears when several conditions combine, and it's easy to miss until someone with a large group membership hits it.
+
+Go 1.27 added `http.Server.MaxHeaderValueCount` with a default of 500 ([golang/go#79936](https://github.com/gol...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/issues/142606)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: 1
+- State: open
+
+### kubernetes/kubernetes#142601: kube-apiserver: /openapi/v3 is never gzip-compressed, unlike /openapi/v2
+
+### What happened?
+
+kube-apiserver serves `/openapi/v3` and `/openapi/v3/<group-version>` uncompressed even when the client sends `Accept-Encoding: gzip`. `/openapi/v2` on the same server is gzipped.
+
+Same client and headers against a v1.34.11 kube-apiserver:
+
+| Path | Identity size | With `Accept-E...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/issues/142601)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: 1
+- State: open
+
+### kubernetes/kubernetes#142590: scheduler test flake: TestAsyncPreemption/Lower_priority_Pod_can_select_the_same_place_where_the_higher_priority_Pod_is_preempting_if_the_node_is_big_enough
+
+### Which jobs are flaking?
+
+integration
+
+### Which tests are flaking?
+
+ k8s.io/kubernetes/test/integration/scheduler: preemption 
+
+TestAsyncPreemption/Lower_priority_Pod_can_select_the_same_place_where_the_higher_priority_Pod_is_preempting_if_the_node_is_big_enough_(Async_API_calls_enabled:_true)
+
+...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/issues/142590)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: 1
+- State: open
+
+### kubernetes/kubernetes#142611: kubectl: complete label keys and values for --selector
+
+#### What type of PR is this?
+
+/kind feature
+/sig cli
+
+#### What this PR does / why we need it:
+
+Adds shell completion for the `-l/--selector` flag. `kubectl get pods -l <TAB>` suggests the label keys found on objects of that type, and `-l app=<TAB>` suggests the values seen for `app`. Only the last...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142611)
+
+**Metadata:**
+- Created: 2026-10-02
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#142610: local-up-cluster: Add curl TLS prerequisite validation for ML-DSA
+
+<!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142610)
+
+**Metadata:**
+- Created: 2026-10-02
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#142608: Add authoritative index for all vertex types in node authorizer
+
+<!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142608)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#142607: apiserver: accept large identity header sets with Go 1.27
+
+#### What type of PR is this?
+
+/kind bug
+/kind regression
+/sig api-machinery
+
+#### What this PR does / why we need it:
+
+Go 1.27 rejects requests with more than 500 header values by default (`http.Server.MaxHeaderValueCount`, golang/go#79936), independently of `MaxHeaderBytes`. Impersonation and requ...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142607)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#142605: scheduler_perf: add StarvationHighPriorityVictims benchmark
+
+#### What type of PR is this?
+
+/kind feature
+
+#### What this PR does / why we need it:
+
+Adds `StarvationHighPriorityVictims`, a variant of `StarvationIndependent`. Two things differ:
+
+- Priority order is clogger (1000) < churn (10000) < victim (1e9), so victims are popped first. Any victim d...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142605)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: Yes
+
+### kubernetes/kubernetes#142604: Clean up expired APIs for 1.38
+
+#### What type of PR is this?
+
+/kind cleanup
+
+#### What this PR does / why we need it:
+
+Regenerates served APIs using `./hack/update-openapi-spec.sh`, removing expired APIs for 1.38 (`resource.k8s.io/v1beta1`) following the `v1.38.0-alpha.1` release cut on Sep 28, 2026.
+
+#### Which issue(s) this PR ...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142604)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#142603: Avoid unsafe shallow-copy in NewDecimalQuantity
+
+#### What type of PR is this?
+
+/kind bug
+
+#### What this PR does / why we need it:
+
+Builds on https://github.com/kubernetes/kubernetes/pull/142594
+
+This addresses the problem where `NewDecimalQuantity` takes a `inf.Dec` and shallow-copies it. This means that a subsequent write to the caller'...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142603)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#142602: kube-aggregator: gzip OpenAPI v3 responses
+
+#### What type of PR is this?
+
+/kind feature
+/sig api-machinery
+
+#### What this PR does / why we need it:
+
+kube-apiserver serves `/openapi/v3` and `/openapi/v3/<group-version>` uncompressed even when the client sends `Accept-Encoding: gzip`, while `/openapi/v2` is gzipped. Clients that fetch ...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142602)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#142600: Migrate gsutil usages to gcloud storage
+
+Migrates the remaining `gsutil` call sites in `cluster/` scripts to `gcloud storage` equivalents, ahead of gsutil's removal from Google Cloud CLI in March 2027.
+
+Changes:
+- `cluster/gce/gci/mounter/stage-upload.sh`: `gsutil cp` → `gcloud storage cp`
+- `cluster/gce/util.sh`: prereq check now requires...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142600)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#142598: Fix binder_test flake by waiting for watches to start
+
+#### What type of PR is this?
+
+/kind flake
+
+#### What this PR does / why we need it:
+
+I encountered this flake here: https://github.com/kubernetes/kubernetes/pull/142581
+
+#### Which issue(s) this PR is related to:
+
+#### Special notes for your reviewer:
+
+#### Does this PR introduce a user...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142598)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#142597: kubelet: avoid marking startup-probed containers started without star…
+
+
+#### What type of PR is this?
+
+
+**/kind bug**
+
+**What this PR does / why we need it:**
+
+This PR fixes a kubelet startup-probe regression where a container could be marked as started after a kubelet restart even though its startup probe had not succeeded yet.
+
+The issue was caused by check...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142597)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#142596: wsstream: keep a write deadline across writes
+
+#### What type of PR is this?
+
+/kind bug
+
+#### What this PR does / why we need it:
+
+`wsstream.Conn` renews its idle timeout with `SetDeadline` on every frame it reads or writes, and that sets the write deadline as well. So a deadline set with `SetWriteDeadline` lasts only until the next frame is wri...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142596)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: Yes
+
+### kubernetes/kubernetes#142595: [InPlaceNodeResourceResize] Scheduler: Re-queue nominated pods when target node allocatable decreases
+
+
+
+<!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contribut...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142595)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#142591: Fix differences in error returned between cacher and etcd3 storage
+
+Not sure if this is externally observable, but we have first fruit from https://github.com/kubernetes/kubernetes/issues/141652
+
+Looks like there is differences in errors returned between cacher and etcd3:
+* For Get on invalid RV cacher doesn't return storage error. https://github.com/kubernetes/k...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142591)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#142589: kubectl: return an error instead of panicking when config set/unset navigates into extensions
+
+#### What type of PR is this?
+
+/kind bug
+
+#### What this PR does / why we need it:
+
+`kubectl config set` and `kubectl config unset` panic with `reflect: Elem of invalid type runtime.Object` when the property path goes into an `extensions` map, for example `clusters.foo.extensions.bar` or `pref...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142589)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#142587: Reduce default gzip threshold to 1KB
+
+#### What type of PR is this?
+
+/kind feature
+/sig api-machinery
+/cc @serathius 
+
+#### What this PR does / why we need it:
+
+On a managed cluster where nodes reach the apiserver over a metered WAN, GET/LIST responses of 1-100 KB were ~46% of apiserver egress, and none of them were compressed; ...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142587)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#142583: Use public field paths in kube-proxy configuration validation
+
+#### What type of PR is this?
+
+/kind bug
+/sig network
+/area kube-proxy
+
+#### What this PR does / why we need it:
+
+- Report validation errors using public v1alpha1 JSON and YAML field names instead of internal Go type and field names
+- Match the public layout for conntrack and local detection and sel...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/142583)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/k8s.io#10011: fetch prowjob crd from source directly
+
+I'm seeing this log line with hook in prow.
+
+`Warning: unknown field "spec.extra_refs[0].auxiliary".`
+
+Our CRD copy is out of date.
+
+🔗 [Link](https://github.com/kubernetes/k8s.io/pull/10011)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/test-infra#37955: lws: use vYYYYMMDD-<hash> format for _GIT_TAG in image pushing job
+
+Pass --version-tag-filter=none to image-builder in post-lws-push-images so that git describe --tags --always --dirty ignores git tags and always falls back to the short commit hash.
+
+This ensures _GIT_TAG is consistently formatted as vYYYYMMDD-<hash> for both branch commits (instead of vYYYYMMDD-<...
+
+🔗 [Link](https://github.com/kubernetes/test-infra/pull/37955)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/test-infra#37953: bump kubekins e2e deps - october 2026
+
+🔗 [Link](https://github.com/kubernetes/test-infra/pull/37953)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/test-infra#37952: create a crio-slow presubmit to verify test changes
+
+Create a presubmit for https://testgrid.k8s.io/sig-node-cri-o#ci-node-crio-slow
+
+**AI Usage**
+AI was used to draft the change but it was reviewed and checked by me.
+
+
+🔗 [Link](https://github.com/kubernetes/test-infra/pull/37952)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/autoscaler#10379: Add extraObjects to the VPA helm chart
+
+Adds an extraObjects value (empty by default) that renders extra manifests with the release. Items can be YAML maps or multi-line strings and are evaluated with tpl following the Traefik and Argo CD charts. Users can add resources such as PodMonitors without the chart carrying third-party CRDs.
+Fix...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/pull/10379)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/autoscaler#10378: build(deps): bump github.com/prometheus/common from 0.70.1 to 0.72.0 in /addon-resizer
+
+Bumps [github.com/prometheus/common](https://github.com/prometheus/common) from 0.70.1 to 0.72.0.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/prometheus/common/releases">github.com/prometheus/common's releases</a>.</em></p>
+<blockquote>
+<h2>v0.72.0</h2>...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/pull/10378)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/autoscaler#10377: AEP-9926: reactive memory pressure detection for VPA
+
+#### What type of PR is this?
+/kind feature
+/kind documentation
+/kind api-change
+/area vertical-pod-autoscaler
+<!--
+Add one of the following kinds:
+/kind bug
+/kind dependency
+/kind cleanup
+/kind documentation
+/kind feature
+
+Optionally add one or more of the following kinds if applicable...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/pull/10377)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/autoscaler#10376: [POC] [WIP] VPA: proof of concept for reactive memory pressure detection (AEP-9926)
+
+#### What type of PR is this?
+/kind feature
+/kind api-change
+/area vertical-pod-autoscaler
+<!--
+Add one of the following kinds:
+/kind bug
+/kind dependency
+/kind cleanup
+/kind documentation
+/kind feature
+
+Optionally add one or more of the following kinds if applicable:
+/kind api-change
+...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/pull/10376)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/website#57846: Official client library lists disagree across docs pages
+
+**This is a Bug Report**
+
+**Problem:**
+
+The officially supported client libraries are listed differently on three pages, and the C# client is named differently ("dotnet" vs "C#").
+
+| Page | Official clients listed |
+|---|---|
+| [Client libraries](https://kubernetes.io/docs/reference/using-api/client...
+
+🔗 [Link](https://github.com/kubernetes/website/issues/57846)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: 2
+- State: open
+
+### kubernetes/website#57845: dotnet client docs pin KubernetesClient 1.6.1
+
+**This is a Bug Report**
+
+**Problem:**
+
+The dotnet section of "Access Clusters Using the Kubernetes API" tells readers to install a fixed, very old package version:
+
+```shell
+dotnet add package KubernetesClient --version 1.6.1
+```
+
+The current release of the official C# client is [v20.0.84](https://...
+
+🔗 [Link](https://github.com/kubernetes/website/issues/57845)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: 1
+- State: open
+
+### kubernetes/website#57841: [vi] Add Vietnamese translation for concepts/workloads/controllers/deployment
+
+**This is a Feature Request**
+
+<!-- Please only use this template for submitting feature/enhancement requests -->
+<!-- See https://kubernetes.io/docs/contribute/start/ for guidance on writing an actionable issue description. -->
+
+**What would you like to be added**
+
+Translate content/en/docs/concept...
+
+🔗 [Link](https://github.com/kubernetes/website/issues/57841)
+
+**Metadata:**
+- Created: 2026-10-01
+- Comments: 2
+- State: open
+
+### kubernetes/registry.k8s.io: v0.8.0
+
+## What's Changed
+* Route referrers requests to the signature upstream by @saschagrunert in https://github.com/kubernetes/registry.k8s.io/pull/336
+* Fall back to the signature upstream for content by digest by @saschagrunert in https://github.com/kubernetes/registry.k8s.io/pull/337
+* Fix the content checks for content by digest by @saschagrunert in https://github.com/kubernetes/registry.k8s.io/pull/338
+* refresh the ip ranges for October 2026 by @upodroid in https://github.com/kubernetes/reg...
+
+🔗 [Link](https://github.com/kubernetes/registry.k8s.io/releases/tag/v0.8.0)
+
+**Metadata:**
+- Version: v0.8.0
+- Published: 2026-10-01
+- Prerelease: No
+
+
+---
+
+*This content was automatically collected on 2026-10-02 04:00:06*

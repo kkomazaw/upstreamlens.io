@@ -1,0 +1,1089 @@
+<!DOCTYPE html><html lang="ja"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="CNCF upstream activity from github"><title>Upstream Github - 2026-10-22 | Upstream Lens</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><style>.post[data-astro-cid-egg7nqdx]{max-width:100%}.post-header[data-astro-cid-egg7nqdx]{margin-bottom:3rem;padding-bottom:2rem;border-bottom:2px solid var(--border-color)}.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{margin:0 0 1rem}.post-meta[data-astro-cid-egg7nqdx]{display:flex;gap:1rem;align-items:center;font-size:.875rem;color:var(--text-secondary);margin-bottom:1rem}.category[data-astro-cid-egg7nqdx]{background-color:var(--code-bg);padding:.25rem .75rem;border-radius:3px;font-weight:600;color:var(--text-color)}.tags[data-astro-cid-egg7nqdx]{display:flex;flex-wrap:wrap;gap:.5rem}.tag[data-astro-cid-egg7nqdx]{background-color:var(--border-color);color:var(--text-color);padding:.25rem .75rem;border-radius:3px;font-size:.875rem}.post-content[data-astro-cid-egg7nqdx]{margin:3rem 0;line-height:1.8}.post-content[data-astro-cid-egg7nqdx] h2{margin-top:3rem}.post-content[data-astro-cid-egg7nqdx] h3{margin-top:2rem}.post-content[data-astro-cid-egg7nqdx] img{max-width:100%;height:auto;border-radius:4px;margin:2rem 0}.post-content[data-astro-cid-egg7nqdx] blockquote{border-left:4px solid var(--accent-color);padding-left:1.5rem;margin:2rem 0;color:var(--text-secondary);font-style:italic}.post-footer[data-astro-cid-egg7nqdx]{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border-color)}.post-nav[data-astro-cid-egg7nqdx]{text-align:center}.back-link[data-astro-cid-egg7nqdx]{color:var(--link-color);text-decoration:none;font-weight:600}.back-link[data-astro-cid-egg7nqdx]:hover{color:var(--link-hover);text-decoration:underline}@media(max-width:768px){.post-header[data-astro-cid-egg7nqdx]{margin-bottom:2rem;padding-bottom:1.5rem}.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{font-size:1.75rem;line-height:1.3}.post-meta[data-astro-cid-egg7nqdx]{flex-direction:column;align-items:flex-start;gap:.5rem}.post-content[data-astro-cid-egg7nqdx]{margin:2rem 0}.post-content[data-astro-cid-egg7nqdx] h2{margin-top:2rem}.post-content[data-astro-cid-egg7nqdx] h3{margin-top:1.5rem}.post-content[data-astro-cid-egg7nqdx] blockquote{padding-left:1rem;margin:1.5rem 0;font-size:.95rem}.post-content[data-astro-cid-egg7nqdx] pre{margin:1.5rem -1.25rem;border-radius:0;font-size:.875rem}.post-footer[data-astro-cid-egg7nqdx]{margin-top:3rem}.tags[data-astro-cid-egg7nqdx]{gap:.375rem}.tag[data-astro-cid-egg7nqdx]{font-size:.8125rem;padding:.2rem .625rem}}@media(max-width:480px){.post-header[data-astro-cid-egg7nqdx] h1[data-astro-cid-egg7nqdx]{font-size:1.5rem}.post-content[data-astro-cid-egg7nqdx] pre{font-size:.8125rem}}
+</style>
+<link rel="stylesheet" href="/_astro/about.Mt-9HUYb.css"></head> <body> <div class="container"> <header data-astro-cid-3ef6ksr2> <div class="header-top" data-astro-cid-3ef6ksr2> <div class="header-content" data-astro-cid-3ef6ksr2> <div class="site-title" data-astro-cid-3ef6ksr2> <a href="/" data-astro-cid-3ef6ksr2>Upstream Lens</a> </div> <p class="tagline" data-astro-cid-3ef6ksr2>Seeing decisions before code is written</p> </div> <div class="language-switcher" data-astro-cid-a2mxz4y6> <a href="/posts/2026/2026-10-22-upstream-github/" class="lang-link active" aria-current="page" data-astro-cid-a2mxz4y6> 日本語 </a><a href="/en/posts/2026/2026-10-22-upstream-github/" class="lang-link" data-astro-cid-a2mxz4y6> English </a> </div>  </div> <nav data-astro-cid-pux6a34n> <button class="mobile-menu-toggle" aria-label="メニュー" id="mobile-menu-toggle" data-astro-cid-pux6a34n> <span class="hamburger" data-astro-cid-pux6a34n></span> </button> <ul id="nav-menu" data-astro-cid-pux6a34n> <li data-astro-cid-pux6a34n> <a href="/" class="nav-link" data-astro-cid-pux6a34n> Home </a> </li><li data-astro-cid-pux6a34n> <a href="/philosophy" class="nav-link" data-astro-cid-pux6a34n> Philosophy </a> </li><li data-astro-cid-pux6a34n> <a href="/posts" class="nav-link active" aria-current="page" data-astro-cid-pux6a34n> Posts </a> </li><li data-astro-cid-pux6a34n> <a href="/stories" class="nav-link" data-astro-cid-pux6a34n> Stories </a> </li><li data-astro-cid-pux6a34n> <a href="/about" class="nav-link" data-astro-cid-pux6a34n> About </a> </li> </ul> </nav> <script type="module">const e=document.getElementById("mobile-menu-toggle"),n=document.getElementById("nav-menu");e&&n&&(e.addEventListener("click",()=>{const t=n.classList.toggle("open");e.classList.toggle("open"),e.setAttribute("aria-expanded",t.toString())}),n.querySelectorAll("a").forEach(t=>{t.addEventListener("click",()=>{n.classList.remove("open"),e.classList.remove("open"),e.setAttribute("aria-expanded","false")})}),document.addEventListener("click",t=>{!e.contains(t.target)&&!n.contains(t.target)&&(n.classList.remove("open"),e.classList.remove("open"),e.setAttribute("aria-expanded","false"))}));</script>  </header>  <main>  <article class="post" data-astro-cid-egg7nqdx> <header class="post-header" data-astro-cid-egg7nqdx> <h1 data-astro-cid-egg7nqdx>Upstream Github - 2026-10-22</h1> <div class="post-meta" data-astro-cid-egg7nqdx> <time datetime="2026-10-22T00:00:00.000Z" data-astro-cid-egg7nqdx> 2026年10月22日 </time> <span class="category" data-astro-cid-egg7nqdx>Notes</span> </div> <div class="tags" data-astro-cid-egg7nqdx> <span class="tag" data-astro-cid-egg7nqdx>upstream</span><span class="tag" data-astro-cid-egg7nqdx>CNCF</span><span class="tag" data-astro-cid-egg7nqdx>kubernetes</span><span class="tag" data-astro-cid-egg7nqdx>issue</span><span class="tag" data-astro-cid-egg7nqdx>kind/bug</span><span class="tag" data-astro-cid-egg7nqdx>needs-triage</span><span class="tag" data-astro-cid-egg7nqdx>kubectl</span><span class="tag" data-astro-cid-egg7nqdx>sig/storage</span><span class="tag" data-astro-cid-egg7nqdx>kind/flake</span><span class="tag" data-astro-cid-egg7nqdx>sig/cli</span><span class="tag" data-astro-cid-egg7nqdx>triage/accepted</span><span class="tag" data-astro-cid-egg7nqdx>kind/cleanup</span><span class="tag" data-astro-cid-egg7nqdx>sig/scheduling</span><span class="tag" data-astro-cid-egg7nqdx>wg/workload-aware-scheduling</span><span class="tag" data-astro-cid-egg7nqdx>sig/network</span><span class="tag" data-astro-cid-egg7nqdx>pr</span><span class="tag" data-astro-cid-egg7nqdx>area/kubelet</span><span class="tag" data-astro-cid-egg7nqdx>sig/node</span><span class="tag" data-astro-cid-egg7nqdx>size/XL</span><span class="tag" data-astro-cid-egg7nqdx>release-note-none</span><span class="tag" data-astro-cid-egg7nqdx>approved</span><span class="tag" data-astro-cid-egg7nqdx>cncf-cla: yes</span><span class="tag" data-astro-cid-egg7nqdx>needs-priority</span><span class="tag" data-astro-cid-egg7nqdx>area/test</span><span class="tag" data-astro-cid-egg7nqdx>area/apiserver</span><span class="tag" data-astro-cid-egg7nqdx>sig/api-machinery</span><span class="tag" data-astro-cid-egg7nqdx>release-note</span><span class="tag" data-astro-cid-egg7nqdx>size/L</span><span class="tag" data-astro-cid-egg7nqdx>sig/testing</span><span class="tag" data-astro-cid-egg7nqdx>kind/feature</span><span class="tag" data-astro-cid-egg7nqdx>size/XXL</span><span class="tag" data-astro-cid-egg7nqdx>area/kubectl</span><span class="tag" data-astro-cid-egg7nqdx>kind/api-change</span><span class="tag" data-astro-cid-egg7nqdx>needs-ok-to-test</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/work-in-progress</span><span class="tag" data-astro-cid-egg7nqdx>area/code-generation</span><span class="tag" data-astro-cid-egg7nqdx>wg/device-management</span><span class="tag" data-astro-cid-egg7nqdx>lgtm</span><span class="tag" data-astro-cid-egg7nqdx>sig/apps</span><span class="tag" data-astro-cid-egg7nqdx>sig/instrumentation</span><span class="tag" data-astro-cid-egg7nqdx>area/cloudprovider</span><span class="tag" data-astro-cid-egg7nqdx>sig/cloud-provider</span><span class="tag" data-astro-cid-egg7nqdx>sig/autoscaling</span><span class="tag" data-astro-cid-egg7nqdx>api-review</span><span class="tag" data-astro-cid-egg7nqdx>size/M</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/release-note-label-needed</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/needs-kind</span><span class="tag" data-astro-cid-egg7nqdx>do-not-merge/hold</span><span class="tag" data-astro-cid-egg7nqdx>size/XS</span><span class="tag" data-astro-cid-egg7nqdx>size/S</span><span class="tag" data-astro-cid-egg7nqdx>sig/auth</span><span class="tag" data-astro-cid-egg7nqdx>sig/release</span><span class="tag" data-astro-cid-egg7nqdx>area/release-eng</span><span class="tag" data-astro-cid-egg7nqdx>release</span><span class="tag" data-astro-cid-egg7nqdx>language/ja</span><span class="tag" data-astro-cid-egg7nqdx>website</span><span class="tag" data-astro-cid-egg7nqdx>cloud-provider-gcp</span><span class="tag" data-astro-cid-egg7nqdx>needs-kind</span><span class="tag" data-astro-cid-egg7nqdx>cloud-provider-aws</span><span class="tag" data-astro-cid-egg7nqdx>ok-to-test</span><span class="tag" data-astro-cid-egg7nqdx>minikube</span><span class="tag" data-astro-cid-egg7nqdx>dependencies</span><span class="tag" data-astro-cid-egg7nqdx>github_actions</span><span class="tag" data-astro-cid-egg7nqdx>area/github-management</span><span class="tag" data-astro-cid-egg7nqdx>org</span><span class="tag" data-astro-cid-egg7nqdx>kops</span><span class="tag" data-astro-cid-egg7nqdx>sig/contributor-experience</span><span class="tag" data-astro-cid-egg7nqdx>area/community-management</span><span class="tag" data-astro-cid-egg7nqdx>area/slack-management</span><span class="tag" data-astro-cid-egg7nqdx>community</span><span class="tag" data-astro-cid-egg7nqdx>autoscaler</span><span class="tag" data-astro-cid-egg7nqdx>area/vertical-pod-autoscaler</span><span class="tag" data-astro-cid-egg7nqdx>area/balancer</span><span class="tag" data-astro-cid-egg7nqdx>area/cluster-autoscaler</span><span class="tag" data-astro-cid-egg7nqdx>area/dependency</span><span class="tag" data-astro-cid-egg7nqdx>area/infra</span><span class="tag" data-astro-cid-egg7nqdx>area/prow</span><span class="tag" data-astro-cid-egg7nqdx>area/terraform</span><span class="tag" data-astro-cid-egg7nqdx>sig/k8s-infra</span><span class="tag" data-astro-cid-egg7nqdx>area/infra/gcp</span><span class="tag" data-astro-cid-egg7nqdx>k8s.io</span><span class="tag" data-astro-cid-egg7nqdx>ingress-gce</span><span class="tag" data-astro-cid-egg7nqdx>kube-state-metrics</span><span class="tag" data-astro-cid-egg7nqdx>priority/important-soon</span><span class="tag" data-astro-cid-egg7nqdx>kind/documentation</span><span class="tag" data-astro-cid-egg7nqdx>sig-release</span><span class="tag" data-astro-cid-egg7nqdx>prometheus</span><span class="tag" data-astro-cid-egg7nqdx>blackbox_exporter</span><span class="tag" data-astro-cid-egg7nqdx>containerd</span> </div> </header> <div class="post-content" data-astro-cid-egg7nqdx> <h2 id="overview">Overview</h2>
+<p>This is an automated collection of upstream activity from github.</p>
+<h2 id="-high-priority-updates">🔥 High Priority Updates</h2>
+<h3 id="kuberneteskubectl1890-kubectl-explicit-kuberc-flag-is-overridden-by-kuberc-when-using-the-default-path">kubernetes/kubectl#1890: kubectl: Explicit —kuberc flag is overridden by KUBERC when using the default path</h3>
+<!-- Please use this template while reporting a bug and provide as much info as possible. Not doing so may result in your bug not being addressed in a timely manner. Thanks!
+
+If the matter is security related, please disclose it privately via https://kubernetes.io/security/
+-->
+<p><strong>What happened</strong>:</p>
+<p>…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubectl/issues/1890">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: 3</li>
+<li>State: open</li>
+</ul>
+<h3 id="kuberneteskubernetes143289-client-goleaderelection-add-recovery-mode-and-write-gate">kubernetes/kubernetes#143289: client-go/leaderelection: add recovery mode and write gate</h3>
+<p>Implements the client-go part of KEP-6361 (Leader Election Recovery).</p>
+<p>With LeaderElectionConfig.Recovery set, a missed RenewDeadline closes the write gate and calls OnStoppedLeading instead of ending Run. The elector keeps renewing the lease it held, never re-acquiring, and reopens the gate on succ…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/143289">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskubernetes143280-kep---6313--network-isolated-pods---alpha">kubernetes/kubernetes#143280: KEP - 6313 : Network Isolated Pods - ALPHA</h3>
+<h2 id="what-type-of-pr-is-this">What type of PR is this?</h2>
+<p>/kind feature
+/kind api-change
+/sig network
+/sig node
+/label api-review</p>
+<h2 id="what-this-pr-does--why-we-need-it">What this PR does / why we need it</h2>
+<p>Alpha implementation of <a href="https://kep.k8s.io/6313">KEP-6313: network-isolated pod sandboxes</a>. It adds <code>spec.defaultNetwork</code> to Pods with the values <code>Pod</code>, `Host…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/143280">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kubernetescloud-provider-gcp1399-gce-aliasnetworkendpoints-api-returns-numeric-project-number-instead-of-project-id-in-resource-urls-aip-122-non-compliance">kubernetes/cloud-provider-gcp#1399: GCE AliasNetworkEndpoints API returns numeric project number instead of project ID in resource URLs (AIP-122 non-compliance)</h3>
+<p>The GCE Compute <code>v1.preview</code> AliasNetworkEndpoints (ANE) API returns numeric project numbers in resource reference URLs (e.g., <code>host.instance</code> and <code>subnetwork</code>) instead of the alphanumeric project ID configured for the cluster.</p>
+<p>Per [Google Cloud API Improvement Proposal AIP-122](<a href="https://google.aip">https://google.aip</a>…</p>
+<p>🔗 <a href="https://github.com/kubernetes/cloud-provider-gcp/issues/1399">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: 1</li>
+<li>State: open</li>
+</ul>
+<h3 id="kubernetesautoscaler10484-capacitybuffer-conditions-and-shared-api-constants-aep">kubernetes/autoscaler#10484: CapacityBuffer Conditions and Shared API Constants AEP</h3>
+<h4 id="what-type-of-pr-is-this-1">What type of PR is this?</h4>
+<p>/kind api-change</p>
+<!--
+Add one of the following kinds:
+/kind bug
+/kind dependency
+/kind cleanup
+/kind documentation
+/kind feature
+
+Optionally add one or more of the following kinds if applicable:
+/kind api-change
+/kind deprecation
+/kind failing-test
+/kind flake
+/kind r...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/pull/10484)
+
+**Metadata:**
+- Created: 2026-10-22
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/autoscaler#10469: VPA recommender: keep checkpoint history across target selector flips
+
+#### What type of PR is this?
+
+/kind bug
+/area vertical-pod-autoscaler
+
+#### What this PR does / why we need it:
+
+Picks up #10095 from @iho, which has been inactive since August (agreed on that PR). iho's two commits are kept as they are.
+
+When the recommender can't resolve a VPA's `targetRef` (info...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/pull/10469)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### prometheus/prometheus: 3.15.1 / 2026-10-21
+
+- [SECURITY] Container images: Update CA certificates to distrust "emSign ECC Root CA - G3" and "Comodo AAA Services root" following the compromise of eMudhra intermediate CA private keys.
+- [SECURITY] Build with Go 1.27.3 to fix vulnerabilities in `net/http`, `net/textproto`, `crypto/tls` and `html/template`.
+- [SECURITY] Bump golang.org/x/net to v0.60.0 to fix HTTP/2 vulnerabilities (GO-2026-6603, GO-2026-6610, GO-2026-6611, GO-2026-6612, GO-2026-6617).
+
+
+🔗 [Link](https://github.com/prometheus/prometheus/releases/tag/v3.15.1)
+
+**Metadata:**
+- Version: v3.15.1
+- Published: 2026-10-21
+- Prerelease: No
+
+### prometheus/prometheus: 3.13.5 / 2026-10-21
+
+- [SECURITY] Container images: Update CA certificates to distrust "emSign ECC Root CA - G3" and "Comodo AAA Services root" following the compromise of eMudhra intermediate CA private keys.
+- [SECURITY] Build with Go 1.26.10 to fix vulnerabilities in `net/http`, `net/textproto`, `crypto/tls` and `html/template`.
+- [SECURITY] Bump golang.org/x/net to v0.60.0 to fix HTTP/2 vulnerabilities (GO-2026-6603, GO-2026-6610, GO-2026-6611, GO-2026-6612, GO-2026-6617).
+- [SECURITY] Bump OpenTelemetry to v...
+
+🔗 [Link](https://github.com/prometheus/prometheus/releases/tag/v3.13.5)
+
+**Metadata:**
+- Version: v3.13.5
+- Published: 2026-10-21
+- Prerelease: No
+
+### prometheus/blackbox_exporter: 0.29.1 / 2026-10-21
+
+* [SECURITY] Container images: Update CA certificates to distrust "emSign ECC Root CA - G3" and "Comodo AAA Services root" following the compromise of eMudhra intermediate CA private keys.
+* [SECURITY] Build with Go 1.27.3 to fix vulnerabilities in `net/http`, `net/textproto`, `mime/multipart`, `crypto/tls`, `crypto/x509` and `html/template`. `crypto/x509` now rejects the compromised eMudhra intermediates on hosts with an outdated CA store.
+* [SECURITY] Bump golang.org/x/net to v0.61.0 to fix ...
+
+🔗 [Link](https://github.com/prometheus/blackbox_exporter/releases/tag/v0.29.1)
+
+**Metadata:**
+- Version: v0.29.1
+- Published: 2026-10-21
+- Prerelease: No
+
+## Updates
+
+### kubernetes/kubernetes#143293: [Flaking Test] [sig-storage] CSI Volumes [Driver: pd.csi.storage.gke.io] [Provider:gce] [Testpattern: Dynamic PV (block volmode)] volume-stress multiple pods should access different volumes repeatedly
+
+### Which jobs are flaking?
+
+[ci-kubernetes-e2e-gce-cos-serial-master](https://prow.k8s.io/job-history/gs/kubernetes-ci-logs/logs/ci-kubernetes-e2e-gce-cos-serial-master)
+
+### Which tests are flaking?
+
+[Kubernetes e2e suite: [It] [sig-storage] CSI Volumes [Driver: pd.csi.storage.gke.io] [Provider:gc...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/issues/143293)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: 2
+- State: open
+
+### kubernetes/kubernetes#143292: kubectl: OpenAPI v3 query param verifier fails on typed List resources (e.g. ReplicationControllerList, ServiceList) and falls back to OpenAPI v2
+
+### What happened?
+
+When validating a typed `*List` resource (such as `v1.ReplicationControllerList` or `v1.ServiceList`), `queryParamVerifierV3.HasSupport` looks up `/openapi/v3/api/v1` and searches `supportsQueryParamV3` for a `PATCH` endpoint matching the GVK. Because list kinds do not have a `PA...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/issues/143292)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: 1
+- State: open
+
+### kubernetes/kubernetes#143281: scheduler-perf: inline createPods inside createPodGroups and createPodGroups inside createCompositePodGroups.
+
+### What would you like to be added?
+/sig scheduling
+/kind cleanup
+/wg workload-aware-scheduling
+
+As per discussion: https://github.com/kubernetes/kubernetes/pull/141706#discussion_r4293485745
+`createCompositePodGroups` propagates multiple fields/params to `createPodGroups` which require when creati...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/issues/143281)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: 1
+- State: open
+
+### kubernetes/kubernetes#143275: kube-proxy can lose the initial node topology event and ignore zone hints until restart
+
+/sig network
+/kind bug
+
+### What happened?
+
+On AKS and EKS, kube-proxy repeatedly logged this warning:
+
+```text
+"Ignoring same-zone topology hints for service since node is missing label" label="topology.kubernetes.io/zone"
+```
+
+On the affected nodes, the Node API object had the correct zone label. ...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/issues/143275)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: 4
+- State: open
+
+### kubernetes/kubernetes#143294: Kubelet: Don't allocate resources for terminating/terminated pods
+
+#### What type of PR is this?
+
+/kind bug
+
+#### What this PR does / why we need it:
+
+Don't allocate resources for terminating/terminated pods. Once a pod enters a terminating state, we never actuate the resize anyway.
+
+#### Which issue(s) this PR is related to:
+
+Pre-work for https://github.com/kubern...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143294)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143291: apiserver: decorate Service and PVC objects on storage decode
+
+#### What type of PR is this?
+
+/kind bug
+/sig api-machinery
+/sig network
+
+#### What this PR does / why we need it:
+
+Legacy Services and PersistentVolumeClaims lose their read-time defaults on cached watch events and status subresource requests, which can cause the ServiceCIDR repair controller to de...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143291)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143290: client-go/workqueue: add Pausable to pause and resume item retrieval
+
+Pausable is an optional interface, implemented by Typed and forwarded by the delaying and rate limiting wrappers. While paused, Get blocks until Resume or ShutDown; Add, Done and Forget keep working so event handlers can keep enqueuing and workers can finish the items they hold. A queue shut down wh...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143290)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143288: kubectl: remove OpenAPI v2 query param verifier fallback from Validator
+
+#### What type of PR is this?
+
+/kind bug
+/kind cleanup
+
+#### What this PR does / why we need it:
+
+- Removes the OpenAPI v2 `QueryParamVerifier` fallback from `kubectl`'s `Validator()` and marks `NewQueryParamVerifier`, `QueryParamVerifier`, and `NewFallbackQueryParamVerifier` as deprecated.
+- Fixes ...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143288)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143287: DRA consumable capacity validation
+
+#### What type of PR is this?
+/kind bug
+/kind api-change
+
+#### What this PR does / why we need it:
+The PR carry forwards the changes from #140563 
+
+From the original PR:
+This PR adds validation to prevent negative capacity values from entering the DRA node-allocatable resource accounting pat...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143287)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: Yes
+
+### kubernetes/kubernetes#143285: Validate labels and annotations in pods/binding
+
+#### What type of PR is this?
+
+/kind bug
+
+#### What this PR does / why we need it:
+
+Ensures pods/binding enforce the same labels and annotations validation as create / update pod paths.
+
+/sig node apimachinery
+/assign @deads2k 
+
+#### Does this PR introduce a user-facing change?
+```release-note
+Make ...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143285)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143284: kubelet: add sync_result_errors_total and pod_worker_errors_total metrics
+
+#### What type of PR is this?
+
+/kind feature
+
+#### What this PR does / why we need it:
+
+Add 2 new metrics to track errors from pod sync:
+1. `kubelet_sync_result_errors_total`: a counter that is incremented for every error returned in a `SyncResult`, with a label for the sync action.
+2. `kubelet_pod_...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143284)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143283: controller-manager: remove Config and ConfigOrDie from ControllerClientBuilder
+
+Raw rest.Config values let controllers build clients that bypass the transport wrappers the controller manager applies. Have the builder construct metadata, dynamic and scale clients instead, and add WithRateLimiterMultiplier for controllers that scale QPS and burst.
+
+The HPA metrics and apiextensio...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143283)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143282: Fix use of in-cluster config when client configuration flags are set
+
+#### What type of PR is this?
+
+/kind bug
+/sig cli
+/sig api-machinery
+
+#### What this PR does / why we need it:
+
+When a client (kubectl, or any client-go based CLI) is running inside a pod with a service account, the in-cluster configuration is only used if the merged kubeconfig is *exactly* the defa...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143282)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143279: WIP: POC: decorating decoder
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143279)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143278: [WIP] Extend the validation performed in workloadbuilder
+
+#### What type of PR is this?
+/kind feature
+
+#### What this PR does / why we need it:
+`kube-apiserver` and `kube-scheduler` restrict some workload configurations that `workloadbuilder` allowed so far. Adding matching restrictions to `workloadbuilder`'s own validation will make the library more robus...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143278)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143277: kubectl: fix --kuberc flag precedence when pointing to the default path
+
+&#x3C;!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/de...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143277)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143276: Watchcache unify reading snapshot list get
+
+Followup to https://github.com/kubernetes/kubernetes/pull/143270
+
+/kind cleanup
+
+```release-note
+NONE
+```
+
+
+#### AI usage disclosure:
+
+Yes
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143276)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: Yes
+
+### kubernetes/kubernetes#143274: [WIP] Move functions that are only used by scheduler tests from test/integration/util to test/integration/scheduler/util.go
+
+&#x3C;!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/de...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143274)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143273: test(apiserver): use namespaced keys in registry fixture
+
+#### What type of PR is this?
+
+/kind cleanup
+
+#### What this PR does / why we need it:
+
+The namespaced Pod registry test fixture builds keys without the namespace, so objects with the same name in different namespaces collide.
+
+Use the existing `defaultStoreKeyFuncs` to keep the registry request key...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143273)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143271: apiextensions: sort map keys to ensure deterministic CEL validation order
+
+#### What type of PR is this?
+
+/kind bug
+/sig api-machinery
+
+#### What this PR does / why we need it:
+
+In `validateMap`, iteration over `obj` directly relied on Go map range iteration, which is non-deterministic by runtime design. As a result, when multiple CEL validation rules fail across map prope...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143271)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143269: cluster/gce: retry master creation on capacity exhaustion
+
+&#x3C;!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/de...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143269)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143267: audit: don't mark the original event as truncated
+
+#### What type of PR is this?
+
+/kind bug
+/sig auth
+
+#### What this PR does / why we need it:
+
+The truncate audit backend shallow-copied the event and then added `audit.k8s.io/truncated: "true"` to the copy's annotations. The copy shares that map with the original, so the original was marked too. The...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143267)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/release#4579: Add patch-release-notification Lambda to email cherry-pick deadline reminders
+
+#### What type of PR is this?
+
+/kind feature
+
+#### What this PR does / why we need it:
+
+Revives #3627, rebased on master with the review feedback addressed.
+
+Adds `cmd/patch-release-notification`, an AWS Lambda that runs once a day, reads the patch release schedule, and emails the community ...
+
+🔗 [Link](https://github.com/kubernetes/release/pull/4579)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/website#58243: [ja] Improve scripts/ja/verify-spelling.sh to support file and directory arguments
+
+**This is a Feature Request**
+
+**What would you like to be added**
+
+Improve `scripts/ja/verify-spelling.sh` to support file and directory arguments, among other changes.
+
+**Why is this needed**
+
+The current script always scans the entire `content/ja` directory, so it is not suited to checking specif...
+
+🔗 [Link](https://github.com/kubernetes/website/issues/58243)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: 2
+- State: open
+
+### kubernetes/cloud-provider-aws#1514: Automated cherry pick of #1496: Add vpcId filter when resolving subnets for load balancer
+
+Cherry pick of #1496 on release-1.31.
+
+#1496: Add vpcId filter when resolving subnets for load balancer
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+```release-note
+
+```
+
+🔗 [Link](https://github.com/kubernetes/cloud-provider-aws/pull/1514)
+
+**Metadata:**
+- Created: 2026-10-22
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/cloud-provider-aws#1513: Automated cherry pick of #1496: Add vpcId filter when resolving subnets for load balancer
+
+Cherry pick of #1496 on release-1.32.
+
+#1496: Add vpcId filter when resolving subnets for load balancer
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+```release-note
+
+```
+
+🔗 [Link](https://github.com/kubernetes/cloud-provider-aws/pull/1513)
+
+**Metadata:**
+- Created: 2026-10-22
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/cloud-provider-aws#1512: Automated cherry pick of #1496: Add vpcId filter when resolving subnets for load balancer
+
+Cherry pick of #1496 on release-1.33.
+
+#1496: Add vpcId filter when resolving subnets for load balancer
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+```release-note
+
+```
+
+🔗 [Link](https://github.com/kubernetes/cloud-provider-aws/pull/1512)
+
+**Metadata:**
+- Created: 2026-10-22
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/cloud-provider-aws#1511: Automated cherry pick of #1496: Add vpcId filter when resolving subnets for load balancer
+
+Cherry pick of #1496 on release-1.34.
+
+#1496: Add vpcId filter when resolving subnets for load balancer
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+```release-note
+
+```
+
+🔗 [Link](https://github.com/kubernetes/cloud-provider-aws/pull/1511)
+
+**Metadata:**
+- Created: 2026-10-22
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/cloud-provider-aws#1510: Automated cherry pick of #1496: Add vpcId filter when resolving subnets for load balancer
+
+Cherry pick of #1496 on release-1.35.
+
+#1496: Add vpcId filter when resolving subnets for load balancer
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+```release-note
+
+```
+
+🔗 [Link](https://github.com/kubernetes/cloud-provider-aws/pull/1510)
+
+**Metadata:**
+- Created: 2026-10-22
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/cloud-provider-aws#1509: Automated cherry pick of #1496: Add vpcId filter when resolving subnets for load balancer
+
+Cherry pick of #1496 on release-1.36.
+
+#1496: Add vpcId filter when resolving subnets for load balancer
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+```release-note
+
+```
+
+🔗 [Link](https://github.com/kubernetes/cloud-provider-aws/pull/1509)
+
+**Metadata:**
+- Created: 2026-10-22
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/cloud-provider-aws#1508: Automated cherry pick of #1496: Add vpcId filter when resolving subnets for load balancer
+
+Cherry pick of #1496 on release-1.37.
+
+#1496: Add vpcId filter when resolving subnets for load balancer
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+```release-note
+
+```
+
+🔗 [Link](https://github.com/kubernetes/cloud-provider-aws/pull/1508)
+
+**Metadata:**
+- Created: 2026-10-22
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/minikube#23917: prow: Use a smaller GCE VM and nested virt only for kvm
+
+none and kvm prow jobs fail about half the time while creating the boskos GCE VM. GCP returns `ZONE_RESOURCE_POOL_EXHAUSTED`, so the jobs never reach the tests.
+
+`n2-standard-8` (8 vCPU, 32 GB) with nested virtualization was out in `us-central1-b`. After shrinking to `n2-standard-4`, that zone was s...
+
+🔗 [Link](https://github.com/kubernetes/minikube/pull/23917)
+
+**Metadata:**
+- Created: 2026-10-22
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/minikube#23915: chore(deps): bump docker/build-push-action from 6.9.0 to 7.4.0
+
+Bumps [docker/build-push-action](https://github.com/docker/build-push-action) from 6.9.0 to 7.4.0.
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/docker/build-push-action/releases">docker/build-push-action's releases</a>.</em></p>
+<blockquote>
+<h2>v7.4.0</...
+
+🔗 [Link](https://github.com/kubernetes/minikube/pull/23915)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/org#6732: add stage-bots as admin to apiextensions-api staging repo
+
+Gives the `stage-bots` team (k8s-publishing-bot) admin access to the new `kubernetes/apiextensions-api` staging repo, and adds the repo to the `kubernetes/org.yaml` restrictions list.
+
+Ref: #6726
+
+This PR was written in part with the assistance of generative AI.
+
+🔗 [Link](https://github.com/kubernetes/org/pull/6732)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kops#18892: deploy AWS LB controller for scalability tests
+
+Part of https://github.com/kubernetes/kubernetes/issues/143229
+
+xref: https://kubernetes.slack.com/archives/CCK68P2Q2/p1792583993994579
+
+We don't want AWS CCM creating load balancers for scalability tests. Instead, they should be created by the AWS LB Controller.
+
+@dims
+
+🔗 [Link](https://github.com/kubernetes/kops/pull/18892)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/community#9230: Archive old KCS channels per ContribEx discussion
+
+Per decision at Contribex meeting, archive the old Kubernetes Contributor Summit channels.
+
+Fixes #9204
+
+
+🔗 [Link](https://github.com/kubernetes/community/pull/9230)
+
+**Metadata:**
+- Created: 2026-10-22
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/autoscaler: vertical-pod-autoscaler-chart-0.15.0
+
+Automatically adjust resources for your workloads
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/releases/tag/vertical-pod-autoscaler-chart-0.15.0)
+
+**Metadata:**
+- Version: vertical-pod-autoscaler-chart-0.15.0
+- Published: 2026-10-21
+- Prerelease: No
+
+### kubernetes/autoscaler: vertical-pod-autoscaler-1.8.1
+
+## Changes by Kind
+
+### Dependency
+
+- Bump Go to 1.26.10 ([#10454](https://github.com/kubernetes/autoscaler/pull/10454), [@adrianmoisey](https://github.com/adrianmoisey))
+
+### Bug or Regression
+
+- Fix VPA updater treating a days-old lastState OOM as a fresh quick OOM under InPlace ([#10385](https://github.com/kubernetes/autoscaler/pull/10385), [@locker95](https://github.com/locker95))
+- Fixed VPA updater logic to determine DaemonSet replica count from DaemonSet.Status.DesiredNumberSched...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/releases/tag/vertical-pod-autoscaler-1.8.1)
+
+**Metadata:**
+- Version: vertical-pod-autoscaler-1.8.1
+- Published: 2026-10-21
+- Prerelease: No
+
+### kubernetes/autoscaler: vertical-pod-autoscaler-1.7.3
+
+## Changes by Kind
+
+### Dependency
+
+- Bump Go to 1.26.10 ([#10456](https://github.com/kubernetes/autoscaler/pull/10456), [@adrianmoisey](https://github.com/adrianmoisey))
+
+### Bug or Regression
+
+- Fix VPA updater treating a days-old lastState OOM as a fresh quick OOM under InPlace ([#10386](https://github.com/kubernetes/autoscaler/pull/10386), [@adrianmoisey](https://github.com/adrianmoisey))
+- Fixed VPA updater logic to determine DaemonSet replica count from DaemonSet.Status.DesiredNum...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/releases/tag/vertical-pod-autoscaler-1.7.3)
+
+**Metadata:**
+- Version: vertical-pod-autoscaler-1.7.3
+- Published: 2026-10-21
+- Prerelease: No
+
+### kubernetes/autoscaler#10481: VPA 1.8.1 retains CVE-2026-78669 in golang.org/x/net
+
+**Which component are you using?**:
+
+/area vertical-pod-autoscaler
+
+**What version of the component are you using?**:
+
+Component version: `vpa-recommender:1.8.1`
+
+**What k8s version are you using (`kubectl version`)?**:
+
+Not applicable. This was reproduced by scanning the published image without dep...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/issues/10481)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: 1
+- State: open
+
+### kubernetes/autoscaler#10478: feature: Add first-class support for hostUsers parameter in Helm chart values
+
+
+**Feature: Add first-class support for hostUsers parameter in Helm chart values
+
+Description**
+
+With Kubernetes natively supporting User Namespaces (stable as of v1.36), clusters can now isolate non-host-dependent controller workloads from the host root namespace using the hostUsers: false paramete...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/issues/10478)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: 2
+- State: open
+
+### kubernetes/autoscaler#10476: recommender: history pods loaded with --storage=prometheus never match VPA selectors that contain . or / in label keys
+
+**Which component are you using?**: vertical-pod-autoscaler (recommender)
+
+/area vertical-pod-autoscaler
+
+**What version of the component are you using?**: 1.5.0
+
+Component version: 1.5.0
+
+**What k8s version are you using (`kubectl version`)?**:
+
+<details><summary><code>kubectl version</code> Output...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/issues/10476)
+
+**Metadata:**
+- Created: 2026-10-21
+- Comments: 1
+- State: open
+
+### kubernetes/autoscaler#10474: Balancer priority policy panics when targetOrder references an unknown target
+
+&#x3C;!--
+Please answer these questions before submitting your bug report. Thanks!
+-->
+<p><strong>Which component are you using?</strong>:</p>
+<p>Balancer controller.</p>
+<p>/area balancer</p>
+<p><strong>What version of the component are you using?</strong>:</p>
+<p>master branch</p>
+<p>Component version:</p>
+<p><strong>What k8s version are you using (<code>kubectl version</code>)?</strong>:…</p>
+<p>🔗 <a href="https://github.com/kubernetes/autoscaler/issues/10474">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: 1</li>
+<li>State: open</li>
+</ul>
+<h3 id="kubernetesautoscaler10468-vpa-release-181">kubernetes/autoscaler#10468: VPA release 1.8.1</h3>
+<p>Please follow instructions in
+<a href="https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/RELEASE.md">RELEASE.md</a> and note each
+completed step on this issue.</p>
+<p>Please provide any information that is related to the release:</p>
+<ul>
+<li>When we plan to do the release?</li>
+<li>Are there any issues / …</li>
+</ul>
+<p>🔗 <a href="https://github.com/kubernetes/autoscaler/issues/10468">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: 7</li>
+<li>State: open</li>
+</ul>
+<h3 id="kubernetesautoscaler10467-vpa-release-173">kubernetes/autoscaler#10467: VPA release 1.7.3</h3>
+<p>Please follow instructions in
+<a href="https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/RELEASE.md">RELEASE.md</a> and note each
+completed step on this issue.</p>
+<p>Please provide any information that is related to the release:</p>
+<ul>
+<li>When we plan to do the release?</li>
+<li>Are there any issues / …</li>
+</ul>
+<p>🔗 <a href="https://github.com/kubernetes/autoscaler/issues/10467">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: 5</li>
+<li>State: open</li>
+</ul>
+<h3 id="kubernetesautoscaler10483-dependabotdeps-bump-sigsk8siocontroller-runtime-from-0251-to-0252-in-cluster-autoscaler">kubernetes/autoscaler#10483: dependabot(deps): bump sigs.k8s.io/controller-runtime from 0.25.1 to 0.25.2 in /cluster-autoscaler</h3>
+<p>Bumps <a href="https://github.com/kubernetes-sigs/controller-runtime">sigs.k8s.io/controller-runtime</a> from 0.25.1 to 0.25.2.</p>
+<details>
+<summary>Release notes</summary>
+<p><em>Sourced from <a href="https://github.com/kubernetes-sigs/controller-runtime/releases">sigs.k8s.io/controller-runtime's releases</a>.&#x3C;...
+</em></p><p><em>🔗 <a href="https://github.com/kubernetes/autoscaler/pull/10483">Link</a></em></p><em>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kubernetesautoscaler10479-balancer-reject-priority-targetorder-entries-that-name-an-unknown-target">kubernetes/autoscaler#10479: balancer: reject priority targetOrder entries that name an unknown target</h3>
+<h4 id="what-type-of-pr-is-this-2">What type of PR is this?</h4>
+<p>/kind bug</p>
+<p>/area balancer</p>
+<h4 id="what-this-pr-does--why-we-need-it-1">What this PR does / why we need it:</h4>
+<p><code>GetPlacement</code> checks that <code>spec.policy.priorities.targetOrder</code> is set, but not that its entries name targets in <code>spec.targets</code>. For an unknown name, <code>distributeByPriority</code> reads a nil <code>*targetInfo</code> f…</p>
+<p>🔗 <a href="https://github.com/kubernetes/autoscaler/pull/10479">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kubernetesk8sio10097-add-sf-compute-api-key-secret-for-prow-build">kubernetes/k8s.io#10097: Add SF Compute API key secret for prow-build</h3>
+<p>This adds a <code>sfcompute-api-key</code> GCP Secret Manager secret in <code>k8s-infra-prow-build</code> and an ExternalSecret that syncs it into the prow-build cluster. Upcoming Prow GPU e2e jobs will use this SF Compute API key. The secret is owned by <code>k8s-infra-sfcompute-admins@kubernetes.io</code> alongside prow-oncall, a…</p>
+<p>🔗 <a href="https://github.com/kubernetes/k8s.io/pull/10097">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kubernetesingress-gce3293-return-early-in-readinessreflectorsyncpod-when-pod-does-not-need-processing">kubernetes/ingress-gce#3293: Return early in readinessReflector.SyncPod when pod does not need processing</h3>
+<p>In <code>readinessReflector.SyncPod</code>, when <code>!needToProcess(pod)</code> is true, it logs <code>"Skip processing pod"</code> but was missing a <code>return</code> statement, causing every pod (including pods without a NEG readiness gate or with <code>NegReadinessGate</code> already <code>True</code>) to be added to <code>r.queue</code> anyway and discarded later in …</p>
+<p>🔗 <a href="https://github.com/kubernetes/ingress-gce/pull/3293">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kubernetesingress-gce3291-fixneg-mitigate-gce-read-quota-exhaustion-during-endpoint-churn">kubernetes/ingress-gce#3291: fix(neg): mitigate GCE read quota exhaustion during endpoint churn</h3>
+<p>Mitigates GCE <code>ListNetworkEndpoints</code> and <code>Get</code> read quota exhaustion during high-churn pod scale-up and node-drain events:</p>
+<ul>
+<li><strong>Coalesce <code>EndpointSlice</code> queue events (<code>--neg-endpoint-sync-batch-period</code>):</strong> Delay <code>endpointQueue</code> items by <code>flags.F.NegEndpointSyncBatchPeriod</code> (default <code>1s</code>) via `AddA…</li>
+</ul>
+<p>🔗 <a href="https://github.com/kubernetes/ingress-gce/pull/3291">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kubernetesingress-gce3290-fix-l4-ipv6-health-check-firewall-name-collisions">kubernetes/ingress-gce#3290: Fix L4 IPv6 health check firewall name collisions</h3>
+<p><code>L4IPv6HealthCheckFirewall</code> (V2) truncates the 63-char <code>L4Backend</code> name to append <code>-fw-ipv6</code>. For <code>len(namespace) + len(name) >= 39</code> this drops the whole hash, so Services with the same trimmed prefix share one rule and overwrite each other’s health check port.</p>
+<p>This PR:</p>
+<ul>
+<li>Adds `L4IPv6HealthCheckFir…</li>
+</ul>
+<p>🔗 <a href="https://github.com/kubernetes/ingress-gce/pull/3290">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskube-state-metrics3164-feature-add-first-class-support-for-hostusers-parameter-in-helm-chart-values">kubernetes/kube-state-metrics#3164: feature: Add first-class support for hostUsers parameter in Helm chart values</h3>
+<p>**Feature: Add first-class support for hostUsers parameter in Helm chart values</p>
+<p>Description**</p>
+<p>With Kubernetes natively supporting User Namespaces (stable as of v1.36), clusters can now isolate non-host-dependent controller workloads from the host root namespace using the hostUsers: false paramete…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kube-state-metrics/issues/3164">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: 1</li>
+<li>State: open</li>
+</ul>
+<h3 id="kuberneteskube-state-metrics3167-chore-replace-controller-runtime-auth-filter-with-a-client-go-implementation">kubernetes/kube-state-metrics#3167: chore: replace controller-runtime auth filter with a client-go implementation</h3>
+<p><strong>What this PR does / why we need it:</strong></p>
+<p><code>sigs.k8s.io/controller-runtime</code> is only imported for <code>filters.WithAuthenticationAndAuthorization</code>, which backs <code>--auth-filter</code>. That single import links <code>k8s.io/apiserver</code> into the binary, and with it gRPC, <code>cel-go</code>, the OpenTelemetry SDK and OTLP exporters,…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kube-state-metrics/pull/3167">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-22</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kuberneteskube-state-metrics3166-chore-replace-viper-with-fsnotify-for-config-file-watching">kubernetes/kube-state-metrics#3166: chore: replace viper with fsnotify for config file watching</h3>
+<p><strong>What this PR does / why we need it:</strong></p>
+<p>viper is only used in <code>internal/wrapper.go</code> to check that the options file, the custom resource state config and the kubeconfig exist and parse as YAML, and to restart KSM when they change. The parsed values were discarded, and the options file was then read …</p>
+<p>🔗 <a href="https://github.com/kubernetes/kube-state-metrics/pull/3166">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kubernetessig-release3127-cut-v1380-alpha3-release">kubernetes/sig-release#3127: Cut v1.38.0-alpha.3 release</h3>
+<h2 id="scheduled-to-happen-wed-2026-10-21">Scheduled to happen: Wed, 2026-10-21</h2>
+<p>_Note for v1.x.0 releases: Having this issue in open state will stop the
+periodic run of <a href="https://testgrid.k8s.io/sig-release-releng-blocking#git-repo-kubernetes-fast-forward"><code>krel fast-forward</code></a>
+to avoid conflicts with releases running in parallel. The fast…</p>
+<p>🔗 <a href="https://github.com/kubernetes/sig-release/issues/3127">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: 2</li>
+<li>State: open</li>
+</ul>
+<h3 id="containerdcontainerd14444-redundant-runc-kill-command-runc-kill---all-9-on-container-exit">containerd/containerd#14444: Redundant runc kill command <code>runc kill --all 9</code> on container exit</h3>
+<h3 id="description">Description</h3>
+<p>While working on <a href="https://github.com/containerd/containerd/issues/14292">https://github.com/containerd/containerd/issues/14292</a>, I found a bug in containerd’s container deletion process for a Pod with <code>shareProcessNamespace: false</code> (the default) that I thought should be filed separately.</p>
+<p>containerd StopContainer makes a gRPC <code>Kill()</code> ca…</p>
+<p>🔗 <a href="https://github.com/containerd/containerd/issues/14444">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-10-21</li>
+<li>Comments: 3</li>
+<li>State: open</li>
+</ul>
+<hr>
+<p><em>This content was automatically collected on 2026-10-22 03:19:00</em></p></em></details> </div> <footer class="post-footer" data-astro-cid-egg7nqdx> <nav class="post-nav" data-astro-cid-egg7nqdx> <a href="/posts" class="back-link" data-astro-cid-egg7nqdx>← 記事一覧に戻る</a> </nav> </footer> </article>  </main> <footer data-astro-cid-sz7xmlte> <div class="footer-content" data-astro-cid-sz7xmlte> <p class="copyright" data-astro-cid-sz7xmlte> © 2026 Upstream Lens. All rights reserved. </p> <p class="disclaimer-note" data-astro-cid-sz7xmlte> This site is not affiliated with any specific foundation, organization, or project. </p> <nav class="footer-nav" data-astro-cid-sz7xmlte> <a href="/disclaimer" data-astro-cid-sz7xmlte>Disclaimer</a> <span class="separator" data-astro-cid-sz7xmlte>•</span> <a href="/author" data-astro-cid-sz7xmlte>Author</a> <span class="separator" data-astro-cid-sz7xmlte>•</span> <a href="https://github.com/kkomazaw/upstreamlens.io" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>GitHub</a> </nav> </div> </footer>  </div> </body></html> 

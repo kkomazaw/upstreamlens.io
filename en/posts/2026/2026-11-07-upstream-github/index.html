@@ -1,0 +1,546 @@
+<!DOCTYPE html><html lang="ja"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="CNCF upstream activity from github"><title>Upstream Github - 2026-11-07 | Upstream Lens</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><style>.post[data-astro-cid-z5xrqrku]{max-width:100%}.post-header[data-astro-cid-z5xrqrku]{margin-bottom:3rem;padding-bottom:2rem;border-bottom:2px solid var(--border-color)}.post-header[data-astro-cid-z5xrqrku] h1[data-astro-cid-z5xrqrku]{margin:0 0 1rem}.post-meta[data-astro-cid-z5xrqrku]{display:flex;gap:1rem;align-items:center;font-size:.875rem;color:var(--text-secondary);margin-bottom:1rem}.category[data-astro-cid-z5xrqrku]{background-color:var(--code-bg);padding:.25rem .75rem;border-radius:3px;font-weight:600;color:var(--text-color)}.tags[data-astro-cid-z5xrqrku]{display:flex;flex-wrap:wrap;gap:.5rem}.tag[data-astro-cid-z5xrqrku]{background-color:var(--border-color);color:var(--text-color);padding:.25rem .75rem;border-radius:3px;font-size:.875rem}.post-content[data-astro-cid-z5xrqrku]{margin:3rem 0;line-height:1.8}.post-content[data-astro-cid-z5xrqrku] h2{margin-top:3rem}.post-content[data-astro-cid-z5xrqrku] h3{margin-top:2rem}.post-content[data-astro-cid-z5xrqrku] img{max-width:100%;height:auto;border-radius:4px;margin:2rem 0}.post-content[data-astro-cid-z5xrqrku] blockquote{border-left:4px solid var(--accent-color);padding-left:1.5rem;margin:2rem 0;color:var(--text-secondary);font-style:italic}.post-footer[data-astro-cid-z5xrqrku]{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border-color)}.post-nav[data-astro-cid-z5xrqrku]{text-align:center}.back-link[data-astro-cid-z5xrqrku]{color:var(--link-color);text-decoration:none;font-weight:600}.back-link[data-astro-cid-z5xrqrku]:hover{color:var(--link-hover);text-decoration:underline}@media(max-width:768px){.post-header[data-astro-cid-z5xrqrku]{margin-bottom:2rem;padding-bottom:1.5rem}.post-header[data-astro-cid-z5xrqrku] h1[data-astro-cid-z5xrqrku]{font-size:1.75rem;line-height:1.3}.post-meta[data-astro-cid-z5xrqrku]{flex-direction:column;align-items:flex-start;gap:.5rem}.post-content[data-astro-cid-z5xrqrku]{margin:2rem 0}.post-content[data-astro-cid-z5xrqrku] h2{margin-top:2rem}.post-content[data-astro-cid-z5xrqrku] h3{margin-top:1.5rem}.post-content[data-astro-cid-z5xrqrku] blockquote{padding-left:1rem;margin:1.5rem 0;font-size:.95rem}.post-content[data-astro-cid-z5xrqrku] pre{margin:1.5rem -1.25rem;border-radius:0;font-size:.875rem}.post-footer[data-astro-cid-z5xrqrku]{margin-top:3rem}.tags[data-astro-cid-z5xrqrku]{gap:.375rem}.tag[data-astro-cid-z5xrqrku]{font-size:.8125rem;padding:.2rem .625rem}}@media(max-width:480px){.post-header[data-astro-cid-z5xrqrku] h1[data-astro-cid-z5xrqrku]{font-size:1.5rem}.post-content[data-astro-cid-z5xrqrku] pre{font-size:.8125rem}}
+</style>
+<link rel="stylesheet" href="/_astro/about.Mt-9HUYb.css"></head> <body> <div class="container"> <header data-astro-cid-3ef6ksr2> <div class="header-top" data-astro-cid-3ef6ksr2> <div class="header-content" data-astro-cid-3ef6ksr2> <div class="site-title" data-astro-cid-3ef6ksr2> <a href="/en/" data-astro-cid-3ef6ksr2>Upstream Lens</a> </div> <p class="tagline" data-astro-cid-3ef6ksr2>Seeing decisions before code is written</p> </div> <div class="language-switcher" data-astro-cid-a2mxz4y6> <a href="/posts/2026/2026-11-07-upstream-github/" class="lang-link" data-astro-cid-a2mxz4y6> 日本語 </a><a href="/en/posts/2026/2026-11-07-upstream-github/" class="lang-link active" aria-current="page" data-astro-cid-a2mxz4y6> English </a> </div>  </div> <nav data-astro-cid-pux6a34n> <button class="mobile-menu-toggle" aria-label="メニュー" id="mobile-menu-toggle" data-astro-cid-pux6a34n> <span class="hamburger" data-astro-cid-pux6a34n></span> </button> <ul id="nav-menu" data-astro-cid-pux6a34n> <li data-astro-cid-pux6a34n> <a href="/en/" class="nav-link" data-astro-cid-pux6a34n> Home </a> </li><li data-astro-cid-pux6a34n> <a href="/en/philosophy" class="nav-link" data-astro-cid-pux6a34n> Philosophy </a> </li><li data-astro-cid-pux6a34n> <a href="/en/posts" class="nav-link active" aria-current="page" data-astro-cid-pux6a34n> Posts </a> </li><li data-astro-cid-pux6a34n> <a href="/en/stories" class="nav-link" data-astro-cid-pux6a34n> Stories </a> </li><li data-astro-cid-pux6a34n> <a href="/en/about" class="nav-link" data-astro-cid-pux6a34n> About </a> </li> </ul> </nav> <script type="module">const e=document.getElementById("mobile-menu-toggle"),n=document.getElementById("nav-menu");e&&n&&(e.addEventListener("click",()=>{const t=n.classList.toggle("open");e.classList.toggle("open"),e.setAttribute("aria-expanded",t.toString())}),n.querySelectorAll("a").forEach(t=>{t.addEventListener("click",()=>{n.classList.remove("open"),e.classList.remove("open"),e.setAttribute("aria-expanded","false")})}),document.addEventListener("click",t=>{!e.contains(t.target)&&!n.contains(t.target)&&(n.classList.remove("open"),e.classList.remove("open"),e.setAttribute("aria-expanded","false"))}));</script>  </header>  <main>  <article class="post" data-astro-cid-z5xrqrku> <header class="post-header" data-astro-cid-z5xrqrku> <h1 data-astro-cid-z5xrqrku>Upstream Github - 2026-11-07</h1> <div class="post-meta" data-astro-cid-z5xrqrku> <time datetime="2026-11-07T00:00:00.000Z" data-astro-cid-z5xrqrku> November 7, 2026 </time> <span class="category" data-astro-cid-z5xrqrku>Notes</span> </div> <div class="tags" data-astro-cid-z5xrqrku> <span class="tag" data-astro-cid-z5xrqrku>upstream</span><span class="tag" data-astro-cid-z5xrqrku>CNCF</span><span class="tag" data-astro-cid-z5xrqrku>kubernetes</span><span class="tag" data-astro-cid-z5xrqrku>release</span><span class="tag" data-astro-cid-z5xrqrku>issue</span><span class="tag" data-astro-cid-z5xrqrku>kind/bug</span><span class="tag" data-astro-cid-z5xrqrku>needs-sig</span><span class="tag" data-astro-cid-z5xrqrku>needs-triage</span><span class="tag" data-astro-cid-z5xrqrku>sig/api-machinery</span><span class="tag" data-astro-cid-z5xrqrku>sig/node</span><span class="tag" data-astro-cid-z5xrqrku>wg/device-management</span><span class="tag" data-astro-cid-z5xrqrku>kind/flake</span><span class="tag" data-astro-cid-z5xrqrku>sig/apps</span><span class="tag" data-astro-cid-z5xrqrku>pr</span><span class="tag" data-astro-cid-z5xrqrku>area/kubelet</span><span class="tag" data-astro-cid-z5xrqrku>kind/cleanup</span><span class="tag" data-astro-cid-z5xrqrku>size/L</span><span class="tag" data-astro-cid-z5xrqrku>release-note-none</span><span class="tag" data-astro-cid-z5xrqrku>cncf-cla: yes</span><span class="tag" data-astro-cid-z5xrqrku>needs-ok-to-test</span><span class="tag" data-astro-cid-z5xrqrku>needs-priority</span><span class="tag" data-astro-cid-z5xrqrku>area/test</span><span class="tag" data-astro-cid-z5xrqrku>sig/scheduling</span><span class="tag" data-astro-cid-z5xrqrku>release-note</span><span class="tag" data-astro-cid-z5xrqrku>needs-rebase</span><span class="tag" data-astro-cid-z5xrqrku>size/XXL</span><span class="tag" data-astro-cid-z5xrqrku>kind/feature</span><span class="tag" data-astro-cid-z5xrqrku>sig/testing</span><span class="tag" data-astro-cid-z5xrqrku>do-not-merge/work-in-progress</span><span class="tag" data-astro-cid-z5xrqrku>sig/storage</span><span class="tag" data-astro-cid-z5xrqrku>kind/api-change</span><span class="tag" data-astro-cid-z5xrqrku>sig/instrumentation</span><span class="tag" data-astro-cid-z5xrqrku>area/code-generation</span><span class="tag" data-astro-cid-z5xrqrku>area/apiserver</span><span class="tag" data-astro-cid-z5xrqrku>approved</span><span class="tag" data-astro-cid-z5xrqrku>do-not-merge/release-note-label-needed</span><span class="tag" data-astro-cid-z5xrqrku>lgtm</span><span class="tag" data-astro-cid-z5xrqrku>size/XS</span><span class="tag" data-astro-cid-z5xrqrku>kind/dependency</span><span class="tag" data-astro-cid-z5xrqrku>size/M</span><span class="tag" data-astro-cid-z5xrqrku>do-not-merge/cherry-pick-not-approved</span><span class="tag" data-astro-cid-z5xrqrku>do-not-merge/needs-kind</span><span class="tag" data-astro-cid-z5xrqrku>ok-to-test</span><span class="tag" data-astro-cid-z5xrqrku>sig/windows</span><span class="tag" data-astro-cid-z5xrqrku>area/kubectl</span><span class="tag" data-astro-cid-z5xrqrku>sig/cli</span><span class="tag" data-astro-cid-z5xrqrku>autoscaler</span><span class="tag" data-astro-cid-z5xrqrku>cloud-provider-vsphere</span><span class="tag" data-astro-cid-z5xrqrku>envoyproxy</span><span class="tag" data-astro-cid-z5xrqrku>gateway</span><span class="tag" data-astro-cid-z5xrqrku>containerd</span><span class="tag" data-astro-cid-z5xrqrku>accelerated-container-image</span> </div> </header> <div class="post-content" data-astro-cid-z5xrqrku> <h2 id="overview">Overview</h2>
+<p>This is an automated collection of upstream activity from github.</p>
+<h2 id="-high-priority-updates">🔥 High Priority Updates</h2>
+<h3 id="kuberneteskubernetes143910-do-not-review-poc-dra-preemption-with-nominationextensions-kep-5690">kubernetes/kubernetes#143910: [Do not review] PoC: DRA preemption with NominationExtensions (KEP-5690)</h3>
+<h4 id="what-type-of-pr-is-this">What type of PR is this?</h4>
+<p>/kind feature
+/sig scheduling</p>
+<h4 id="what-this-pr-does--why-we-need-it">What this PR does / why we need it:</h4>
+<p>Proof of concept for DRA preemption (KEP-5690), opened as a draft to review the whole approach in one place. Not meant to be merged as is.</p>
+<p>It consists of:</p>
+<ul>
+<li>The 19 commits of #143892, unchanged:…</li>
+</ul>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/143910">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-11-07</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: Yes</li>
+</ul>
+<h3 id="kuberneteskubernetes143907-kep-6371-add-node-lifecycle-controller-node-liveness-source">kubernetes/kubernetes#143907: KEP-6371: Add node lifecycle controller —node-liveness-source</h3>
+<h4 id="what-type-of-pr-is-this-1">What type of PR is this?</h4>
+<p>/kind feature
+/kind api-change</p>
+<h4 id="what-this-pr-does--why-we-need-it-1">What this PR does / why we need it:</h4>
+<p>Implements the main feature of KEP-6371 to allow external node liveness detection. Node lease writes are the largest single class of apiserver writes (~29% in a 5000-node scalability run). Extern…</p>
+<p>🔗 <a href="https://github.com/kubernetes/kubernetes/pull/143907">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-11-06</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: Yes</li>
+</ul>
+<h3 id="kuberneteskubernetes143899-kep-5999-graduate-h2c-probes-to-beta">kubernetes/kubernetes#143899: KEP-5999: Graduate h2c Probes to beta</h3>
+<!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/de...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143899)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143889: KEP-4939: Graduate gRPC probe TLS to beta
+
+&#x3C;!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143889)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/autoscaler: cluster-autoscaler-1.36.2
+
+## Security
+
+The release images were rebuilt with Go 1.26.10, which includes the `crypto/x509` mitigation for [CVE-2026-111943 / GO-2026-6809](https://pkg.go.dev/vuln/GO-2026-6809). The refreshed Distroless trust bundle excludes `emSign ECC Root CA - G3` and `AAA Certificate Services`, addressing the image rebuild request in [#10621](https://github.com/kubernetes/autoscaler/issues/10621).
+
+## Changes by Kind
+
+### Bug or Regression
+
+- Exclude GPU-labeled unmanaged nodes with unavailable G...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/releases/tag/cluster-autoscaler-1.36.2)
+
+**Metadata:**
+- Version: cluster-autoscaler-1.36.2
+- Published: 2026-11-06
+- Prerelease: No
+
+### kubernetes/autoscaler: cluster-autoscaler-1.35.3
+
+## Security
+
+The release images were rebuilt with Go 1.26.10, which includes the `crypto/x509` mitigation for [CVE-2026-111943 / GO-2026-6809](https://pkg.go.dev/vuln/GO-2026-6809). The refreshed Distroless trust bundle excludes `emSign ECC Root CA - G3` and `AAA Certificate Services`, addressing the image rebuild request in [#10621](https://github.com/kubernetes/autoscaler/issues/10621).
+
+## Changes by Kind
+
+### Bug or Regression
+
+- Exclude GPU-labeled unmanaged nodes with unavailable G...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/releases/tag/cluster-autoscaler-1.35.3)
+
+**Metadata:**
+- Version: cluster-autoscaler-1.35.3
+- Published: 2026-11-06
+- Prerelease: No
+
+### kubernetes/autoscaler: cluster-autoscaler-1.34.6
+
+## Security
+
+The release images were rebuilt with Go 1.26.10, which includes the `crypto/x509` mitigation for [CVE-2026-111943 / GO-2026-6809](https://pkg.go.dev/vuln/GO-2026-6809). The refreshed Distroless trust bundle excludes `emSign ECC Root CA - G3` and `AAA Certificate Services`, addressing the image rebuild request in [#10621](https://github.com/kubernetes/autoscaler/issues/10621).
+
+## Changes by Kind
+
+### Bug or Regression
+
+- Exclude GPU-labeled unmanaged nodes with unavailable G...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/releases/tag/cluster-autoscaler-1.34.6)
+
+**Metadata:**
+- Version: cluster-autoscaler-1.34.6
+- Published: 2026-11-06
+- Prerelease: No
+
+## Updates
+
+### kubernetes/kubernetes: v1.38.0-beta.0
+
+
+See [kubernetes-announce@](https://groups.google.com/forum/#!forum/kubernetes-announce). Additional binary downloads are linked in the [CHANGELOG](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.38.md).
+
+See the [CHANGELOG](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.38.md) for more details.
+
+
+
+
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/releases/tag/v1.38.0-beta.0)
+
+**Metadata:**
+- Version: v1.38.0-beta.0
+- Published: 2026-11-06
+- Prerelease: Yes
+
+### kubernetes/kubernetes#143908: Investigate goroutine panic handling issues
+
+### What happened?
+
+PR #143845 added HandleCrash calls to the concurrent watch decoder’s goroutines. During review, we found that adding a panic handler alone was not enough. If a worker recovers from a panic without publishing a result, its caller can wait indefinitely. Recovery must also ensure th...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/issues/143908)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: 4
+- State: open
+
+### kubernetes/kubernetes#143905: List with `limit` and `resourceVersion` (no `resourceVersionMatch`) is served at the latest revision, not the exact one, when the field selector names one object
+
+### What happened?
+
+A list request with `limit=<n>` and `resourceVersion=<rv>`, `rv` not 0, and no
+`resourceVersionMatch` is served at `<rv>`, except when the field selector names a single object:
+
+- `GET /api/v1/namespaces/<ns>/configmaps?fieldSelector=metadata.name=<name>&...`
+- `GET /api/v1/confi...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/issues/143905)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: 2
+- State: open
+
+### kubernetes/kubernetes#143903: SSA /status acquires ownership of additional root fields reset by the CRD status strategy
+
+### What happened?
+
+Server-side Apply on a CRD's `/status` subresource can acquire ownership of an unchanged, non-status root field that the status strategy restores from the old object. The original main-endpoint manager's subsequent change then conflicts with that status ownership.
+
+This requires ...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/issues/143903)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: 1
+- State: open
+
+### kubernetes/kubernetes#143901: ResourceClaim updates fail with "spec: field is immutable" when opaque parameters are not canonical JSON
+
+### What happened?
+
+A ResourceClaim created with the Python client (kubernetes 37.0.2) cannot be labeled afterwards:
+
+```
+$ kubectl label resourceclaim claim-py x=y
+The ResourceClaim "claim-py" is invalid: spec: Invalid value: null: field is immutable
+```
+
+The client sends `"parameters": {"a": "b", ...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/issues/143901)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: 1
+- State: open
+
+### kubernetes/kubernetes#143888: [Falking Test] [sig-apps] StatefulSet StatefulSet Recreate Update Strategy should recreate stuck pods with ImagePullBackOff when the update strategy is Recreate [FeatureGate:StatefulSetRecreateStrategy] [Beta]
+
+### Which jobs are flaking?
+
+https://prow.k8s.io/job-history/gs/kubernetes-ci-logs/logs/ci-kubernetes-e2e-ubuntu-gce-containerd
+https://prow.k8s.io/job-history/gs/kubernetes-ci-logs/logs/ci-kubernetes-ppc64le-e2e-alpha-enabled-default
+https://prow.k8s.io/job-history/gs/kubernetes-ci-logs/logs/ci-kub...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/issues/143888)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: 3
+- State: open
+
+### kubernetes/kubernetes#143911: kubelet: suspend PLEG events while SyncPod is running
+
+#### What type of PR is this?
+
+/kind cleanup
+/sig node
+
+#### What this PR does / why we need it:
+
+While SyncPod() runs, its own CRI calls cause PLEG to relist the pod repeatedly. These events are redundant, since if the sync changed the pod, postSync() requests a relist afterwards anyway.
+
+The pod w...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143911)
+
+**Metadata:**
+- Created: 2026-11-07
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143909: remove RecursiveReadOnlyMounts feature gate
+
+&#x3C;!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/de...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143909)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143904: Label operation type for consistent read wait
+
+/kind feature
+
+```release-note
+Add verb label to apiserver_watch_cache_consistent_read_total metric
+```
+
+#### AI usage disclosure:
+
+Yes
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143904)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: Yes
+
+### kubernetes/kubernetes#143902: Report ObjectMeta validation errors once on update
+
+#### What type of PR is this?
+
+/kind bug
+/sig api-machinery
+
+#### What this PR does / why we need it:
+
+When you update an object, the API server checks the metadata two times:
+
+1. the generic check (`validateCommonFields`)
+2. the check in the strategy (`strategy.ValidateUpdate`)
+
+Most strategies alr...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143902)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143898: test/images: bump agnhost VERSION
+
+&#x3C;!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/de...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143898)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143897: Automated cherry pick of #143603: test/integration/job: suspend and delete job in cleanUp to prevent pod recreation race
+
+Cherry pick of #143603 on release-1.34.
+
+#143603: test/integration/job: suspend and delete job in cleanUp to prevent pod recreation race
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+#### Wh...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143897)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143896: Automated cherry pick of #143603: test/integration/job: suspend and delete job in cleanUp to prevent pod recreation race
+
+Cherry pick of #143603 on release-1.35.
+
+#143603: test/integration/job: suspend and delete job in cleanUp to prevent pod recreation race
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+#### Wh...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143896)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143895: Automated cherry pick of #143603: test/integration/job: suspend and delete job in cleanUp to prevent pod recreation race
+
+Cherry pick of #143603 on release-1.36.
+
+#143603: test/integration/job: suspend and delete job in cleanUp to prevent pod recreation race
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+#### Wh...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143895)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143894: Automated cherry pick of #143603: test/integration/job: suspend and delete job in cleanUp to prevent pod recreation race
+
+Cherry pick of #143603 on release-1.37.
+
+#143603: test/integration/job: suspend and delete job in cleanUp to prevent pod recreation race
+
+For details on the cherry pick process, see the [cherry pick requests](https://git.k8s.io/community/contributors/devel/sig-release/cherry-picks.md) page.
+
+#### Wh...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143894)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143892: [Do not review] DRA preemption POC
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143892)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: Yes
+
+### kubernetes/kubernetes#143886: topologymanager: fix pod-scope check in TestAdmit and include allocation errors
+
+&#x3C;!--  Thanks for sending a pull request!  Here are some tips for you:
+
+1. If this is your first time, please read our contributor guidelines: https://git.k8s.io/community/contributors/guide/first-contribution.md#your-first-contribution and developer guide https://git.k8s.io/community/contributors/de...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143886)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143884: filesystem: fail MkdirAll when the Windows path exists as a file
+
+#### What type of PR is this?
+
+/kind bug
+/sig windows
+/sig node
+
+#### What this PR does / why we need it:
+
+`pkg/util/filesystem.MkdirAll` is the helper the kubelet uses instead of `os.MkdirAll`, because `os.MkdirAll` ignores the permission bits on Windows (golang/go#65377). The Windows implementatio...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143884)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143883: Pr 143456 poc
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143883)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: Yes
+
+### kubernetes/kubernetes#143877: kubelet: write hostAliases before node /etc/hosts for hostNetwork pods
+
+For hostNetwork pods kubelet appended spec.hostAliases after the node's /etc/hosts. Resolvers use the first matching entry, so any node entry for the same hostname silently shadowed the pod's hostAliases.
+
+Write hostAliases entries first so they take precedence.
+
+&#x3C;!--  Thanks for sending a pull requ...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143877)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/kubernetes#143874: Cache OpenAPI v3 resources in client-go and kubectl
+
+- `client-go/openapi3`: add GVK-indexed `Resources` cache (`SchemaForGVK`, `GetConsumes`, `SupportsQueryParam`)
+  - unit test coverage: `97.8%` in `client-go/openapi3`
+- `cli-runtime/resource`: use `openapi3.Resources` in `queryParamVerifierV3`
+  -  unit test coverage: `100%` in `cli-runtime/pkg/...
+
+🔗 [Link](https://github.com/kubernetes/kubernetes/pull/143874)
+
+**Metadata:**
+- Created: 2026-11-06
+- Comments: undefined
+- State: open
+- Draft: No
+
+### kubernetes/autoscaler: cluster-autoscaler-1.37.0
+
+## Urgent Upgrade Notes
+
+### Action Required
+
+- **CapacityQuota users:** update the CapacityQuota CRD and migrate manifests to `autoscaling.x-k8s.io/v1beta1`. The `v1alpha1` API remains served but is deprecated; `v1beta1` is now the storage version. The updated CRD is available [in this release](https://github.com/kubernetes/autoscaler/blob/cluster-autoscaler-1.37.0/cluster-autoscaler/apis/config/crd/autoscaling.x-k8s.io_capacityquotas.yaml). ([#9890](https://github.com/kubernetes/autoscaler...
+
+🔗 [Link](https://github.com/kubernetes/autoscaler/releases/tag/cluster-autoscaler-1.37.0)
+
+**Metadata:**
+- Version: cluster-autoscaler-1.37.0
+- Published: 2026-11-06
+- Prerelease: No
+
+### kubernetes/cloud-provider-vsphere#1940: 🌱 Bump E2E test
+
+&#x3C;!-- Thanks for sending a pull request! -->
+<p><strong>What this PR does / why we need it</strong>:
+Bump E2E test</p>
+<p><strong>Which issue this PR fixes</strong> <em>(optional, in <code>fixes #&#x3C;issue number>(, fixes #&#x3C;issue_number>, ...)</code> format, will close that issue when PR gets merged)</em>: fixes #</p>
+<p><strong>Special notes for your reviewer</strong>:</p>
+<p>…</p>
+<p>🔗 <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1940">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-11-06</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="kubernetescloud-provider-vsphere1939--bump-to-k8s-1380-beta0-and-go-1270">kubernetes/cloud-provider-vsphere#1939: 🌱 Bump to k8s 1.38.0 beta.0 and go 1.27.0</h3>
+<!-- Thanks for sending a pull request! -->
+<p><strong>What this PR does / why we need it</strong>:
+Bump to k8s 1.38.0 beta.0 and go 1.27.0</p>
+<p><strong>Which issue this PR fixes</strong> <em>(optional, in <code>fixes #&#x3C;issue number>(, fixes #&#x3C;issue_number>, ...)</code> format, will close that issue when PR gets merged)</em>: fixes #</p>
+<p>**Special not…</p>
+<p>🔗 <a href="https://github.com/kubernetes/cloud-provider-vsphere/pull/1939">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Created: 2026-11-06</li>
+<li>Comments: undefined</li>
+<li>State: open</li>
+<li>Draft: No</li>
+</ul>
+<h3 id="envoyproxygateway-v1100">envoyproxy/gateway: v1.10.0</h3>
+<h1 id="release-announcement">Release Announcement</h1>
+<p>Check out the <a href="https://gateway.envoyproxy.io/news/releases/notes/v1.10.0/">v1.10.0 release announcement</a> to learn more about the release.</p>
+<h2 id="whats-changed">What’s Changed</h2>
+<ul>
+<li>chore: replace sets.NewString with sets.New[string] by @mmmommm in <a href="https://github.com/envoyproxy/gateway/pull/9704">https://github.com/envoyproxy/gateway/pull/9704</a></li>
+<li>feat(chart): Add TLS certificate expiration to the Envoy Global dashboard by @FlorisFeddema in <a href="https://github.com/envoyproxy/gateway/pull/9615">https://github.com/envoyproxy/gateway/pull/9615</a></li>
+<li>docs: add note about Tempo appProtocol in proxy-trace.m…</li>
+</ul>
+<p>🔗 <a href="https://github.com/envoyproxy/gateway/releases/tag/v1.10.0">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Version: v1.10.0</li>
+<li>Published: 2026-11-06</li>
+<li>Prerelease: No</li>
+</ul>
+<h3 id="containerdaccelerated-container-image-development-build">containerd/accelerated-container-image: Development Build</h3>
+<h2 id="commits">Commits</h2>
+<ul>
+<li>0806b5e: Fix device probe, writable rootfs detection and lazy overlay probing (#402) (ZAwei) <a href="https://github.com/containerd/accelerated-container-image/pull/402">#402</a></li>
+</ul>
+<p>🔗 <a href="https://github.com/containerd/accelerated-container-image/releases/tag/latest">Link</a></p>
+<p><strong>Metadata:</strong></p>
+<ul>
+<li>Version: latest</li>
+<li>Published: 2026-11-06</li>
+<li>Prerelease: Yes</li>
+</ul>
+<hr>
+<p><em>This content was automatically collected on 2026-11-07 04:35:04</em></p> </div> <footer class="post-footer" data-astro-cid-z5xrqrku> <nav class="post-nav" data-astro-cid-z5xrqrku> <a href="/en/posts" class="back-link" data-astro-cid-z5xrqrku>← Back to Posts</a> </nav> </footer> </article>  </main> <footer data-astro-cid-sz7xmlte> <div class="footer-content" data-astro-cid-sz7xmlte> <p class="copyright" data-astro-cid-sz7xmlte> © 2026 Upstream Lens. All rights reserved. </p> <p class="disclaimer-note" data-astro-cid-sz7xmlte> This site is not affiliated with any specific foundation, organization, or project. </p> <nav class="footer-nav" data-astro-cid-sz7xmlte> <a href="/en/disclaimer" data-astro-cid-sz7xmlte>Disclaimer</a> <span class="separator" data-astro-cid-sz7xmlte>•</span> <a href="/en/author" data-astro-cid-sz7xmlte>Author</a> <span class="separator" data-astro-cid-sz7xmlte>•</span> <a href="https://github.com/kkomazaw/upstreamlens.io" target="_blank" rel="noopener noreferrer" data-astro-cid-sz7xmlte>GitHub</a> </nav> </div> </footer>  </div> </body></html> 

@@ -1,0 +1,52 @@
+---
+title: "Upstream Cncf-blog - 2026-11-25"
+description: "CNCF upstream activity from cncf-blog"
+pubDate: 2026-11-25
+category: "Notes"
+tags: ["upstream", "CNCF", "blog", "argo", "release", "kubernetes", "kyverno"]
+draft: false
+---
+
+## Overview
+
+This is an automated collection of upstream activity from cncf-blog.
+
+## Updates
+
+### CNCF Blog: When a sync window closes: How Argo CD self-heal skipped the migration hook
+
+The uncomfortable question A few days ago, a customer asked me a question that sounded simple: “Argo CD said the sync succeeded, so why didn’t our migration run?” They had pushed a release while a deny...
+
+🔗 [Link](https://www.cncf.io/blog/2026/11/20/when-a-sync-window-closes-how-argo-cd-self-heal-skipped-the-migration-hook/)
+
+**Metadata:**
+- Published: 2026-11-20
+- Source: CNCF Official Blog
+- Author: Afzal Ansari (CNCF Ambassador)
+
+### CNCF Blog: How to support your app on Kubernetes environments you don’t control
+
+Running an application in Kubernetes is one thing, but supporting that application in Kubernetes environments your customers run is something else entirely. You don’t control the cluster configuration, its upgrade schedule, the surrounding tooling, or the...
+
+🔗 [Link](https://www.cncf.io/blog/2026/11/19/how-to-support-your-app-on-kubernetes-environments-you-dont-control/)
+
+**Metadata:**
+- Published: 2026-11-19
+- Source: CNCF Official Blog
+- Author: Adam Zahorscak, Fairwinds
+
+### CNCF Blog: Optimizing Kubernetes admission control: Where Kyverno’s CEL admission cost actually goes
+
+Kyverno’s CEL (Common Expression Language)-based engines exist to evaluate policy expressions. So when we profiled the admission path, we expected to find the bulk of the cost in CEL evaluation. It was not there. About 86%...
+
+🔗 [Link](https://www.cncf.io/blog/2026/11/18/optimizing-kubernetes-admission-control-where-kyvernos-cel-admission-cost-actually-goes/)
+
+**Metadata:**
+- Published: 2026-11-18
+- Source: CNCF Official Blog
+- Author: Raunak Madan (Software Engineer Intern, Nirmata)
+
+
+---
+
+*This content was automatically collected on 2026-11-25 06:57:06*
